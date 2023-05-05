@@ -1,11 +1,16 @@
 package com.yash.ytms.model;
 
+import java.io.Serializable;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
-public class Associate {
+public class Associate implements Serializable{
+	
+	private static final long serialVersionUID = 1234568L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -14,15 +19,18 @@ public class Associate {
 	@Column(name = "emp_id")
 	private Long empId;
 	
+	@NotEmpty(message = "The employee name is required.")
 	@Column(name = "emp_name")
 	private String empName;
 	
 	@Column(name = "exprience")
 	private float exprience;
 	
+	@NotEmpty(message = "The grade is required.")
 	@Column(name = "grade")
 	private String grade;
 	
+	@NotEmpty(message = "The current skills is required.")
 	@Column(name = "current_skill")
 	private String currentSkill;
 	

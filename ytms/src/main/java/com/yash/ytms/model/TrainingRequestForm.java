@@ -1,11 +1,16 @@
 package com.yash.ytms.model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.*;
 
 import javax.persistence.*;
+import javax.validation.Valid;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 
 /**
  * This class will responsible to map the data with training_request_form table
@@ -15,8 +20,10 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
  */
 @Entity
 @Table(name="training_request_form")
-public class TrainingRequestForm {
+public class TrainingRequestForm implements Serializable{
 
+	private static final long serialVersionUID = 1234567L;
+	
 	/**
 	 * This will hold the auto generated primary keys value
 	 */
@@ -27,15 +34,18 @@ public class TrainingRequestForm {
 	/**
 	 * This will hold the training title name
 	 */
+	@NotEmpty(message = "The training title is required.")
 	@Column(name = "training_title")
 	private String trainingTitle;
 	
 	/**
 	 * This will hold the type of training like online or offline
 	 */
+	@NotEmpty(message = "The training type is required.")
 	@Column(name = "training_type")
 	private String trainingType;
 	
+	@NotEmpty(message = "The resource type is required.")
 	@Column(name = "resource_type")
 	private String resourceType;
 	
@@ -54,6 +64,7 @@ public class TrainingRequestForm {
 	/**
 	 * This will hold the initiate date of training
 	 */
+	@NotNull(message = "The initiated date is required.")
 	@Column(name = "initiated_from")
 	private LocalDate initiatedFrom;
 	
@@ -78,18 +89,22 @@ public class TrainingRequestForm {
 	/**
 	 * This will hold the start date of training
 	 */
+	@NotNull(message = "The start date is required.")
 	@Column(name = "start_date")
 	private LocalDate startDate;
 	
 	/**
 	 * This will hold the end date of training
 	 */
+	@NotNull(message = "The end date is required.")
 	@Column(name = "end_date")
 	private LocalDate endDate;
 	
 	/**
 	 * Hold the list of associate which will participate in the training
 	 */
+    @Valid
+    @NotNull(message = "The associates is required.")
 	@JsonManagedReference
     @OneToMany(cascade =  CascadeType.ALL,mappedBy = "trf")
     private List<Associate> associates;
