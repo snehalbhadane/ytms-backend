@@ -17,4 +17,5 @@ public interface TRFService {
 
 	public TrainingRequestForm createTRF(TrainingRequestForm form);
 	public List<TrainingRequestForm> getAllTrf();
+	public TrainingRequestForm getById(Long Id);
 }
