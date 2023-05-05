@@ -16,6 +16,7 @@ public class TrainerServiceImpl implements TrainerService {
 	@Override
 	public Trainer saveTrainerDeatils(Trainer trainer) {
 		// TODO Auto-generated method stub
+		System.out.println(trainer);
 		return rainerRepository.save(trainer);
 	}
 
