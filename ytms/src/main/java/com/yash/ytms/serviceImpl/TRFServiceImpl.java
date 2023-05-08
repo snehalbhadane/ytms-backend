@@ -1,11 +1,13 @@
 package com.yash.ytms.serviceImpl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.yash.ytms.exception.TRFNotFound;
 import com.yash.ytms.model.TrainingRequestForm;
 import com.yash.ytms.repo.TRFRepository;
 import com.yash.ytms.service.TRFService;
@@ -44,9 +46,13 @@ public class TRFServiceImpl implements TRFService{
 		return trfRepository.findAll();	
 	}
 
+	/**
+	 * This method will fetch the training request form by id
+	 * @throws TRFNotFound will throw not found excpetion
+	 */
 	@Override
-	public TrainingRequestForm getById(Long Id) {
+	public TrainingRequestForm getById(Long Id) throws TRFNotFound {
 		// TODO Auto-generated method stub
-		return null;
+        return trfRepository.findById(Id).orElseThrow(()-> new TRFNotFound("Not Found"));
 	}
 }

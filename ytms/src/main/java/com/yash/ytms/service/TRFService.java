@@ -1,9 +1,11 @@
 package com.yash.ytms.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
+import com.yash.ytms.exception.TRFNotFound;
 import com.yash.ytms.model.TrainingRequestForm;
 
 /**
@@ -17,5 +19,5 @@ public interface TRFService {
 
 	public TrainingRequestForm createTRF(TrainingRequestForm form);
 	public List<TrainingRequestForm> getAllTrf();
-	public TrainingRequestForm getById(Long Id);
+	public TrainingRequestForm getById(Long Id) throws TRFNotFound;
 }

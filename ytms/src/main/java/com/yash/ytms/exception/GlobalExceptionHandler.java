@@ -9,26 +9,33 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
+import org.springframework.web.servlet.NoHandlerFoundException;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-@ControllerAdvice
-public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
-  @Override
-  protected ResponseEntity<Object> handleMethodArgumentNotValid(
-      MethodArgumentNotValidException ex, HttpHeaders headers,
-      HttpStatus status, WebRequest request) {
+@RestControllerAdvice
+public class GlobalExceptionHandler 
+{
+  @ResponseStatus(HttpStatus.NOT_FOUND)
+  @ExceptionHandler(TRFNotFound.class)
+  private ResponseEntity<Object> handleResourceNotFoundException(TRFNotFound e) {
+	    Map<String, String> map = new HashMap<>();
+	    map.put("error", e.getMessage());
+        return ResponseEntity
+          .status(HttpStatus.FORBIDDEN)
+          .body(map);
+  }
 
-    Map<String, List<String>> body = new HashMap<>();
-
-    List<String> errors = ex.getBindingResult()
-        .getFieldErrors()
-        .stream()
-        .map(DefaultMessageSourceResolvable::getDefaultMessage)
-        .collect(Collectors.toList());
-
-    body.put("errors", errors);
-
-    return new ResponseEntity<>(body, HttpStatus.BAD_REQUEST);
+  @ResponseStatus(HttpStatus.BAD_REQUEST)
+  @ExceptionHandler(MethodArgumentNotValidException.class)
+  public Map<String, String> handleMethodArgumentNotValid(MethodArgumentNotValidException ex){
+	  Map<String, String> map = new HashMap<>();
+	  ex.getBindingResult().getFieldErrors().forEach(e->{
+		  map.put(e.getField(), e.getDefaultMessage());
+	  });
+	  return map;
   }
 }
