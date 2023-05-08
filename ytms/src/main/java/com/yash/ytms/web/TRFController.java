@@ -33,7 +33,6 @@ import lombok.NonNull;
  */
 @RestController
 @RequestMapping("/trf")
-@Validated
 public class TRFController {
 
 	/**
