@@ -2,7 +2,6 @@ package com.yash.ytms.model;
 
 import java.time.LocalDateTime;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -11,7 +10,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -21,9 +19,9 @@ public class Trainer {
 	@Id
 	@Column(name = "trainer_id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int trainerId;
+	private Long trainerId;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "user_id", referencedColumnName = "user_id")
 	private User user;
 
@@ -53,7 +51,7 @@ public class Trainer {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Trainer(int trainerId, User user, String currentLocation, String baseLocation, String irm, String type,
+	public Trainer(Long trainerId, User user, String currentLocation, String baseLocation, String irm, String type,
 			String totalExperience, LocalDateTime createdOn, LocalDateTime updatedOn) {
 		super();
 		this.trainerId = trainerId;
@@ -67,11 +65,11 @@ public class Trainer {
 		this.updatedOn = updatedOn;
 	}
 
-	public int getTrainerId() {
+	public Long getTrainerId() {
 		return trainerId;
 	}
 
-	public void setTrainerId(int trainerId) {
+	public void setTrainerId(Long trainerId) {
 		this.trainerId = trainerId;
 	}
 

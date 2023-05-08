@@ -21,7 +21,7 @@ public class User {
 	@Id
 	@Column(name = "user_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int userId;
+	private Long userId;
 	
 	@Column(name = "emp_code")
 	private String empCode;
@@ -50,7 +50,7 @@ public class User {
 	@Column(name = "experience")
 	private String experience;
 	
-	@OneToOne(cascade = CascadeType.ALL,fetch=FetchType.LAZY)
+	@OneToOne(cascade = CascadeType.ALL,fetch=FetchType.EAGER)
 	@JoinColumn(name="role_id",referencedColumnName ="role_Id")
 	private Role role;
 	
@@ -78,7 +78,7 @@ public class User {
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(int userId, String empCode, String firstName, String lastName, String email, String passwod, int mobile,
+	public User(Long userId, String empCode, String firstName, String lastName, String email, String passwod, int mobile,
 			String gender, Date dobDate, String experience, Role role, String location, String project,
 			String designation, LocalDateTime createdOn, LocalDateTime updatedDate, User createdBy) {
 		super();
@@ -101,11 +101,11 @@ public class User {
 		this.createdBy = createdBy;
 	}
 
-	public int getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
 
-	public void setUserId(int userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 

@@ -53,4 +53,13 @@ public class GlobalExceptionHandler
 	  });
 	  return map;
   }
+  
+  @ExceptionHandler(TrainerNotFound.class)
+	private ResponseEntity<Object> resourceNotFoundException(TrainerNotFound ex) {
+		
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("error", ex.getMessage());
+		
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(map);
+  }	
 }

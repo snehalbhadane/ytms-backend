@@ -20,7 +20,7 @@ public class TrainerTask {
 	@Id
 	@Column(name = "trainer_task_id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int trainerTaskId;
+	private Long trainerTaskId;
 
 	@Column(name = "task_date")
 	private LocalDateTime taskDate;
@@ -55,7 +55,7 @@ public class TrainerTask {
 		// TODO Auto-generated constructor stub
 	}
 
-	public TrainerTask(int trainerTaskId, LocalDateTime taskDate, String firstHalf, String firstHalfDescription,
+	public TrainerTask(Long trainerTaskId, LocalDateTime taskDate, String firstHalf, String firstHalfDescription,
 			String secondHalf, String secondHalfDescription, User createdBy, LocalDateTime createdOn,
 			LocalDateTime updatedOn, boolean active) {
 		super();
@@ -71,11 +71,11 @@ public class TrainerTask {
 		this.active = active;
 	}
 
-	public int getTrainerTaskId() {
+	public Long getTrainerTaskId() {
 		return trainerTaskId;
 	}
 
-	public void setTrainerTaskId(int trainerTaskId) {
+	public void setTrainerTaskId(Long trainerTaskId) {
 		this.trainerTaskId = trainerTaskId;
 	}
 
