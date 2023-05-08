@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.yash.ytms.dto.TRFGetByIdResponse;
 import com.yash.ytms.exception.TRFNotFound;
 import com.yash.ytms.model.TrainingRequestForm;
 import com.yash.ytms.service.TRFService;
