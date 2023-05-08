@@ -16,9 +16,19 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.NoHandlerFoundException;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+/**
+ * This class will handle the exception
+ * @author dheerendra.kag
+ *
+ */
 @RestControllerAdvice
 public class GlobalExceptionHandler 
 {
+  /**
+   * This method will handle the resource not found exception
+   * @param e user define TRFNotFound Exception
+   * @return the handler message
+   */
   @ResponseStatus(HttpStatus.NOT_FOUND)
   @ExceptionHandler(TRFNotFound.class)
   private ResponseEntity<Object> handleResourceNotFoundException(TRFNotFound e) {
@@ -29,6 +39,11 @@ public class GlobalExceptionHandler
           .body(map);
   }
 
+  /**
+   * This method will handle the bad request exception
+   * @param ex predefine argument not valid exception
+   * @return the handler message
+   */
   @ResponseStatus(HttpStatus.BAD_REQUEST)
   @ExceptionHandler(MethodArgumentNotValidException.class)
   public Map<String, String> handleMethodArgumentNotValid(MethodArgumentNotValidException ex){

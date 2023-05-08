@@ -70,23 +70,6 @@ public class TRFController {
 	 */
 	@GetMapping("/getById/{id}")
 	public ResponseEntity<TrainingRequestForm> getAllTrf(@PathVariable("id") Long id) throws TRFNotFound{
-//		Optional<TrainingRequestForm> formOptional = trfService.getById(id);
-//		TRFGetByIdResponse response = null;
-////	    if(formOptional.isPresent()) {
-////        	 response = new TRFGetByIdResponse(302,"Found",formOptional.get());
-////        }else {
-////        	 response = new TRFGetByIdResponse(404,"Not Found",null);
-////        }			
-////		return response;
-//		TrainingRequestForm form = null;
-//		try {
-//			form = formOptional.orElseThrow(()->new TRFNotFound("User with ID :"+id+" Not Found!"));
-//		} catch (TRFNotFound e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//        
-//        return ResponseEntity.ok().body(form);
 		return new ResponseEntity<TrainingRequestForm>(trfService.getById(id),HttpStatus.FOUND);
     }
 }
