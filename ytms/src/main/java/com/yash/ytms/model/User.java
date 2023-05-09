@@ -11,6 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -50,7 +51,7 @@ public class User {
 	@Column(name = "experience")
 	private String experience;
 	
-	@OneToOne(cascade = CascadeType.ALL,fetch=FetchType.EAGER)
+	@OneToOne(cascade = CascadeType.ALL,fetch=FetchType.LAZY)
 	@JoinColumn(name="role_id",referencedColumnName ="role_Id")
 	private Role role;
 	
@@ -69,9 +70,9 @@ public class User {
 	@Column(name = "updated_date")
 	private LocalDateTime updatedDate;
 	
-	@OneToOne(cascade = CascadeType.ALL,fetch=FetchType.LAZY)
-	@JoinColumn(name="created_by_id")
-	private User createdBy;
+//	@OneToOne(cascade = CascadeType.ALL,fetch=FetchType.LAZY)
+//	@JoinColumn(name="created_by_id")
+//	private User createdBy;
 
 	public User() {
 		super();
@@ -80,7 +81,7 @@ public class User {
 
 	public User(Long userId, String empCode, String firstName, String lastName, String email, String passwod, int mobile,
 			String gender, Date dobDate, String experience, Role role, String location, String project,
-			String designation, LocalDateTime createdOn, LocalDateTime updatedDate, User createdBy) {
+			String designation, LocalDateTime createdOn, LocalDateTime updatedDate) {
 		super();
 		this.userId = userId;
 		this.empCode = empCode;
@@ -98,7 +99,7 @@ public class User {
 		this.designation = designation;
 		this.createdOn = createdOn;
 		this.updatedDate = updatedDate;
-		this.createdBy = createdBy;
+		
 	}
 
 	public Long getUserId() {
@@ -229,12 +230,5 @@ public class User {
 		this.updatedDate = updatedDate;
 	}
 
-	public User getCreatedBy() {
-		return createdBy;
-	}
-
-	public void setCreatedBy(User createdBy) {
-		this.createdBy = createdBy;
-	}
 
 }
