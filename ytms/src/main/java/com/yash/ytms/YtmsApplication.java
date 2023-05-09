@@ -8,7 +8,6 @@ public class YtmsApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(YtmsApplication.class, args);
-
 		System.out.println("Wellcome to YTMS");
 	}
 

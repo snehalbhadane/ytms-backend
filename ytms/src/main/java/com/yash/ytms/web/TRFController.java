@@ -67,7 +67,7 @@ public class TRFController {
 	 * @throws TRFNotFound 
 	 */
 	@GetMapping("/getById/{id}")
-	public ResponseEntity<TrainingRequestForm> getAllTrf(@PathVariable("id") Long id) throws TRFNotFound{
+	public ResponseEntity<TrainingRequestForm> getTrfById(@PathVariable("id") Long id) throws TRFNotFound{
 		return new ResponseEntity<TrainingRequestForm>(trfService.getById(id),HttpStatus.FOUND);
     }
 }
