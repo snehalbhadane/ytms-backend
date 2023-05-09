@@ -1,9 +1,14 @@
 package com.yash.ytms.controller;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -20,8 +25,11 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.yash.ytms.exception.TRFNotFound;
 import com.yash.ytms.model.Associate;
 import com.yash.ytms.model.TrainingRequestForm;
@@ -51,15 +59,15 @@ public class TRFControllerTest {
 		trf.setResourceType("xyz");
 		trf.setDuration(25);
 		trf.setPurposeOfTraining("abc");
-//		LocalDate initFrom = LocalDate.of(2023, 05, 05);
-//		trf.setInitiatedFrom(initFrom);
+		LocalDate initFrom = LocalDate.of(2023, 05, 05);
+		trf.setInitiatedFrom(initFrom);
 		trf.setProjectName("CAT");
 		trf.setSkillToBeImpartent("");
 		trf.setNoOfParticipants(25);
-//		LocalDate startDate = LocalDate.of(2023, 05, 05);
-//		trf.setStartDate(startDate);
-//		LocalDate endDate = LocalDate.of(2023, 07, 05);
-//		trf.setEndDate(endDate);
+		LocalDate startDate = LocalDate.of(2023, 05, 05);
+		trf.setStartDate(startDate);
+		LocalDate endDate = LocalDate.of(2023, 07, 05);
+		trf.setEndDate(endDate);
 		Associate ass = new Associate();
 		ass.setEmpId((long)1016720);
 		ass.setEmpName("Dheerendra kag");
@@ -77,28 +85,32 @@ public class TRFControllerTest {
     
     public static String asJsonString(final Object obj) {
         try {
-            return new ObjectMapper().writeValueAsString(obj);
+        	ObjectMapper mapper = new ObjectMapper();
+        	mapper.registerModule(new JavaTimeModule());
+        	mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
+            return mapper.writeValueAsString(obj);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
     
     @Test
-    public void createTrfTest(){
+    public void createTrfTest() throws Exception{
 
     	when(trfService.createTRF(any())).thenReturn(trf);
-    	MvcResult res = null;
-        try {
-			res = mockMvc.perform(MockMvcRequestBuilders.post("/trf/create")
-			                                            .contentType(MediaType.APPLICATION_JSON)
-			                                            .content(asJsonString(trf)))
-					     .andDo(print()).andReturn();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-        assertEquals(400, res.getResponse().getStatus());
+        mockMvc.perform(MockMvcRequestBuilders.
+                post("/trf/create")
+                    .content(asJsonString(trf))
+                    .contentType(MediaType.APPLICATION_JSON)
+                )
+                .andDo(print())
+                .andExpect(status().isCreated())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$.trainingType", is("online")))
+                .andExpect(jsonPath("$.initiatedFrom", is("2023-05-05")))
+                .andExpect(jsonPath("$").isNotEmpty());
     }
-
+    
     @Test
     public void getAllTrfTest() {
     	List<TrainingRequestForm> list = new ArrayList<>();
@@ -131,5 +143,19 @@ public class TRFControllerTest {
 			e.printStackTrace();
 		}
     	assertEquals(302, res.getResponse().getStatus());
+    }
+    
+    @Test
+    public void getTrfByIdTestTRFNotFoundException() throws Exception {
+    	try {
+			when(trfService.getById(any())).thenThrow(new TRFNotFound("Not Found"));
+		} catch (TRFNotFound e) {
+			e.printStackTrace();
+		}
+        mockMvc.perform(MockMvcRequestBuilders.get("/trf/getById/1"))
+                .andDo(print())
+                .andExpect(status().isForbidden())
+                .andExpect(jsonPath("$.error").value("Not Found"));
+
     }
 }
