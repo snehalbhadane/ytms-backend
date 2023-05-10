@@ -48,7 +48,7 @@ public class TRFController {
 	 */
 	@PostMapping("/create")
 	public ResponseEntity<TrainingRequestForm> createTrf(@Valid @RequestBody(required=false) TrainingRequestForm form){
-		return new ResponseEntity<TrainingRequestForm>(trfService.createTRF(form), HttpStatus.CREATED);
+		return new ResponseEntity<>(trfService.createTRF(form), HttpStatus.CREATED);
 	}
 	
 	/**
@@ -57,7 +57,7 @@ public class TRFController {
 	 */
 	@GetMapping("/getAllTrf")
 	public ResponseEntity<List<TrainingRequestForm>> getAllTrf(){
-		return new ResponseEntity<List<TrainingRequestForm>>(trfService.getAllTrf(),HttpStatus.OK);
+		return new ResponseEntity<>(trfService.getAllTrf(),HttpStatus.OK);
 	}
 	
 	/**
@@ -68,6 +68,6 @@ public class TRFController {
 	 */
 	@GetMapping("/getById/{id}")
 	public ResponseEntity<TrainingRequestForm> getTrfById(@PathVariable("id") Long id) throws TRFNotFound{
-		return new ResponseEntity<TrainingRequestForm>(trfService.getById(id),HttpStatus.FOUND);
+		return new ResponseEntity<>(trfService.getById(id),HttpStatus.FOUND);
     }
 }

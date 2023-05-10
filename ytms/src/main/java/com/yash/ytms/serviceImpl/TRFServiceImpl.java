@@ -33,7 +33,6 @@ public class TRFServiceImpl implements TRFService{
 	@Transactional
 	@Override
 	public TrainingRequestForm createTRF(TrainingRequestForm form) {
-		// TODO Auto-generated method stub
 		return trfRepository.save(form);
 	}
 
@@ -42,7 +41,6 @@ public class TRFServiceImpl implements TRFService{
 	 */
 	@Override
 	public List<TrainingRequestForm> getAllTrf() {
-		// TODO Auto-generated method stub
 		return trfRepository.findAll();	
 	}
 
@@ -52,7 +50,6 @@ public class TRFServiceImpl implements TRFService{
 	 */
 	@Override
 	public TrainingRequestForm getById(Long Id) throws TRFNotFound {
-		// TODO Auto-generated method stub
-        return trfRepository.findById(Id).orElseThrow(()-> new TRFNotFound("Not Found"));
+		return trfRepository.findById(Id).orElseThrow(()-> new TRFNotFound("Not Found"));
 	}
 }
