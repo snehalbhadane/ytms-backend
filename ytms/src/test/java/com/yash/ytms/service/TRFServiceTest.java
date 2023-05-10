@@ -29,7 +29,7 @@ import com.yash.ytms.serviceImpl.TRFServiceImpl;
  *
  */
 @ExtendWith(MockitoExtension.class)
-public class TRFServiceTest {
+	class TRFServiceTest {
 
 	/**
 	 * This will Autowired the dependency
@@ -74,7 +74,7 @@ public class TRFServiceTest {
 	}
 	
 	@Test
-	public void createTRFTest() {
+	 void createTRFTest() {
 
 		when(trfRepo.save(any(TrainingRequestForm.class))).thenReturn(trf);
 		TrainingRequestForm res = trfServiceImpl.createTRF(trf);
@@ -82,16 +82,16 @@ public class TRFServiceTest {
 	}
 	
 	@Test
-	public void getAllTrfTest() {
+	 void getAllTrfTest() {
 		List<TrainingRequestForm> list = new ArrayList<>();
 		list.add(trf);
 		when(trfRepo.findAll()).thenReturn(list);
 		List<TrainingRequestForm> res = trfServiceImpl.getAllTrf();
-		assertThat(res.size()).isEqualTo(1);
+		assertThat(res).hasSize(1);
 	}
 	
 	@Test
-	public void getByIdTest() {
+	 void getByIdTest() {
 		when(trfRepo.findById((long)1)).thenReturn(Optional.of(trf));
 		TrainingRequestForm res = null;
 		try {
