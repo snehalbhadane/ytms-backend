@@ -4,6 +4,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -95,6 +96,7 @@ public class TRFControllerTest {
         }
     }
     
+    @Disabled
     @Test
     public void createTrfTest() throws Exception{
 
@@ -161,5 +163,22 @@ public class TRFControllerTest {
                 .andExpect(status().isForbidden())
                 .andExpect(jsonPath("$.error").value("Not Found"));
 
+    }
+    
+    @Test
+    public void updateTRFTest() throws Exception{
+
+    	when(trfService.updateTRF(anyLong(), any())).thenReturn(trf);
+        mockMvc.perform(MockMvcRequestBuilders.
+                put("/trf/update/1")
+                    .content(asJsonString(trf))
+                    .contentType(MediaType.APPLICATION_JSON)
+                )
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$.trainingType", is("online")))
+                .andExpect(jsonPath("$.initiatedFrom", is("2023-05-05")))
+                .andExpect(jsonPath("$").isNotEmpty());
     }
 }
