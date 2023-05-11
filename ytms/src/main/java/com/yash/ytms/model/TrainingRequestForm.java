@@ -101,17 +101,21 @@ public class TrainingRequestForm implements Serializable{
 	private LocalDate endDate;
 	
 	/**
+	 * This will hold the request form status is approved or not
+	 */
+	@Column(name = "status")
+	private String status;
+	
+	/**
 	 * Hold the list of associate which will participate in the training
 	 */
-    @Valid
-    @NotNull(message = "The associates is required.")
-	@JsonManagedReference
-    @OneToMany(cascade =  CascadeType.ALL,mappedBy = "trf")
+	
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval=true)
+    @JoinColumn(name = "asst_trf_id", referencedColumnName = "trfId")
     private List<Associate> associates;
 
 	public TrainingRequestForm() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public TrainingRequestForm(Long trfId, String trainingTitle, String trainingType, String resourceType, int duration,
@@ -235,6 +239,15 @@ public class TrainingRequestForm implements Serializable{
 
 	public void setAssociates(List<Associate> associates) {
 		this.associates = associates;
+	}
+
+	
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 	@Override

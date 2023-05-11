@@ -15,6 +15,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -70,4 +71,16 @@ public class TRFController {
 	public ResponseEntity<TrainingRequestForm> getTrfById(@PathVariable("id") Long id) throws TRFNotFound{
 		return new ResponseEntity<>(trfService.getById(id),HttpStatus.FOUND);
     }
+	
+	/**
+	 * This will update the existing record by id
+	 * @param id contain the record id which we want to update
+	 * @param form new training request form data
+	 * @return save record will return with created id
+	 * @throws TRFNotFound if not found record then throws the exception
+	 */
+	@PutMapping("update/{id}")
+	public ResponseEntity<TrainingRequestForm> updateTRF(@PathVariable("id") Long id, @Valid @RequestBody TrainingRequestForm form) throws TRFNotFound{
+		return new ResponseEntity<>(trfService.updateTRF(id, form), HttpStatus.OK);
+	}
 }

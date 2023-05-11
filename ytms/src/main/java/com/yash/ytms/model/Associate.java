@@ -42,19 +42,13 @@ public class Associate implements Serializable{
 	
 	@Column(name = "upgraded_skill_set")
 	private String upgradedSkillSet;
-	
-	@JsonBackReference
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "asst_trf_id", referencedColumnName = "trfId")
-    private TrainingRequestForm trf;
 
 	public Associate() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Associate(Long id, Long empId, String empName, float exprience, String grade, String currentSkill,
-			String currentAllocation, String project, String upgradedSkillSet, TrainingRequestForm trf) {
+			String currentAllocation, String project, String upgradedSkillSet) {
 		super();
 		this.id = id;
 		this.empId = empId;
@@ -65,7 +59,6 @@ public class Associate implements Serializable{
 		this.currentAllocation = currentAllocation;
 		this.project = project;
 		this.upgradedSkillSet = upgradedSkillSet;
-		this.trf = trf;
 	}
 
 	public Long getId() {
@@ -140,18 +133,10 @@ public class Associate implements Serializable{
 		this.upgradedSkillSet = upgradedSkillSet;
 	}
 
-	public TrainingRequestForm getTrf() {
-		return trf;
-	}
-
-	public void setTrf(TrainingRequestForm trf) {
-		this.trf = trf;
-	}
-
 	@Override
 	public String toString() {
 		return "Associate [id=" + id + ", empId=" + empId + ", empName=" + empName + ", exprience=" + exprience
 				+ ", grade=" + grade + ", currentSkill=" + currentSkill + ", currentAllocation=" + currentAllocation
-				+ ", project=" + project + ", upgradedSkillSet=" + upgradedSkillSet + ", trf=" + trf + "]";
+				+ ", project=" + project + ", upgradedSkillSet=" + upgradedSkillSet + "]";
 	}
 }
