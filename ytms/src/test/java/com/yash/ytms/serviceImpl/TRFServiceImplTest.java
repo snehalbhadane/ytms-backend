@@ -1,4 +1,4 @@
-package com.yash.ytms.service;
+package com.yash.ytms.serviceImpl;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
@@ -15,13 +15,11 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.http.ResponseEntity;
 
 import com.yash.ytms.exception.TRFNotFound;
 import com.yash.ytms.model.Associate;
 import com.yash.ytms.model.TrainingRequestForm;
 import com.yash.ytms.repo.TRFRepository;
-import com.yash.ytms.serviceImpl.TRFServiceImpl;
 
 /**
  * This class will test the TRFService
@@ -29,7 +27,7 @@ import com.yash.ytms.serviceImpl.TRFServiceImpl;
  *
  */
 @ExtendWith(MockitoExtension.class)
-	class TRFServiceTest {
+	class TRFServiceImplTest {
 
 	/**
 	 * This will Autowired the dependency

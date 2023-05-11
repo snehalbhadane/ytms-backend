@@ -11,7 +11,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -23,65 +22,65 @@ public class User {
 	@Column(name = "user_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long userId;
-	
+
 	@Column(name = "emp_code")
 	private String empCode;
-	
+
 	@Column(name = "first_name")
 	private String firstName;
-	
+
 	@Column(name = "last_name")
 	private String lastName;
-	
+
 	@Column(name = "email")
 	private String email;
-	
+
 	@Column(name = "passwod")
 	private String passwod;
-	
+
 	@Column(name = "mobile")
 	private int mobile;
-	
+
 	@Column(name = "gender")
 	private String gender;
-	
+
 	@Column(name = "dob_date")
 	private Date dobDate;
-	
+
 	@Column(name = "experience")
 	private String experience;
-	
-	@OneToOne(cascade = CascadeType.ALL,fetch=FetchType.LAZY)
-	@JoinColumn(name="role_id",referencedColumnName ="role_Id")
+
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@JoinColumn(name = "role_id", referencedColumnName = "role_Id")
 	private Role role;
-	
+
 	@Column(name = "location")
 	private String location;
-	
+
 	@Column(name = "project")
 	private String project;
-	
+
 	@Column(name = "designation")
 	private String designation;
-	
+
 	@Column(name = "created_on")
 	private LocalDateTime createdOn;
-	
+
 	@Column(name = "updated_date")
 	private LocalDateTime updatedDate;
-	
-//	@OneToOne(cascade = CascadeType.ALL,fetch=FetchType.LAZY)
-//	@JoinColumn(name="created_by_id")
-//	private User createdBy;
+
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@JoinColumn(name = "created_by_id")
+	private User createdBy;
 
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(Long userId, String empCode, String firstName, String lastName, String email, String passwod, int mobile,
-			String gender, Date dobDate, String experience, Role role, String location, String project,
-			String designation, LocalDateTime createdOn, LocalDateTime updatedDate) {
+	public User(Long userId, String empCode, String firstName, String lastName, String email, String passwod,
+			int mobile, String gender, Date dobDate, String experience, Role role, String location, String project,
+			String designation, LocalDateTime createdOn, LocalDateTime updatedDate, User createdBy) {
 		super();
 		this.userId = userId;
 		this.empCode = empCode;
@@ -99,7 +98,7 @@ public class User {
 		this.designation = designation;
 		this.createdOn = createdOn;
 		this.updatedDate = updatedDate;
-		
+		this.createdBy = createdBy;
 	}
 
 	public Long getUserId() {
@@ -230,5 +229,12 @@ public class User {
 		this.updatedDate = updatedDate;
 	}
 
+	public User getCreatedBy() {
+		return createdBy;
+	}
+
+	public void setCreatedBy(User createdBy) {
+		this.createdBy = createdBy;
+	}
 
 }
