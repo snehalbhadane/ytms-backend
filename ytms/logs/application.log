@@ -1,0 +1,129 @@
+2023-05-11 17:03:37.457  INFO 19572 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-05-11 17:03:37.477  INFO 19572 --- [Thread-40] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-05-11 17:03:37.485  INFO 19572 --- [Thread-40] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-11 17:03:37.485  INFO 19572 --- [Thread-40] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2023-05-11 17:03:37.487  INFO 19572 --- [Thread-40] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2023-05-11 17:03:37.595  INFO 19572 --- [restartedMain] com.yash.ytms.YtmsApplication            : Starting YtmsApplication using Java 15 on YB1016483LT with PID 19572 (D:\YTMS-Project\dev-backend\ytms\target\classes started by sadav.khan in D:\YTMS-Project\dev-backend\ytms)
+2023-05-11 17:03:37.596  INFO 19572 --- [restartedMain] com.yash.ytms.YtmsApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-05-11 17:03:37.881  INFO 19572 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-11 17:03:37.957  INFO 19572 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 7 JPA repository interfaces.
+2023-05-11 17:03:38.125  INFO 19572 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-05-11 17:03:38.126  INFO 19572 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-11 17:03:38.126  INFO 19572 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-11 17:03:38.179  INFO 19572 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-05-11 17:03:38.179  INFO 19572 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 581 ms
+2023-05-11 17:03:38.237  INFO 19572 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-11 17:03:38.245  INFO 19572 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2023-05-11 17:03:38.253  INFO 19572 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2023-05-11 17:03:38.254  INFO 19572 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-05-11 17:03:38.524  INFO 19572 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-11 17:03:38.524  INFO 19572 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-11 17:03:38.790  WARN 19572 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-11 17:03:39.011  INFO 19572 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-05-11 17:03:39.028  INFO 19572 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-11 17:03:39.042  INFO 19572 --- [restartedMain] com.yash.ytms.YtmsApplication            : Started YtmsApplication in 1.491 seconds (JVM running for 322.788)
+2023-05-11 17:03:39.048  INFO 19572 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-05-11 17:03:53.803  INFO 19572 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-05-11 17:03:53.820  INFO 19572 --- [Thread-44] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-05-11 17:03:53.826  INFO 19572 --- [Thread-44] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-11 17:03:53.827  INFO 19572 --- [Thread-44] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2023-05-11 17:03:53.829  INFO 19572 --- [Thread-44] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2023-05-11 17:03:53.965  INFO 19572 --- [restartedMain] com.yash.ytms.YtmsApplication            : Starting YtmsApplication using Java 15 on YB1016483LT with PID 19572 (D:\YTMS-Project\dev-backend\ytms\target\classes started by sadav.khan in D:\YTMS-Project\dev-backend\ytms)
+2023-05-11 17:03:53.965  INFO 19572 --- [restartedMain] com.yash.ytms.YtmsApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-05-11 17:03:54.430  INFO 19572 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-11 17:03:54.541  INFO 19572 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109 ms. Found 7 JPA repository interfaces.
+2023-05-11 17:03:54.740  INFO 19572 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-05-11 17:03:54.741  INFO 19572 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-11 17:03:54.741  INFO 19572 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-11 17:03:54.808  INFO 19572 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-05-11 17:03:54.809  INFO 19572 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 841 ms
+2023-05-11 17:03:54.887  INFO 19572 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-11 17:03:54.895  INFO 19572 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2023-05-11 17:03:54.901  INFO 19572 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2023-05-11 17:03:54.902  INFO 19572 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-05-11 17:03:55.305  INFO 19572 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-11 17:03:55.305  INFO 19572 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-11 17:03:55.639  WARN 19572 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-11 17:03:55.934  INFO 19572 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-05-11 17:03:55.953  INFO 19572 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-11 17:03:55.965  INFO 19572 --- [restartedMain] com.yash.ytms.YtmsApplication            : Started YtmsApplication in 2.063 seconds (JVM running for 339.712)
+2023-05-11 17:03:55.968  INFO 19572 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-05-11 17:04:05.587  INFO 19572 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-05-11 17:04:05.601  INFO 19572 --- [Thread-48] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-05-11 17:04:05.608  INFO 19572 --- [Thread-48] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-11 17:04:05.608  INFO 19572 --- [Thread-48] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2023-05-11 17:04:05.611  INFO 19572 --- [Thread-48] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+2023-05-11 17:04:05.752  INFO 19572 --- [restartedMain] com.yash.ytms.YtmsApplication            : Starting YtmsApplication using Java 15 on YB1016483LT with PID 19572 (D:\YTMS-Project\dev-backend\ytms\target\classes started by sadav.khan in D:\YTMS-Project\dev-backend\ytms)
+2023-05-11 17:04:05.753  INFO 19572 --- [restartedMain] com.yash.ytms.YtmsApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-05-11 17:04:06.104  INFO 19572 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-11 17:04:06.191  INFO 19572 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 7 JPA repository interfaces.
+2023-05-11 17:04:06.365  INFO 19572 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-05-11 17:04:06.366  INFO 19572 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-11 17:04:06.366  INFO 19572 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-11 17:04:06.420  INFO 19572 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-05-11 17:04:06.420  INFO 19572 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 662 ms
+2023-05-11 17:04:06.478  INFO 19572 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-11 17:04:06.485  INFO 19572 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2023-05-11 17:04:06.490  INFO 19572 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2023-05-11 17:04:06.491  INFO 19572 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-05-11 17:04:06.787  INFO 19572 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-11 17:04:06.787  INFO 19572 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-11 17:04:07.079  WARN 19572 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-11 17:04:07.280  INFO 19572 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-05-11 17:04:07.299  INFO 19572 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-11 17:04:07.313  INFO 19572 --- [restartedMain] com.yash.ytms.YtmsApplication            : Started YtmsApplication in 1.632 seconds (JVM running for 351.059)
+2023-05-11 17:04:07.316  INFO 19572 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-05-11 17:04:10.772  INFO 19572 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-05-11 17:04:10.783  INFO 19572 --- [Thread-52] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-05-11 17:04:10.787  INFO 19572 --- [Thread-52] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-11 17:04:10.788  INFO 19572 --- [Thread-52] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
+2023-05-11 17:04:10.790  INFO 19572 --- [Thread-52] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
+2023-05-11 17:04:10.926  INFO 19572 --- [restartedMain] com.yash.ytms.YtmsApplication            : Starting YtmsApplication using Java 15 on YB1016483LT with PID 19572 (D:\YTMS-Project\dev-backend\ytms\target\classes started by sadav.khan in D:\YTMS-Project\dev-backend\ytms)
+2023-05-11 17:04:10.927  INFO 19572 --- [restartedMain] com.yash.ytms.YtmsApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-05-11 17:04:11.282  INFO 19572 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-11 17:04:11.374  INFO 19572 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 7 JPA repository interfaces.
+2023-05-11 17:04:11.534  INFO 19572 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-05-11 17:04:11.535  INFO 19572 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-11 17:04:11.535  INFO 19572 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-11 17:04:11.572  INFO 19572 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-05-11 17:04:11.573  INFO 19572 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 644 ms
+2023-05-11 17:04:11.632  INFO 19572 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-11 17:04:11.639  INFO 19572 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
+2023-05-11 17:04:11.644  INFO 19572 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
+2023-05-11 17:04:11.645  INFO 19572 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-05-11 17:04:11.923  INFO 19572 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-11 17:04:11.924  INFO 19572 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-11 17:04:12.225  WARN 19572 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-11 17:04:12.464  INFO 19572 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-05-11 17:04:12.489  INFO 19572 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-11 17:04:12.508  INFO 19572 --- [restartedMain] com.yash.ytms.YtmsApplication            : Started YtmsApplication in 1.636 seconds (JVM running for 356.254)
+2023-05-11 17:04:12.510  INFO 19572 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-05-11 17:04:48.735  INFO 19572 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-05-11 17:04:48.748  INFO 19572 --- [Thread-56] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-05-11 17:04:48.754  INFO 19572 --- [Thread-56] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-11 17:04:48.755  INFO 19572 --- [Thread-56] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
+2023-05-11 17:04:48.757  INFO 19572 --- [Thread-56] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
+2023-05-11 17:04:48.900  INFO 19572 --- [restartedMain] com.yash.ytms.YtmsApplication            : Starting YtmsApplication using Java 15 on YB1016483LT with PID 19572 (D:\YTMS-Project\dev-backend\ytms\target\classes started by sadav.khan in D:\YTMS-Project\dev-backend\ytms)
+2023-05-11 17:04:48.900  INFO 19572 --- [restartedMain] com.yash.ytms.YtmsApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-05-11 17:04:49.251  INFO 19572 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-11 17:04:49.381  INFO 19572 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129 ms. Found 7 JPA repository interfaces.
+2023-05-11 17:04:49.540  INFO 19572 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-05-11 17:04:49.541  INFO 19572 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-11 17:04:49.541  INFO 19572 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-11 17:04:49.585  INFO 19572 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-05-11 17:04:49.585  INFO 19572 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 682 ms
+2023-05-11 17:04:49.644  INFO 19572 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-11 17:04:49.650  INFO 19572 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Starting...
+2023-05-11 17:04:49.658  INFO 19572 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Start completed.
+2023-05-11 17:04:49.658  INFO 19572 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-05-11 17:04:49.928  INFO 19572 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-11 17:04:49.929  INFO 19572 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-11 17:04:50.210  WARN 19572 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-11 17:04:50.435  INFO 19572 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-05-11 17:04:50.461  INFO 19572 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-11 17:04:50.484  INFO 19572 --- [restartedMain] com.yash.ytms.YtmsApplication            : Started YtmsApplication in 1.645 seconds (JVM running for 394.23)
+2023-05-11 17:04:50.486  INFO 19572 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-05-11 17:04:57.895  INFO 19572 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-11 17:04:57.896  INFO 19572 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-11 17:04:57.898  INFO 19572 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-05-11 17:04:58.170  INFO 19572 --- [http-nio-8080-exec-2] com.yash.ytms.web.TrainerController      : save() called from TrainerController.com.yash.ytms.model.Trainer@8c11774
