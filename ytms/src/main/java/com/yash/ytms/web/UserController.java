@@ -32,6 +32,9 @@ public class UserController {
 		List<User> user = userService.getListOfAllUsers();
 		return  ResponseEntity.ok(user);
 	}
+//	
+//	@PostMapping("/login")
+	
 	
 
 }

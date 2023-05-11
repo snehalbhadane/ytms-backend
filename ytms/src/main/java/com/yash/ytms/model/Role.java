@@ -17,17 +17,12 @@ public class Role {
 	private int roleId;
 
 	@Column(name = "role_name")
-	private int roleName;
+	private String roleName;
 
 	@Column(name = "role_code")
 	private int roleCode;
 
-	public Role() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public Role(int roleId, int roleName, int roleCode) {
+	public Role(int roleId, String roleName, int roleCode) {
 		super();
 		this.roleId = roleId;
 		this.roleName = roleName;
@@ -42,11 +37,11 @@ public class Role {
 		this.roleId = roleId;
 	}
 
-	public int getRoleName() {
+	public String getRoleName() {
 		return roleName;
 	}
 
-	public void setRoleName(int roleName) {
+	public void setRoleName(String roleName) {
 		this.roleName = roleName;
 	}
 
@@ -57,5 +52,12 @@ public class Role {
 	public void setRoleCode(int roleCode) {
 		this.roleCode = roleCode;
 	}
+
+	public Role() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	
 
 }

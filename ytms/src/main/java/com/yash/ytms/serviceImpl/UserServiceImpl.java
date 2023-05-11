@@ -26,4 +26,25 @@ public class UserServiceImpl implements UserService{
 		return userRepository.findAll();
 	}
 
+	@Override
+	public String fetchEmailAndPasswod(String email, String passwod) {
+//		User user=new User();
+//		user.setEmail(email);
+//		user.setPasswod(password);
+//           userRepository.findByEmailAndPassword(email, password).toString();
+//	 
+//
+//	 if(user.getEmail().equals(string) && user.getPasswod().equals(password)) {
+//			 
+//			 return "login Successfully";
+//		 
+//		 }
+//		 else {
+//			 return "Invalid credentinal";
+//		 }
+		
+		return "Hii";
+		
+	}
+
 }

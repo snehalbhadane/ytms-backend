@@ -1,5 +1,6 @@
 package com.yash.ytms.model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
 
@@ -11,6 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -40,19 +42,21 @@ public class User {
 	private String passwod;
 	
 	@Column(name = "mobile")
-	private int mobile;
+	private String mobile;
 	
 	@Column(name = "gender")
 	private String gender;
 	
 	@Column(name = "dob_date")
-	private Date dobDate;
+	private LocalDate dobDate;
 	
 	@Column(name = "experience")
 	private String experience;
 	
-	@OneToOne(cascade = CascadeType.ALL,fetch=FetchType.LAZY)
-	@JoinColumn(name="role_id",referencedColumnName ="role_Id")
+	//Change role type into string 
+	
+	@ManyToOne
+	@JoinColumn(name = "role_id")
 	private Role role;
 	
 	@Column(name = "location")
@@ -65,23 +69,21 @@ public class User {
 	private String designation;
 	
 	@Column(name = "created_on")
-	private LocalDateTime createdOn;
+	private LocalDate createdOn;
 	
 	@Column(name = "updated_date")
-	private LocalDateTime updatedDate;
+	private LocalDate updatedDate;
 	
-//	@OneToOne(cascade = CascadeType.ALL,fetch=FetchType.LAZY)
-//	@JoinColumn(name="created_by_id")
-//	private User createdBy;
+	
 
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(Long userId, String empCode, String firstName, String lastName, String email, String passwod, int mobile,
-			String gender, Date dobDate, String experience, Role role, String location, String project,
-			String designation, LocalDateTime createdOn, LocalDateTime updatedDate) {
+	public User(Long userId, String empCode, String firstName, String lastName, String email, String passwod,
+			String mobile, String gender, LocalDate dobDate, String experience, Role role, String location,
+			String project, String designation, LocalDate createdOn, LocalDate updatedDate) {
 		super();
 		this.userId = userId;
 		this.empCode = empCode;
@@ -99,7 +101,6 @@ public class User {
 		this.designation = designation;
 		this.createdOn = createdOn;
 		this.updatedDate = updatedDate;
-		
 	}
 
 	public Long getUserId() {
@@ -150,11 +151,11 @@ public class User {
 		this.passwod = passwod;
 	}
 
-	public int getMobile() {
+	public String getMobile() {
 		return mobile;
 	}
 
-	public void setMobile(int mobile) {
+	public void setMobile(String mobile) {
 		this.mobile = mobile;
 	}
 
@@ -166,11 +167,11 @@ public class User {
 		this.gender = gender;
 	}
 
-	public Date getDobDate() {
+	public LocalDate getDobDate() {
 		return dobDate;
 	}
 
-	public void setDobDate(Date dobDate) {
+	public void setDobDate(LocalDate dobDate) {
 		this.dobDate = dobDate;
 	}
 
@@ -214,21 +215,28 @@ public class User {
 		this.designation = designation;
 	}
 
-	public LocalDateTime getCreatedOn() {
+	public LocalDate getCreatedOn() {
 		return createdOn;
 	}
 
-	public void setCreatedOn(LocalDateTime createdOn) {
+	public void setCreatedOn(LocalDate createdOn) {
 		this.createdOn = createdOn;
 	}
 
-	public LocalDateTime getUpdatedDate() {
+	public LocalDate getUpdatedDate() {
 		return updatedDate;
 	}
 
-	public void setUpdatedDate(LocalDateTime updatedDate) {
+	public void setUpdatedDate(LocalDate updatedDate) {
 		this.updatedDate = updatedDate;
 	}
-
+	
+	
+//	@OneToOne(cascade = CascadeType.ALL,fetch=FetchType.LAZY)
+//	@JoinColumn(name="created_by_id")
+//	private User createdBy;
+	
+	
+	
 
 }
