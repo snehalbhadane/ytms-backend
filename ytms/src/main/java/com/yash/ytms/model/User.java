@@ -69,7 +69,7 @@ public class User {
 	@Column(name = "updated_date")
 	private LocalDateTime updatedDate;
 
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name = "created_by_id")
 	private User createdBy;
 

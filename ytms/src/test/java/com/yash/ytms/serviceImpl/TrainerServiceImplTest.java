@@ -27,7 +27,7 @@ import com.yash.ytms.repo.TrainerRepository;
  * of service layer
  * 
  * @author shubham.Bhake
- * @author Mohammad.Khan
+ * @author Mohammad.Sadav.Khan
  * 
  *  if the beginning of the specified string cannot be
  * parsed then it throws ParseException

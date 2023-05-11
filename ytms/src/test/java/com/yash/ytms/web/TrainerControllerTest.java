@@ -34,6 +34,17 @@ import com.yash.ytms.model.Trainer;
 import com.yash.ytms.model.User;
 import com.yash.ytms.serviceImpl.TrainerServiceImpl;
 
+/*
+ * To Test saveTrainer(),getTrainers(),getTrainerById(),deleteTrainebyId()
+ * of contoller layer
+ * 
+ * @author shubham.Bhake
+ * @author Mohammad.Sadav.Khan
+ * 
+ *  if the beginning of the specified string cannot be
+ * parsed then it throws ParseException
+ */
+
 @ExtendWith(SpringExtension.class)
 @WebMvcTest(TrainerController.class)
 public class TrainerControllerTest {
