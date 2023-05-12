@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2023-05-11 17:03:37.457  INFO 19572 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
 2023-05-11 17:03:37.477  INFO 19572 --- [Thread-40] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
 2023-05-11 17:03:37.485  INFO 19572 --- [Thread-40] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
@@ -584,3 +585,5 @@ Caused by: java.lang.IllegalArgumentException: Unable to locate Attribute  with 
 2023-05-12 15:57:15.789  INFO 10588 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-05-12 15:57:15.793  INFO 10588 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-05-12 15:57:15.805  INFO 10588 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+=======
+>>>>>>> 776b41c8442e2f9c7041f790054eb65d6673c45c
