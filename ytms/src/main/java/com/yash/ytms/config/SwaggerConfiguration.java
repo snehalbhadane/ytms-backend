@@ -18,14 +18,5 @@ public class SwaggerConfiguration {
 				.apis(RequestHandlerSelectors.basePackage("com.yash.ytms")).build();
 	}
 	
-/*	@Bean
-	public Docket api() {
-		return new Docket(DocumentationType.SWAGGER_2)
-				.select()
-				.apis(RequestHandlerSelectors.any())
-				.paths(PathSelectors.any())
-				.build();
-	} */
-	
 //	http://localhost:8080/swagger-ui.html
 }

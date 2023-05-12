@@ -2,6 +2,7 @@ package com.yash.ytms.web;
 
 import java.util.List;
 
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,45 +17,72 @@ import org.springframework.web.bind.annotation.RestController;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.yash.ytms.config.LoggerConfiguration;
 import com.yash.ytms.model.Trainer;
-import com.yash.ytms.serviceImpl.TrainerServiceImpl;
+import com.yash.ytms.service.TrainerService;
 
-import org.slf4j.Logger;
-
+/**
+ * This class will responsible to handle the incoming request url and map with method
+ * @author shubham.Bhake and Mohammad.Sadav.Khan
+ * @version 1.0
+ * @since 05/05/2023
+ */
 @RestController
 @RequestMapping("/trainer")
 public class TrainerController {
-	
+
 	private Logger logger = LoggerConfiguration.getLogger(TrainerController.class);
-	
+
 	@Autowired
-	TrainerServiceImpl trainerServiceImpl;
-	
+	TrainerService trainerService;
+
+	/**
+	 * This controller method handles the Get request to access list of all 
+	 * trainer.
+	 */
 	@GetMapping("/getTrainers")
 	public ResponseEntity<List<Trainer>> getTrainers() {
-		
-		String methodName = "getTrainers()";
-		logger.info(methodName + " called from TrainerController."); 
-		
-		return new ResponseEntity<List<Trainer>>(trainerServiceImpl.getTrainers(), HttpStatus.OK);
+
+		logger.info("getTrainers() method called from TrainerController class.");
+
+		return new ResponseEntity<List<Trainer>>(trainerService.getTrainers(), HttpStatus.OK);
 	}
 	
+	/**
+	 * This controller method handles the Get request to access 
+	 * trainer based on trainer id.
+	 */
 	@GetMapping("/getTrainer/{trainerId}")
 	public ResponseEntity<Trainer> getTrainer(@PathVariable(value = "trainerId") Long trainerId) {
-		return new ResponseEntity<Trainer>(trainerServiceImpl.getTrainer(trainerId), HttpStatus.OK);
-	}
-	
-	@PostMapping("/save")
-	public ResponseEntity<Trainer> saveTrainer(@RequestBody Trainer trainer)throws JsonParseException {
-		
-		String methodName = "save()";
-		logger.info(methodName + " called from TrainerController." + trainer); 
-		
-		return new ResponseEntity<Trainer>(trainerServiceImpl.saveTrainerDeatils(trainer), HttpStatus.CREATED);
-	}
-	
-	@DeleteMapping("/deleteTrainer/{trainerId}")
-	public void deleteTrainer(@PathVariable(value = "trainerId") Long trainerId) {
-		trainerServiceImpl.deleterainerDeatils(trainerId);
+
+		logger.info("getTrainer/{trainerId} method called from TrainerController class.");
+
+		return new ResponseEntity<Trainer>(trainerService.getTrainer(trainerId), HttpStatus.OK);
 	}
 
+	/**
+	 * This controller method handles the HTTP Post request for insert trainer,
+	 * matching with the given URI.
+	 * 
+	 * @param trainer
+	 */
+	@PostMapping("/save")
+	public ResponseEntity<Trainer> saveTrainer(@RequestBody Trainer trainer) throws JsonParseException {
+
+		logger.info("save method called from TrainerController class.");
+
+		return new ResponseEntity<Trainer>(trainerService.saveTrainerDetails(trainer), HttpStatus.CREATED);
+	}
+
+	/**
+	 * This controller method handles the HTTP delete request for delete trainer details,
+	 * matching with the given URI.
+	 * 
+	 * @param trainer
+	 */
+	@DeleteMapping("/deleteTrainer/{trainerId}")
+	public void deleteTrainer(@PathVariable(value = "trainerId") Long trainerId) {
+
+		logger.info("deleteTrainer/{trainerId} method called from TrainerController class.");
+
+		trainerService.deleteTrainerDetails(trainerId);
+	}
 }

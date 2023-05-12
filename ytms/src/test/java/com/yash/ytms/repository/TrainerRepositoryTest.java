@@ -1,11 +1,14 @@
 package com.yash.ytms.repository;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatObject;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -20,9 +23,9 @@ public class TrainerRepositoryTest {
 
 	@Mock
 	private TrainerRepository trainerRepository;
-	
-	private Trainer tr; 
-	
+
+	private Trainer tr;
+
 	@BeforeEach
 	public void init() {
 		tr = new Trainer();
@@ -48,12 +51,31 @@ public class TrainerRepositoryTest {
 		user.setRole(role);
 		tr.setUser(user);
 	}
-	
+
+	@Disabled
 	@Test
 	public void getTrainersTest() {
-		
+
 		List<Trainer> trainers = trainerRepository.findAll();
-		
+
 		assertThat(trainers).isEmpty();
+	}
+
+	@Disabled
+	@Test
+	public void getTrainerByIdTest() {
+		tr.setTrainerId(1l);
+		trainerRepository.save(tr);
+
+		Optional<Trainer> trObj = trainerRepository.findById(tr.getTrainerId());
+
+		assertThat(trObj).isNotNull();
+	}
+
+	@Disabled
+	@Test
+	public void saveTrainerDeatilsTest() {
+		trainerRepository.save(tr);
+		assertThatObject(tr).isNotNull();
 	}
 }

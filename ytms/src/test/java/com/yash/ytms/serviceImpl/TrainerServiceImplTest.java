@@ -60,7 +60,7 @@ class TrainerServiceImplTest {
 	@BeforeEach
 	public void intialSetup() throws ParseException {
 
-		user = new User(1L, "101", "Shubham", "Bhake", "shubham@gmail.com", "1234567890", 1234567890, "male",
+		user = new User(1L, "101", "Shubham", "Bhake", "shubham@gmail.com", "1234567890", "1234567890", "male",
 				formatter.parse(dob), "2.10 year", role, "Pune", "ytms", "software Enginner", createdOndate,
 				updatedOndate, null);
 
@@ -76,17 +76,17 @@ class TrainerServiceImplTest {
 
 		when(trainerRepository.save(trainer)).thenReturn(trainer);
 
-		assertEquals(trainer, trainerServiceImpl.saveTrainerDeatils(trainer));
+		assertEquals(trainer, trainerServiceImpl.saveTrainerDetails(trainer));
 
-		assertEquals(1234567890, trainerServiceImpl.saveTrainerDeatils(trainer).getUser().getMobile());
+		assertEquals(1234567890, trainerServiceImpl.saveTrainerDetails(trainer).getUser().getMobile());
 
-		assertEquals("Shubham", trainerServiceImpl.saveTrainerDeatils(trainer).getUser().getFirstName());
+		assertEquals("Shubham", trainerServiceImpl.saveTrainerDetails(trainer).getUser().getFirstName());
 	}
 
 	@Test
 	public void getTrainersTest() throws ParseException {
 
-		User user1 = new User(1L, "101", "Shubham", "Bhake", "shubham@gmail.com", "1234567890", 1234567890, "male",
+		User user1 = new User(1L, "101", "Shubham", "Bhake", "shubham@gmail.com", "1234567890", "1234567890", "male",
 				formatter.parse(dob), "2.10 year", role, "Pune", "ytms", "software Enginner", createdOndate,
 				updatedOndate, null);
 
@@ -116,7 +116,7 @@ class TrainerServiceImplTest {
 	}
 
 	@Test
-	public void deleterainerDeatilsTest() throws ParseException {
+	public void deleteTrainerDetailsTest() throws ParseException {
 
 		Trainer trainerr = new Trainer(1L, user, "pune", "Hinjewadi", "mamta", "permenat", "3year", createdOndate,
 				updatedOndate);
@@ -125,7 +125,7 @@ class TrainerServiceImplTest {
 
 		when(trainerRepository.findById(trainerId)).thenReturn(Optional.of(trainerr));
 
-		trainerServiceImpl.deleterainerDeatils(trainerId);
+		trainerServiceImpl.deleteTrainerDetails(trainerId);
 
 		verify(trainerRepository, times(1)).deleteById(trainerId);
 

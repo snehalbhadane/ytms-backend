@@ -32,7 +32,7 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.yash.ytms.model.Role;
 import com.yash.ytms.model.Trainer;
 import com.yash.ytms.model.User;
-import com.yash.ytms.serviceImpl.TrainerServiceImpl;
+import com.yash.ytms.service.TrainerService;
 
 /*
  * To Test saveTrainer(),getTrainers(),getTrainerById(),deleteTrainebyId()
@@ -53,7 +53,7 @@ public class TrainerControllerTest {
 	MockMvc mockMvc;
 
 	@MockBean
-	private TrainerServiceImpl trainerServiceImpl;
+	private TrainerService trainerService;
 
 	private Trainer tr;
 
@@ -101,7 +101,7 @@ public class TrainerControllerTest {
 		
 		trainers.add(tr);
 		
-		when(trainerServiceImpl.getTrainers()).thenReturn(trainers);
+		when(trainerService.getTrainers()).thenReturn(trainers);
 		
 		MvcResult res = null;
 		
@@ -118,7 +118,7 @@ public class TrainerControllerTest {
 	@Test
 	public void getTrainerTest() {
 		
-		when(trainerServiceImpl.getTrainer(any())).thenReturn(tr);
+		when(trainerService.getTrainer(any())).thenReturn(tr);
 		
 		MvcResult res = null;
     	try {
@@ -133,7 +133,7 @@ public class TrainerControllerTest {
 	@Test
 	public void saveTest() throws Exception {
 		
-		when(trainerServiceImpl.saveTrainerDeatils(any())).thenReturn(tr);
+		when(trainerService.saveTrainerDetails(any())).thenReturn(tr);
 		mockMvc.perform(MockMvcRequestBuilders.post("/trainer/save")
 				.content(asJsonString(tr))
                 .contentType(MediaType.APPLICATION_JSON))
@@ -148,7 +148,7 @@ public class TrainerControllerTest {
 	@Test
 	public void deleteTrainerTest() {
 		
-		when(trainerServiceImpl.getTrainer(any())).thenReturn(tr);
+		when(trainerService.getTrainer(any())).thenReturn(tr);
 		
 		MvcResult res = null;
     	try {
