@@ -8,6 +8,4 @@ import com.yash.ytms.model.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{
 	
-//	public User findByEmailAndPasswod(String email,String passwod);
-
 }

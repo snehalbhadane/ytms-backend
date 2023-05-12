@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public String fetchEmailAndPasswod(String email, String passwod) {
+	public String fetchEmailAndPassword(String email, String password) {
 //		User user=new User();
 //		user.setEmail(email);
 //		user.setPasswod(password);
