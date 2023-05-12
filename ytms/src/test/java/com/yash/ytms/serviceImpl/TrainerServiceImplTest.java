@@ -60,7 +60,7 @@ class TrainerServiceImplTest {
 	@BeforeEach
 	public void intialSetup() throws ParseException {
 
-		user = new User(1L, "101", "Shubham", "Bhake", "shubham@gmail.com", "1234567890", 1234567890, "male",
+		user = new User(1L, "101", "Shubham", "Bhake", "shubham@gmail.com", "1234567890", "1234567890", "male",
 				formatter.parse(dob), "2.10 year", role, "Pune", "ytms", "software Enginner", createdOndate,
 				updatedOndate, null);
 
@@ -86,7 +86,7 @@ class TrainerServiceImplTest {
 	@Test
 	public void getTrainersTest() throws ParseException {
 
-		User user1 = new User(1L, "101", "Shubham", "Bhake", "shubham@gmail.com", "1234567890", 1234567890, "male",
+		User user1 = new User(1L, "101", "Shubham", "Bhake", "shubham@gmail.com", "1234567890", "1234567890", "male",
 				formatter.parse(dob), "2.10 year", role, "Pune", "ytms", "software Enginner", createdOndate,
 				updatedOndate, null);
 

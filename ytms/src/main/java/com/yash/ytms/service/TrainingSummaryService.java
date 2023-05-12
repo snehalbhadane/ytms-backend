@@ -9,6 +9,8 @@ public interface TrainingSummaryService {
 	public TrainingSummary addTrainingSummary(TrainingSummary trainingSummary);
 	
 	public List<TrainingSummary> getTrainingSummary();
+	
+	public TrainingSummary getById(Long training_summary_id );
 
 	
 }

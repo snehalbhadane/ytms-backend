@@ -35,11 +35,11 @@ public class User {
 	@Column(name = "email")
 	private String email;
 
-	@Column(name = "passwod")
-	private String passwod;
+	@Column(name = "password")
+	private String password;
 
 	@Column(name = "mobile")
-	private int mobile;
+	private String mobile;
 
 	@Column(name = "gender")
 	private String gender;
@@ -78,8 +78,8 @@ public class User {
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(Long userId, String empCode, String firstName, String lastName, String email, String passwod,
-			int mobile, String gender, Date dobDate, String experience, Role role, String location, String project,
+	public User(Long userId, String empCode, String firstName, String lastName, String email, String password,
+			String mobile, String gender, Date dobDate, String experience, Role role, String location, String project,
 			String designation, LocalDateTime createdOn, LocalDateTime updatedDate, User createdBy) {
 		super();
 		this.userId = userId;
@@ -87,7 +87,7 @@ public class User {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
-		this.passwod = passwod;
+		this.password = password;
 		this.mobile = mobile;
 		this.gender = gender;
 		this.dobDate = dobDate;
@@ -141,19 +141,19 @@ public class User {
 		this.email = email;
 	}
 
-	public String getPasswod() {
-		return passwod;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPasswod(String passwod) {
-		this.passwod = passwod;
+	public void setPasswod(String password) {
+		this.password = password;
 	}
 
-	public int getMobile() {
+	public String getMobile() {
 		return mobile;
 	}
 
-	public void setMobile(int mobile) {
+	public void setMobile(String mobile) {
 		this.mobile = mobile;
 	}
 
