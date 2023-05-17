@@ -65,22 +65,7 @@ public class TRFServiceImpl implements TRFService{
 	@Override
 	public TrainingRequestForm updateTRF(Long id, TrainingRequestForm form) throws TRFNotFound {
 		TrainingRequestForm rform = trfRepository.findById(id).orElseThrow(()-> new TRFNotFound("Not Found"));
-		List<Associate> list = new ArrayList<>();
-		form.getAssociates().forEach(a->{
-			Associate as = new Associate();
-			as.setId(a.getId());
-			as.setEmpId(a.getEmpId());
-			as.setEmpName(a.getEmpName());
-			as.setExprience(a.getExprience());
-			as.setGrade(a.getGrade());
-		    as.setCurrentSkill(a.getCurrentSkill());
-		    as.setCurrentAllocation(a.getCurrentAllocation());
-		    as.setProject(a.getProject());
-		    as.setUpgradedSkillSet(a.getUpgradedSkillSet());
-			list.add(as);
-		});
-		rform.getAssociates().clear();
-        rform.getAssociates().addAll(list);
+        rform.setAssociates(form.getAssociates());
 		rform.setTrainingType(form.getTrainingType());
 		rform.setResourceType(form.getResourceType());
 		rform.setDuration(form.getDuration());
