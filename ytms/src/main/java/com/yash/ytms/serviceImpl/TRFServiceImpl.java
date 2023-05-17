@@ -1,16 +1,13 @@
 package com.yash.ytms.serviceImpl;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.IntStream;
-
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.yash.ytms.config.LoggerConfiguration;
 import com.yash.ytms.exception.TRFNotFound;
-import com.yash.ytms.model.Associate;
 import com.yash.ytms.model.TrainingRequestForm;
 import com.yash.ytms.repo.TRFRepository;
 import com.yash.ytms.service.TRFService;
@@ -24,6 +21,8 @@ import com.yash.ytms.service.TRFService;
 @Service
 public class TRFServiceImpl implements TRFService{
 
+	private Logger logger = LoggerConfiguration.getLogger(TRFServiceImpl.class);
+	
 	/**
 	 * This will inject the repository dependency
 	 */
@@ -37,6 +36,7 @@ public class TRFServiceImpl implements TRFService{
 	@Override
 	public TrainingRequestForm createTRF(TrainingRequestForm form) {
 		form.setStatus("PENDING");
+		logger.info("inside createTRF method - {} "+form);
 		return trfRepository.save(form);
 	}
 
@@ -54,6 +54,7 @@ public class TRFServiceImpl implements TRFService{
 	 */
 	@Override
 	public TrainingRequestForm getById(Long Id) throws TRFNotFound {
+		logger.info("inside getById method - {} "+Id);
 		return trfRepository.findById(Id).orElseThrow(()-> new TRFNotFound("Not Found"));
 	}
 
@@ -64,7 +65,9 @@ public class TRFServiceImpl implements TRFService{
 	@Transactional
 	@Override
 	public TrainingRequestForm updateTRF(Long id, TrainingRequestForm form) throws TRFNotFound {
+		logger.info("inside updateTRF method - {} "+id+" training request - {} "+form);
 		TrainingRequestForm rform = trfRepository.findById(id).orElseThrow(()-> new TRFNotFound("Not Found"));
+		logger.info("db fetched form data - {} "+rform);
         rform.setAssociates(form.getAssociates());
 		rform.setTrainingType(form.getTrainingType());
 		rform.setResourceType(form.getResourceType());
@@ -76,6 +79,7 @@ public class TRFServiceImpl implements TRFService{
 		rform.setNoOfParticipants(form.getNoOfParticipants());
 		rform.setStartDate(form.getStartDate());
 		rform.setEndDate(form.getEndDate());
+		logger.info("going to save form data - {} "+rform);
 		return trfRepository.save(rform);
 	}
 }

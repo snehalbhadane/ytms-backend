@@ -1,17 +1,13 @@
 package com.yash.ytms.web;
 
 import java.util.List;
-import java.util.Optional;
 
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
-import org.hibernate.annotations.NotFound;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,11 +16,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.yash.ytms.config.LoggerConfiguration;
 import com.yash.ytms.exception.TRFNotFound;
 import com.yash.ytms.model.TrainingRequestForm;
 import com.yash.ytms.service.TRFService;
-
-import lombok.NonNull;
 
 /**
  * This class will responsible to handle the incoming request url and map with method
@@ -36,6 +31,8 @@ import lombok.NonNull;
 @RequestMapping("/trf")
 public class TRFController {
 
+	private Logger logger = LoggerConfiguration.getLogger(TRFController.class);
+	
 	/**
 	 * This will inject the service dependency
 	 */
@@ -49,6 +46,7 @@ public class TRFController {
 	 */
 	@PostMapping("/create")
 	public ResponseEntity<TrainingRequestForm> createTrf(@Valid @RequestBody(required=false) TrainingRequestForm form){
+		logger.info("inside createTrf method - {} "+form);
 		return new ResponseEntity<>(trfService.createTRF(form), HttpStatus.CREATED);
 	}
 	
@@ -69,6 +67,7 @@ public class TRFController {
 	 */
 	@GetMapping("/getById/{id}")
 	public ResponseEntity<TrainingRequestForm> getTrfById(@PathVariable("id") Long id) throws TRFNotFound{
+		logger.info("inside getTrfById method - {} "+id);
 		return new ResponseEntity<>(trfService.getById(id),HttpStatus.FOUND);
     }
 	
@@ -81,6 +80,7 @@ public class TRFController {
 	 */
 	@PutMapping("update/{id}")
 	public ResponseEntity<TrainingRequestForm> updateTRF(@PathVariable("id") Long id, @Valid @RequestBody TrainingRequestForm form) throws TRFNotFound{
+		logger.info("inside getTrfById method id - {} "+id+" training request - {} "+form);
 		return new ResponseEntity<>(trfService.updateTRF(id, form), HttpStatus.OK);
 	}
 }
