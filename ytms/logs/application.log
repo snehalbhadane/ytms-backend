@@ -5491,3 +5491,23 @@ org.hibernate.HibernateException: A collection with cascade="all-delete-orphan" 
 2023-05-17 16:19:01.811  INFO 30316 --- [RMI TCP Connection(9)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-05-17 16:19:01.814  INFO 30316 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-05-17 16:19:01.827  INFO 30316 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-17 17:41:16.058  INFO 17768 --- [main] c.y.y.web.TrainingSummaryControllerTest  : Starting TrainingSummaryControllerTest using Java 17.0.4.1 on YP1016683LT with PID 17768 (started by shubhangi.kamble in E:\task\ytms\dev\ytms)
+2023-05-17 17:41:16.060  INFO 17768 --- [main] c.y.y.web.TrainingSummaryControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2023-05-17 17:41:18.067  INFO 17768 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-05-17 17:41:18.067  INFO 17768 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-17 17:41:18.068  INFO 17768 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-05-17 17:41:18.104  INFO 17768 --- [main] c.y.y.web.TrainingSummaryControllerTest  : Started TrainingSummaryControllerTest in 2.627 seconds (JVM running for 4.435)
+2023-05-17 17:41:39.351  INFO 24164 --- [main] c.y.y.web.TrainingSummaryControllerTest  : Starting TrainingSummaryControllerTest using Java 17.0.4.1 on YP1016683LT with PID 24164 (started by shubhangi.kamble in E:\task\ytms\dev\ytms)
+2023-05-17 17:41:39.353  INFO 24164 --- [main] c.y.y.web.TrainingSummaryControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2023-05-17 17:41:41.300  INFO 24164 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-05-17 17:41:41.300  INFO 24164 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-17 17:41:41.301  INFO 24164 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-05-17 17:41:41.345  INFO 24164 --- [main] c.y.y.web.TrainingSummaryControllerTest  : Started TrainingSummaryControllerTest in 2.492 seconds (JVM running for 3.793)
+2023-05-17 17:41:41.435  INFO 24164 --- [main] c.y.ytms.web.TrainingSummaryController   : getAllSummary() called from TrainingSummaryController.
+2023-05-17 17:42:59.879  INFO 14664 --- [main] c.y.y.web.TrainingSummaryControllerTest  : Starting TrainingSummaryControllerTest using Java 17.0.4.1 on YP1016683LT with PID 14664 (started by shubhangi.kamble in E:\task\ytms\dev\ytms)
+2023-05-17 17:42:59.881  INFO 14664 --- [main] c.y.y.web.TrainingSummaryControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2023-05-17 17:43:01.680  INFO 14664 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-05-17 17:43:01.680  INFO 14664 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-17 17:43:01.681  INFO 14664 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-05-17 17:43:01.720  INFO 14664 --- [main] c.y.y.web.TrainingSummaryControllerTest  : Started TrainingSummaryControllerTest in 2.312 seconds (JVM running for 3.539)
+2023-05-17 17:43:01.813  INFO 14664 --- [main] c.y.ytms.web.TrainingSummaryController   : getAllSummary() called from TrainingSummaryController.

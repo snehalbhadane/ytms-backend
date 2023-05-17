@@ -52,7 +52,7 @@ public class User {
 	private String experience;
 
 	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "role_id", referencedColumnName = "role_id")
+	@JoinColumn(name = "role_id",referencedColumnName = "role_id")
 	private Role role;
 
 	@Column(name = "location")

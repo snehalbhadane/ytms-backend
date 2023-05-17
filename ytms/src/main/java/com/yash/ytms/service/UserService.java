@@ -10,7 +10,5 @@ public interface UserService {
 	
 	public User addUser(User user);
 	public List<User> getListOfAllUsers();
-	
-	public String fetchEmailAndPassword(String email,String password);
-
+	public User fetchEmailAndPassword(String email,String password);
 }

@@ -27,24 +27,11 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public String fetchEmailAndPassword(String email, String password) {
-//		User user=new User();
-//		user.setEmail(email);
-//		user.setPasswod(password);
-//           userRepository.findByEmailAndPassword(email, password).toString();
-//	 
-//
-//	 if(user.getEmail().equals(string) && user.getPasswod().equals(password)) {
-//			 
-//			 return "login Successfully";
-//		 
-//		 }
-//		 else {
-//			 return "Invalid credentinal";
-//		 }
-		
-		return "Hii";
-		
+	public User fetchEmailAndPassword(String email, String password) {
+		return userRepository.findByEmailAndPassword(email, password);
+
 	}
+
+	
 
 }

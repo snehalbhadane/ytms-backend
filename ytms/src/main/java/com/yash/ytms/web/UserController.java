@@ -32,8 +32,18 @@ public class UserController {
 		List<User> user = userService.getListOfAllUsers();
 		return  ResponseEntity.ok(user);
 	}
-//	
-//	@PostMapping("/login")
+
+	@PostMapping("/login")
+	public ResponseEntity<User> loginUser(@RequestBody User user){
+		User us = userService.fetchEmailAndPassword(user.getEmail(),  user.getPassword());
+		
+		if(user.getEmail().equals(us.getEmail()) && user.getPassword().equals(us.getPassword())) {
+			return ResponseEntity.ok(user);
+		}
+		else {
+			return null;
+		}
+	}
 	
 	
 
