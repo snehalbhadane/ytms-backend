@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.yash.ytms.model.TrainingPlan;
 
 @Repository
-public interface TrainingPlanRepository extends JpaRepository<TrainingPlan, Integer>{
+public interface TrainingPlanRepository extends JpaRepository<TrainingPlan, Long>{
 
 }

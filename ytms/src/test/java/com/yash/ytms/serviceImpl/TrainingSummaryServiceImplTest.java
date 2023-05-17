@@ -45,8 +45,8 @@ public class TrainingSummaryServiceImplTest {
 		
 		TrainingPlan trainingPlan=new TrainingPlan();
 		
-		trainingPlan.setId(1l);
-		trainingPlan.setPlan("Java");
+		trainingPlan.setTrainingPlanId(1l);
+		trainingPlan.setTrainingName("Java Training");
 		
 	
 		User trainer=new User();
