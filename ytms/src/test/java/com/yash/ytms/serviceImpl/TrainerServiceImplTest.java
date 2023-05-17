@@ -78,7 +78,7 @@ class TrainerServiceImplTest {
 
 		assertEquals(trainer, trainerServiceImpl.saveTrainerDetails(trainer));
 
-		assertEquals(1234567890, trainerServiceImpl.saveTrainerDetails(trainer).getUser().getMobile());
+		assertEquals("1234567890", trainerServiceImpl.saveTrainerDetails(trainer).getUser().getMobile());
 
 		assertEquals("Shubham", trainerServiceImpl.saveTrainerDetails(trainer).getUser().getFirstName());
 	}
