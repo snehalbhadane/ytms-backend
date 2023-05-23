@@ -5,13 +5,14 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import com.yash.ytms.config.LoggerConfiguration;
 import com.yash.ytms.exception.TrainerNotFound;
 import com.yash.ytms.model.Trainer;
+import com.yash.ytms.model.TrainerTask;
 import com.yash.ytms.repo.TrainerRepository;
+import com.yash.ytms.repo.TrainerTaskRepository;
 import com.yash.ytms.service.TrainerService;
 
 /**
@@ -27,6 +28,9 @@ public class TrainerServiceImpl implements TrainerService {
 	
 	@Autowired
 	TrainerRepository trainerRepository;
+	
+	@Autowired
+	TrainerTaskRepository trainerTaskRepository; 
 
 	/**
 	 * This method will responsible to fetch the all trainer data
@@ -88,5 +92,19 @@ public class TrainerServiceImpl implements TrainerService {
 		trainerRepository.findById(trainerId).orElseThrow(() -> new TrainerNotFound("Trainer not found."));
 		
 		trainerRepository.deleteById(trainerId);
+	}
+	
+	/**
+	 * This method will responsible to save the trainer task data.
+	 */
+	@Override
+	public TrainerTask saveTrainerTask(TrainerTask trainerTask) {
+		
+		logger.info("saveTrainerTask(TrainerTask trainerTask) method called from TrainerServiceImpl class.");
+		
+		trainerTask.setCreatedOn(LocalDateTime.now());
+		trainerTask.setActive(true);
+
+		return trainerTaskRepository.save(trainerTask);
 	}
 }

@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.yash.ytms.model.Trainer;
+import com.yash.ytms.model.TrainerTask;
 
 /**
  * This interface will responsible to declare the methods.
@@ -22,4 +23,6 @@ public interface TrainerService {
 	public Trainer saveTrainerDetails(Trainer trainer);
 
 	public void deleteTrainerDetails(Long trainerId);
+	
+	public TrainerTask saveTrainerTask(TrainerTask trainerTask);
 }

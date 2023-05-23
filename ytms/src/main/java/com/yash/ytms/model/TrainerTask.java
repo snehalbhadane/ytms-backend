@@ -1,8 +1,8 @@
 package com.yash.ytms.model;
 
+import java.sql.Date;
 import java.time.LocalDateTime;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -10,7 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -23,7 +23,7 @@ public class TrainerTask {
 	private Long trainerTaskId;
 
 	@Column(name = "task_date")
-	private LocalDateTime taskDate;
+	private Date taskDate;
 
 	@Column(name = "first_half")
 	private String firstHalf;
@@ -37,7 +37,7 @@ public class TrainerTask {
 	@Column(name = "second_half_description")
 	private String secondHalfDescription;
 
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "created_by_id", referencedColumnName = "user_id")
 	private User createdBy;
 
@@ -55,7 +55,7 @@ public class TrainerTask {
 		// TODO Auto-generated constructor stub
 	}
 
-	public TrainerTask(Long trainerTaskId, LocalDateTime taskDate, String firstHalf, String firstHalfDescription,
+	public TrainerTask(Long trainerTaskId, Date taskDate, String firstHalf, String firstHalfDescription,
 			String secondHalf, String secondHalfDescription, User createdBy, LocalDateTime createdOn,
 			LocalDateTime updatedOn, boolean active) {
 		super();
@@ -79,11 +79,11 @@ public class TrainerTask {
 		this.trainerTaskId = trainerTaskId;
 	}
 
-	public LocalDateTime getTaskDate() {
+	public Date getTaskDate() {
 		return taskDate;
 	}
 
-	public void setTaskDate(LocalDateTime taskDate) {
+	public void setTaskDate(Date taskDate) {
 		this.taskDate = taskDate;
 	}
 

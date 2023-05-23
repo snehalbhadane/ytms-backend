@@ -3,10 +3,7 @@ package com.yash.ytms.aop.aspect;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
-import org.slf4j.Logger;
 import org.springframework.stereotype.Component;
-
-import com.yash.ytms.config.LoggerConfiguration;
 
 /**
  * This class will declare and define the aspect for TRFServiceImpl 
@@ -17,8 +14,6 @@ import com.yash.ytms.config.LoggerConfiguration;
 @Component
 public class TRFServiceAspect {
 
-	private Logger logger = LoggerConfiguration.getLogger(TRFServiceAspect.class);
-	
 	/**
 	 * 
 	 * @param joinPoint a point in Spring AOP during the execution of a program, such as updateTRF,getTRFById method in this case
@@ -26,7 +21,7 @@ public class TRFServiceAspect {
 	 */
 	@AfterThrowing(value="execution(* com.yash.ytms.serviceImpl.TRFServiceImpl.*(..))", throwing = "ex")
 	public void afterThrowingAdviceForTRF(JoinPoint joinPoint, Exception ex) {
-		logger.info("After throwing exception in method - {} "+joinPoint.getSignature());
-		logger.info("Exception is - {} "+ex.getMessage());
+		System.out.println("After throwing exception in method:"+joinPoint.getSignature());
+		System.out.println("Exception is:"+ex.getMessage());
 	}
 }

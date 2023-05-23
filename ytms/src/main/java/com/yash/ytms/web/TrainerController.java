@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.yash.ytms.config.LoggerConfiguration;
 import com.yash.ytms.model.Trainer;
+import com.yash.ytms.model.TrainerTask;
 import com.yash.ytms.service.TrainerService;
 
 /**
@@ -64,10 +65,10 @@ public class TrainerController {
 	 * 
 	 * @param trainer
 	 */
-	@PostMapping("/save")
+	@PostMapping("/saveTrainerDetails")
 	public ResponseEntity<Trainer> saveTrainer(@RequestBody Trainer trainer) throws JsonParseException {
 
-		logger.info("save method called from TrainerController class.");
+		logger.info("saveTrainerDetails method called from TrainerController class.");
 
 		return new ResponseEntity<Trainer>(trainerService.saveTrainerDetails(trainer), HttpStatus.CREATED);
 	}
@@ -84,5 +85,19 @@ public class TrainerController {
 		logger.info("deleteTrainer/{trainerId} method called from TrainerController class.");
 
 		trainerService.deleteTrainerDetails(trainerId);
+	}
+	
+	/**
+	 * This controller method handles the HTTP Post request for insert trainer task,
+	 * matching with the given URI.
+	 * 
+	 * @param trainer task
+	 */
+	@PostMapping("/saveTrainerTask")
+	public ResponseEntity<TrainerTask> saveTrainerTask(@RequestBody TrainerTask trainerTask) throws JsonParseException {
+		
+		logger.info("saveTrainerTask method called from TrainerController class.");
+		
+		return new ResponseEntity<TrainerTask>(trainerService.saveTrainerTask(trainerTask), HttpStatus.CREATED);
 	}
 }
