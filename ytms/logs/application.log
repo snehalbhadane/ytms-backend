@@ -1,1 +1,103 @@
 
+2023-05-24 18:26:03.666  INFO 20604 --- [restartedMain] com.yash.ytms.YtmsApplication            : Starting YtmsApplication using Java 15 on YB1016483LT with PID 20604 (D:\YTMS-Project\dev-branch\ytms\target\classes started by sadav.khan in D:\YTMS-Project\dev-branch\ytms)
+2023-05-24 18:26:03.669  INFO 20604 --- [restartedMain] com.yash.ytms.YtmsApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-05-24 18:26:03.732  INFO 20604 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-24 18:26:03.732  INFO 20604 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-24 18:26:04.987  INFO 20604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-24 18:26:05.108  INFO 20604 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111 ms. Found 8 JPA repository interfaces.
+2023-05-24 18:26:05.898  INFO 20604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-05-24 18:26:05.911  INFO 20604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-24 18:26:05.912  INFO 20604 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-24 18:26:06.123  INFO 20604 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-24 18:26:06.125  INFO 20604 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2391 ms
+2023-05-24 18:26:06.306  INFO 20604 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-24 18:26:06.376  INFO 20604 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-05-24 18:26:06.587  INFO 20604 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-24 18:26:06.707  INFO 20604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-24 18:26:06.913  INFO 20604 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-24 18:26:06.936  INFO 20604 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-05-24 18:26:07.956  INFO 20604 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-24 18:26:07.966  INFO 20604 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-24 18:26:08.647  WARN 20604 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-24 18:26:08.787  INFO 20604 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-05-24 18:26:08.930  INFO 20604 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-05-24 18:26:09.137  INFO 20604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-24 18:26:09.138  INFO 20604 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-05-24 18:26:09.158  INFO 20604 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-05-24 18:26:09.181  INFO 20604 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-05-24 18:26:09.416  INFO 20604 --- [restartedMain] com.yash.ytms.YtmsApplication            : Started YtmsApplication in 6.322 seconds (JVM running for 7.629)
+2023-05-24 18:28:43.269  INFO 20604 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 5 class path changes (0 additions, 0 deletions, 5 modifications)
+2023-05-24 18:28:43.294  INFO 20604 --- [Thread-4] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-05-24 18:28:43.312  INFO 20604 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-24 18:28:43.314  INFO 20604 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-24 18:28:43.322  INFO 20604 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-24 18:28:43.403  INFO 20604 --- [restartedMain] com.yash.ytms.YtmsApplication            : Starting YtmsApplication using Java 15 on YB1016483LT with PID 20604 (D:\YTMS-Project\dev-branch\ytms\target\classes started by sadav.khan in D:\YTMS-Project\dev-branch\ytms)
+2023-05-24 18:28:43.404  INFO 20604 --- [restartedMain] com.yash.ytms.YtmsApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-05-24 18:29:12.621  INFO 21280 --- [restartedMain] com.yash.ytms.YtmsApplication            : Starting YtmsApplication using Java 15 on YB1016483LT with PID 21280 (D:\YTMS-Project\dev-branch\ytms\target\classes started by sadav.khan in D:\YTMS-Project\dev-branch\ytms)
+2023-05-24 18:29:12.622  INFO 21280 --- [restartedMain] com.yash.ytms.YtmsApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-05-24 18:29:12.659  INFO 21280 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-24 18:29:12.660  INFO 21280 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-24 18:29:13.392  INFO 21280 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-24 18:29:13.485  INFO 21280 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 8 JPA repository interfaces.
+2023-05-24 18:29:14.089  INFO 21280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-05-24 18:29:14.098  INFO 21280 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-24 18:29:14.099  INFO 21280 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-24 18:29:14.240  INFO 21280 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-24 18:29:14.240  INFO 21280 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1580 ms
+2023-05-24 18:29:14.375  INFO 21280 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-24 18:29:14.433  INFO 21280 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-05-24 18:29:14.599  INFO 21280 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-24 18:29:14.693  INFO 21280 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-24 18:29:14.851  INFO 21280 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-24 18:29:14.868  INFO 21280 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-05-24 18:29:15.701  INFO 21280 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-24 18:29:15.709  INFO 21280 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-24 18:29:16.259  WARN 21280 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-24 18:29:16.366  INFO 21280 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-05-24 18:29:16.478  INFO 21280 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-05-24 18:29:16.646  INFO 21280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-24 18:29:16.647  INFO 21280 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-05-24 18:29:16.660  INFO 21280 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-05-24 18:29:16.682  INFO 21280 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-05-24 18:29:16.921  INFO 21280 --- [restartedMain] com.yash.ytms.YtmsApplication            : Started YtmsApplication in 4.605 seconds (JVM running for 5.453)
+2023-05-24 18:29:22.622  INFO 21280 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-24 18:29:22.622  INFO 21280 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-24 18:29:22.623  INFO 21280 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-05-24 18:29:38.227  INFO 21280 --- [http-nio-8080-exec-1] com.yash.ytms.web.TrainerController      : saveTrainerTask method called from TrainerController class.
+2023-05-24 18:29:38.239  INFO 21280 --- [http-nio-8080-exec-1] c.y.ytms.serviceImpl.TrainerServiceImpl  : saveTrainerTask(TrainerTask trainerTask) method called from TrainerServiceImpl class.
+2023-05-24 18:29:42.709  INFO 21280 --- [http-nio-8080-exec-7] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-05-24 18:29:42.710  INFO 21280 --- [http-nio-8080-exec-7] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-05-24 18:29:46.132  INFO 21280 --- [http-nio-8080-exec-5] com.yash.ytms.web.TrainerController      : getTrainerTasksByCreatedById() method called from TrainerController class.
+2023-05-24 18:29:46.132  INFO 21280 --- [http-nio-8080-exec-5] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasksByCreatedById() method called from TrainerServiceImpl class.
+2023-05-24 18:29:49.736  INFO 21280 --- [http-nio-8080-exec-8] com.yash.ytms.web.TrainerController      : getTrainerTask/{trainerTaskId} method called from TrainerController class.
+2023-05-24 18:29:49.736  INFO 21280 --- [http-nio-8080-exec-8] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTask(Long trainerTaskId) method called from TrainerServiceImpl class.
+2023-05-24 18:29:49.750  INFO 21280 --- [http-nio-8080-exec-8] c.y.y.aop.aspect.TrainerServiceAspect    : Method will call after throwing exception :TrainerTask com.yash.ytms.serviceImpl.TrainerServiceImpl.getTrainerTask(Long)
+2023-05-24 18:29:49.750  INFO 21280 --- [http-nio-8080-exec-8] c.y.y.aop.aspect.TrainerServiceAspect    : Excetion Message :Trainer task not found.
+2023-05-24 18:29:49.751  INFO 21280 --- [http-nio-8080-exec-8] c.y.y.aop.aspect.TrainerServiceAspect    : Exception Code : 404 NOT_FOUND
+2023-05-24 18:29:49.755  WARN 21280 --- [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.yash.ytms.exception.TrainerNotFound: Trainer task not found.]
+2023-05-24 18:29:53.968  INFO 21280 --- [http-nio-8080-exec-6] com.yash.ytms.web.TrainerController      : getTrainerTask/{trainerTaskId} method called from TrainerController class.
+2023-05-24 18:29:53.968  INFO 21280 --- [http-nio-8080-exec-6] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTask(Long trainerTaskId) method called from TrainerServiceImpl class.
+2023-05-24 18:29:56.988  INFO 21280 --- [http-nio-8080-exec-9] com.yash.ytms.web.TrainerController      : deleteTrainerTask/{trainerTaskId} method called from TrainerController class.
+2023-05-24 18:29:56.989  INFO 21280 --- [http-nio-8080-exec-9] c.y.ytms.serviceImpl.TrainerServiceImpl  : deleteTrainerTask(Long trainerTaskId) method called from TrainerServiceImpl class.
+2023-05-24 18:29:56.999  INFO 21280 --- [http-nio-8080-exec-9] c.y.y.aop.aspect.TrainerServiceAspect    : Method will call after throwing exception :void com.yash.ytms.serviceImpl.TrainerServiceImpl.deleteTrainerTask(Long)
+2023-05-24 18:29:56.999  INFO 21280 --- [http-nio-8080-exec-9] c.y.y.aop.aspect.TrainerServiceAspect    : Excetion Message :Trainer task not found.
+2023-05-24 18:29:56.999  INFO 21280 --- [http-nio-8080-exec-9] c.y.y.aop.aspect.TrainerServiceAspect    : Exception Code : 404 NOT_FOUND
+2023-05-24 18:29:57.001  WARN 21280 --- [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.yash.ytms.exception.TrainerNotFound: Trainer task not found.]
+2023-05-24 18:30:02.739  INFO 21280 --- [http-nio-8080-exec-10] com.yash.ytms.web.TrainerController      : updateTrainerTask method called from TrainerController class.
+2023-05-24 18:30:02.740  INFO 21280 --- [http-nio-8080-exec-10] c.y.ytms.serviceImpl.TrainerServiceImpl  : updateTrainerTask(TrainerTask trainerTask) method called from TrainerServiceImpl class.
+2023-05-24 18:30:06.396  INFO 21280 --- [http-nio-8080-exec-2] com.yash.ytms.web.TrainerController      : updateTrainer method called from TrainerController class.
+2023-05-24 18:30:06.396  INFO 21280 --- [http-nio-8080-exec-2] c.y.ytms.serviceImpl.TrainerServiceImpl  : updateTrainerDetails(Trainer trainer) method called from TrainerServiceImpl class.
+2023-05-24 18:30:09.485  INFO 21280 --- [http-nio-8080-exec-1] com.yash.ytms.web.TrainerController      : deleteTrainerTask/{trainerTaskId} method called from TrainerController class.
+2023-05-24 18:30:09.485  INFO 21280 --- [http-nio-8080-exec-1] c.y.ytms.serviceImpl.TrainerServiceImpl  : deleteTrainerTask(Long trainerTaskId) method called from TrainerServiceImpl class.
+2023-05-24 18:30:09.489  INFO 21280 --- [http-nio-8080-exec-1] c.y.y.aop.aspect.TrainerServiceAspect    : Method will call after throwing exception :void com.yash.ytms.serviceImpl.TrainerServiceImpl.deleteTrainerTask(Long)
+2023-05-24 18:30:09.489  INFO 21280 --- [http-nio-8080-exec-1] c.y.y.aop.aspect.TrainerServiceAspect    : Excetion Message :Trainer task not found.
+2023-05-24 18:30:09.489  INFO 21280 --- [http-nio-8080-exec-1] c.y.y.aop.aspect.TrainerServiceAspect    : Exception Code : 404 NOT_FOUND
+2023-05-24 18:30:09.490  WARN 21280 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.yash.ytms.exception.TrainerNotFound: Trainer task not found.]
+2023-05-24 18:30:13.284  INFO 21280 --- [http-nio-8080-exec-5] com.yash.ytms.web.TrainerController      : deleteTrainerTask/{trainerTaskId} method called from TrainerController class.
+2023-05-24 18:30:13.285  INFO 21280 --- [http-nio-8080-exec-5] c.y.ytms.serviceImpl.TrainerServiceImpl  : deleteTrainerTask(Long trainerTaskId) method called from TrainerServiceImpl class.
+2023-05-24 18:30:16.624  INFO 21280 --- [RMI TCP Connection(9)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-05-24 18:30:16.644  INFO 21280 --- [RMI TCP Connection(9)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-05-24 18:30:16.646  INFO 21280 --- [RMI TCP Connection(9)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-05-24 18:30:16.659  INFO 21280 --- [RMI TCP Connection(9)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-24 18:30:16.661  INFO 21280 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-24 18:30:16.672  INFO 21280 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

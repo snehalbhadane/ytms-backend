@@ -22,7 +22,19 @@ public interface TrainerService {
 	
 	public Trainer saveTrainerDetails(Trainer trainer);
 
+	public Trainer updateTrainerDetails(Trainer trainer);
+
 	public void deleteTrainerDetails(Long trainerId);
+
+	public List<TrainerTask> getTrainerTasks();
+
+	public List<TrainerTask> getTrainerTasksByCreatedById(Long createdById);
+	
+	public TrainerTask getTrainerTask(Long trainerTaskId);
 	
 	public TrainerTask saveTrainerTask(TrainerTask trainerTask);
+
+	public TrainerTask updateTrainerTask(TrainerTask trainerTask);
+	
+	public void deleteTrainerTask(Long trainerTaskId);
 }

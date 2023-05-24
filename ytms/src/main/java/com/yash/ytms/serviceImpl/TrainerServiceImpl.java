@@ -53,9 +53,6 @@ public class TrainerServiceImpl implements TrainerService {
 		
 		return trainerRepository.findById(trainerId)
 				.orElseThrow(() -> new TrainerNotFound("Trainer not found."));
-		
-/*		return trainerRepository.findById(trainerId)
-			.orElseThrow(() -> new TrainerNotFound("Trainer not found.", HttpStatus.NOT_FOUND)); */
 	}
 	
 	/**
@@ -76,7 +73,41 @@ public class TrainerServiceImpl implements TrainerService {
 		
 		logger.info("saveTrainerDeatils(Trainer trainer) method called from TrainerServiceImpl class.");
 		
-		trainer.setCreatedOn(LocalDateTime.now());
+		if(trainer.getUser() != null && trainer.getUser().getUserId() != null 
+				&& trainer.getUser().getUserId() > 0) {
+			trainer.setCreatedOn(LocalDateTime.now());
+		} else {
+			throw(new TrainerNotFound("Session user not found."));
+		}
+		
+		return trainerRepository.save(trainer);
+	}
+	
+	/**
+	 * This method will update the trainer details
+	 */
+	@Override
+	public Trainer updateTrainerDetails(Trainer trainer) {
+	
+		logger.info("updateTrainerDetails(Trainer trainer) method called from TrainerServiceImpl class.");
+		
+		Trainer trainerObj = new Trainer();
+		
+		if(trainer != null && trainer.getTrainerId() != null && trainer.getTrainerId() > 0) {
+			
+			trainerObj = trainerRepository.findById(trainer.getTrainerId())
+					.orElseThrow(() -> new TrainerNotFound("Trainer not found."));
+		} else {
+			throw(new TrainerNotFound("Trainer not found."));
+		}
+		
+		if(trainer.getUser() != null && trainer.getUser().getUserId() != null 
+				&& trainer.getUser().getUserId() > 0) {
+			trainer.setCreatedOn(trainerObj.getCreatedOn());
+			trainer.setUpdatedOn(LocalDateTime.now());
+		} else {
+			throw(new TrainerNotFound("Session user not found."));
+		}
 		
 		return trainerRepository.save(trainer);
 	}
@@ -95,6 +126,40 @@ public class TrainerServiceImpl implements TrainerService {
 	}
 	
 	/**
+	 * This method will responsible to fetch the all trainer task data
+	 */
+	@Override
+	public List<TrainerTask> getTrainerTasks() {
+	
+		logger.info("getTrainerTasks() method called from TrainerServiceImpl class."); 
+		
+		return trainerTaskRepository.findAll();
+	}
+	
+	/**
+	 * This method will responsible to fetch the all trainer task data based on created by id
+	 */
+	@Override
+	public List<TrainerTask> getTrainerTasksByCreatedById(Long createdById) {
+		
+		logger.info("getTrainerTasksByCreatedById() method called from TrainerServiceImpl class."); 
+
+		return trainerTaskRepository.getTrainerTasksByCreatedById(createdById);
+	}
+	
+	/**
+	 * This method will responsible to fetch the trainer task data based on trainerTaskId
+	 */
+	@Override
+	public TrainerTask getTrainerTask(Long trainerTaskId) {
+		
+		logger.info("getTrainerTask(Long trainerTaskId) method called from TrainerServiceImpl class.");
+		
+		return trainerTaskRepository.findById(trainerTaskId)
+				.orElseThrow(() -> new TrainerNotFound("Trainer task not found."));
+	}
+	
+	/**
 	 * This method will responsible to save the trainer task data.
 	 */
 	@Override
@@ -102,9 +167,77 @@ public class TrainerServiceImpl implements TrainerService {
 		
 		logger.info("saveTrainerTask(TrainerTask trainerTask) method called from TrainerServiceImpl class.");
 		
-		trainerTask.setCreatedOn(LocalDateTime.now());
-		trainerTask.setActive(true);
-
+		if(trainerTask.getCreatedBy() != null && trainerTask.getCreatedBy().getUserId() != null 
+				&& trainerTask.getCreatedBy().getUserId() > 0) {
+			trainerTask.setCreatedOn(LocalDateTime.now());
+			trainerTask.setActive(true);
+		} else {
+			throw(new TrainerNotFound("Session user not found."));
+		}
+		
+		if(trainerTask.getTrainer() != null && trainerTask.getTrainer().getTrainerId() != null 
+				&& trainerTask.getTrainer().getTrainerId() > 0) {
+			
+			Trainer trainer = trainerRepository.findById(trainerTask.getTrainer().getTrainerId())
+					.orElseThrow(() -> new TrainerNotFound("Trainer not found. Please fill all the required details."));
+			trainerTask.setTrainer(trainer);
+		} else {
+			throw(new TrainerNotFound("Trainer not found. Please fill all the required details."));
+		}
+		
 		return trainerTaskRepository.save(trainerTask);
+	}
+
+	/**
+	 * This method will responsible to update trainer task data.
+	 */
+	@Override
+	public TrainerTask updateTrainerTask(TrainerTask trainerTask) {
+		
+		logger.info("updateTrainerTask(TrainerTask trainerTask) method called from TrainerServiceImpl class.");
+		
+		TrainerTask trainerTaskObj = new TrainerTask();
+		
+		if(trainerTask != null && trainerTask.getTrainerTaskId() != null && trainerTask.getTrainerTaskId() > 0) {
+			
+			trainerTaskObj = trainerTaskRepository.findById(trainerTask.getTrainerTaskId())
+					.orElseThrow(() -> new TrainerNotFound("Trainer task not found."));
+		} else {
+			throw(new TrainerNotFound("Trainer task not found."));
+		}
+		
+		if(trainerTask.getCreatedBy() != null && trainerTask.getCreatedBy().getUserId() != null 
+				&& trainerTask.getCreatedBy().getUserId() > 0) {
+			trainerTask.setCreatedOn(trainerTaskObj.getCreatedOn());
+			trainerTask.setUpdatedOn(LocalDateTime.now());
+			trainerTask.setActive(true);
+		} else {
+			throw(new TrainerNotFound("Session user not found."));
+		}
+		
+		if(trainerTask.getTrainer() != null && trainerTask.getTrainer().getTrainerId() != null 
+				&& trainerTask.getTrainer().getTrainerId() > 0) {
+			
+			Trainer trainer = trainerRepository.findById(trainerTask.getTrainer().getTrainerId())
+					.orElseThrow(() -> new TrainerNotFound("Trainer not found. Please fill all the required details."));
+			trainerTask.setTrainer(trainer);
+		} else {
+			throw(new TrainerNotFound("Trainer not found. Please fill all the required details."));
+		}
+		
+		return trainerTaskRepository.save(trainerTask);
+	}
+	
+	/**
+	 * This method will responsible to delete trainer task details data based on trainerTaskId
+	 */
+	@Override
+	public void deleteTrainerTask(Long trainerTaskId) {
+		
+		logger.info("deleteTrainerTask(Long trainerTaskId) method called from TrainerServiceImpl class.");
+		
+		trainerTaskRepository.findById(trainerTaskId).orElseThrow(() -> new TrainerNotFound("Trainer task not found."));
+
+		trainerTaskRepository.deleteById(trainerTaskId);
 	}
 }

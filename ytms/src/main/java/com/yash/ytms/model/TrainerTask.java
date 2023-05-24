@@ -40,6 +40,10 @@ public class TrainerTask {
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "created_by_id", referencedColumnName = "user_id")
 	private User createdBy;
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "trainer_id", referencedColumnName = "trainer_id")
+	private Trainer trainer;
 
 	@Column(name = "created_on")
 	private LocalDateTime createdOn;
@@ -74,81 +78,67 @@ public class TrainerTask {
 	public Long getTrainerTaskId() {
 		return trainerTaskId;
 	}
-
 	public void setTrainerTaskId(Long trainerTaskId) {
 		this.trainerTaskId = trainerTaskId;
 	}
-
 	public Date getTaskDate() {
 		return taskDate;
 	}
-
 	public void setTaskDate(Date taskDate) {
 		this.taskDate = taskDate;
 	}
-
 	public String getFirstHalf() {
 		return firstHalf;
 	}
-
 	public void setFirstHalf(String firstHalf) {
 		this.firstHalf = firstHalf;
 	}
-
 	public String getFirstHalfDescription() {
 		return firstHalfDescription;
 	}
-
 	public void setFirstHalfDescription(String firstHalfDescription) {
 		this.firstHalfDescription = firstHalfDescription;
 	}
-
 	public String getSecondHalf() {
 		return secondHalf;
 	}
-
 	public void setSecondHalf(String secondHalf) {
 		this.secondHalf = secondHalf;
 	}
-
 	public String getSecondHalfDescription() {
 		return secondHalfDescription;
 	}
-
 	public void setSecondHalfDescription(String secondHalfDescription) {
 		this.secondHalfDescription = secondHalfDescription;
 	}
-
 	public User getCreatedBy() {
 		return createdBy;
 	}
-
 	public void setCreatedBy(User createdBy) {
 		this.createdBy = createdBy;
 	}
-
+	public Trainer getTrainer() {
+		return trainer;
+	}
+	public void setTrainer(Trainer trainer) {
+		this.trainer = trainer;
+	}
 	public LocalDateTime getCreatedOn() {
 		return createdOn;
 	}
-
 	public void setCreatedOn(LocalDateTime createdOn) {
 		this.createdOn = createdOn;
 	}
-
 	public LocalDateTime getUpdatedOn() {
 		return updatedOn;
 	}
-
 	public void setUpdatedOn(LocalDateTime updatedOn) {
 		this.updatedOn = updatedOn;
 	}
-
 	public boolean isActive() {
 		return active;
 	}
-
 	public void setActive(boolean active) {
 		this.active = active;
 	}
-
 }
