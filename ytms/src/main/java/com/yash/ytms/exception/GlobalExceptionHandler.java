@@ -66,4 +66,14 @@ public class GlobalExceptionHandler {
 
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(map);
 	} 
+	
+
+	@ResponseStatus(HttpStatus.NOT_FOUND)
+	@ExceptionHandler(UserNotFound.class)
+	private ResponseEntity<Object> handleUserNotFoundException(UserNotFound e) {
+		Map<String, String> map = new HashMap<>();
+		map.put("error", e.getMessage());
+		return ResponseEntity.status(HttpStatus.FORBIDDEN).body(map);
+	}
+	
 }

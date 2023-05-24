@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import com.yash.ytms.exception.UserNotFound;
 import com.yash.ytms.model.User;
 import com.yash.ytms.repo.UserRepository;
 import com.yash.ytms.service.UserService;
@@ -25,11 +26,10 @@ public class UserServiceImpl implements UserService{
 		// TODO Auto-generated method stub
 		return userRepository.findAll();
 	}
-
 	@Override
-	public User fetchEmailAndPassword(String email, String password) {
-		return userRepository.findByEmailAndPassword(email, password);
-
+	public User fetchEmailAndPassword(String email, String password) throws UserNotFound  {
+		
+		return userRepository.findByEmailAndPassword(email, password).orElseThrow(()-> new UserNotFound("This user not  exist"));
 	}
 
 	
