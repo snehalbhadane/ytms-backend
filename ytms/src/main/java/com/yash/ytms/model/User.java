@@ -238,4 +238,14 @@ public class User {
 		this.createdBy = createdBy;
 	}
 
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", empCode=" + empCode + ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", email=" + email + ", password=" + password + ", mobile=" + mobile + ", gender=" + gender
+				+ ", dobDate=" + dobDate + ", experience=" + experience + ", role=" + role + ", location=" + location
+				+ ", project=" + project + ", designation=" + designation + ", createdOn=" + createdOn
+				+ ", updatedDate=" + updatedDate + ", createdBy=" + createdBy + "]";
+	}
+
+	
 }

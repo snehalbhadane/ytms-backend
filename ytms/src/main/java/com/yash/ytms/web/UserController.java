@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.yash.ytms.dto.ServerResponse;
 import com.yash.ytms.exception.UserNotFound;
 import com.yash.ytms.model.User;
 import com.yash.ytms.service.UserService;
@@ -35,17 +36,9 @@ public class UserController {
 	}
 
 	@PostMapping("/login")
-	public ResponseEntity<User> loginUser(@RequestBody User user) throws UserNotFound{
-		User us = userService.fetchEmailAndPassword(user.getEmail(),  user.getPassword());
-		ResponseEntity<User> response=null;
-		if(user.getEmail().equals(us.getEmail()) && user.getPassword().equals(us.getPassword())) {
-			response=new ResponseEntity<>(user, HttpStatus.OK);
-			return response;
-		}
-		return response;
-		
-	
-		
+	public ResponseEntity<ServerResponse> loginUser(@RequestBody User user) throws UserNotFound{
+		ServerResponse res = userService.generateToken(user.getEmail(),  user.getPassword());
+		return new ResponseEntity<ServerResponse>(res,HttpStatus.OK);
 	}
 	
 	
