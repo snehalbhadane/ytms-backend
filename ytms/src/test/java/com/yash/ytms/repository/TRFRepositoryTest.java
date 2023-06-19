@@ -34,7 +34,7 @@ import lombok.extern.slf4j.Slf4j;
 		trf.setDuration(25);
 		trf.setPurposeOfTraining("abc");
 		LocalDate initFrom = LocalDate.of(2023, 05, 05);
-		trf.setInitiatedFrom(initFrom);
+		trf.setInitiatedFrom("Jaynam");
 		trf.setProjectName("CAT");
 		trf.setSkillToBeImpartent("");
 		trf.setNoOfParticipants(25);

@@ -1,5 +1,6 @@
 package com.yash.ytms.serviceImpl;
 
+import java.util.ArrayList;
 import java.util.List;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +9,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.yash.ytms.config.LoggerConfiguration;
 import com.yash.ytms.exception.TRFNotFound;
+import com.yash.ytms.model.Associate;
 import com.yash.ytms.model.TrainingRequestForm;
+import com.yash.ytms.repo.AssociateRepository;
 import com.yash.ytms.repo.TRFRepository;
 import com.yash.ytms.service.TRFService;
 
@@ -29,6 +32,9 @@ public class TRFServiceImpl implements TRFService{
 	@Autowired
 	private TRFRepository trfRepository;
 
+	@Autowired
+	private AssociateRepository assRepository;
+	
 	/**
 	 * This method will create and save the training request
 	 */
@@ -68,6 +74,8 @@ public class TRFServiceImpl implements TRFService{
 		logger.info("inside updateTRF method - {} "+id+" training request - {} "+form);
 		TrainingRequestForm rform = trfRepository.findById(id).orElseThrow(()-> new TRFNotFound("Not Found"));
 		logger.info("db fetched form data - {} "+rform);
+		//deleteAssosicateByIds(id, rform.getAssociates());
+		rform.setTrainingTitle(form.getTrainingTitle());
         rform.setAssociates(form.getAssociates());
 		rform.setTrainingType(form.getTrainingType());
 		rform.setResourceType(form.getResourceType());
@@ -80,6 +88,16 @@ public class TRFServiceImpl implements TRFService{
 		rform.setStartDate(form.getStartDate());
 		rform.setEndDate(form.getEndDate());
 		logger.info("going to save form data - {} "+rform);
-		return trfRepository.save(rform);
+		TrainingRequestForm res = trfRepository.save(rform);
+		assRepository.deleteByIdIn();
+		return res;
+	}
+	
+	public void deleteAssosicateByIds(Long id, List<Associate> associates) {
+//	    List<Long> ids = new ArrayList<>();
+//	    for(Associate a : associates) {
+//	    	ids.add(a.getId());
+//	    }
+//	    assRepository.deleteByIdIn();
 	}
 }

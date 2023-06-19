@@ -66,7 +66,7 @@ public class TrainingRequestForm implements Serializable{
 	 */
 	@NotNull(message = "The initiated date is required.")
 	@Column(name = "initiated_from")
-	private LocalDate initiatedFrom;
+	private String initiatedFrom;
 	
 	/**
 	 * This will hold the project name
@@ -119,7 +119,7 @@ public class TrainingRequestForm implements Serializable{
 	}
 
 	public TrainingRequestForm(Long trfId, String trainingTitle, String trainingType, String resourceType, int duration,
-			String purposeOfTraining, LocalDate initiatedFrom, String projectName, String skillToBeImpartent,
+			String purposeOfTraining, String initiatedFrom, String projectName, String skillToBeImpartent,
 			int noOfParticipants, LocalDate startDate, LocalDate endDate, List<Associate> associates) {
 		super();
 		this.trfId = trfId;
@@ -185,11 +185,11 @@ public class TrainingRequestForm implements Serializable{
 		this.purposeOfTraining = purposeOfTraining;
 	}
 
-	public LocalDate getInitiatedFrom() {
+	public String getInitiatedFrom() {
 		return initiatedFrom;
 	}
 
-	public void setInitiatedFrom(LocalDate initiatedFrom) {
+	public void setInitiatedFrom(String initiatedFrom) {
 		this.initiatedFrom = initiatedFrom;
 	}
 

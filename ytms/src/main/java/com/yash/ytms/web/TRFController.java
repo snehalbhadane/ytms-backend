@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,6 +28,7 @@ import com.yash.ytms.service.TRFService;
  * @version 1.0
  * @since 05/05/2023
  */
+@CrossOrigin
 @RestController
 @RequestMapping("/trf")
 public class TRFController {
@@ -68,7 +70,7 @@ public class TRFController {
 	@GetMapping("/getById/{id}")
 	public ResponseEntity<TrainingRequestForm> getTrfById(@PathVariable("id") Long id) throws TRFNotFound{
 		logger.info("inside getTrfById method - {} "+id);
-		return new ResponseEntity<>(trfService.getById(id),HttpStatus.FOUND);
+		return new ResponseEntity<>(trfService.getById(id),HttpStatus.OK);
     }
 	
 	/**
@@ -78,7 +80,7 @@ public class TRFController {
 	 * @return save record will return with created id
 	 * @throws TRFNotFound if not found record then throws the exception
 	 */
-	@PutMapping("update/{id}")
+	@PutMapping("/update/{id}")
 	public ResponseEntity<TrainingRequestForm> updateTRF(@PathVariable("id") Long id, @Valid @RequestBody TrainingRequestForm form) throws TRFNotFound{
 		logger.info("inside getTrfById method id - {} "+id+" training request - {} "+form);
 		return new ResponseEntity<>(trfService.updateTRF(id, form), HttpStatus.OK);

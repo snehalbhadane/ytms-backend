@@ -1,6 +1,9 @@
 package com.yash.ytms.repo;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.yash.ytms.model.TrainingRequestForm;
@@ -13,5 +16,4 @@ import com.yash.ytms.model.TrainingRequestForm;
  */
 @Repository
 public interface TRFRepository extends JpaRepository<TrainingRequestForm, Long>{
-
 }

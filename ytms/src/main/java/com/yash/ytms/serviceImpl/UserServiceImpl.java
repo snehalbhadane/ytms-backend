@@ -63,6 +63,7 @@ public class UserServiceImpl implements UserService{
         resp.setStatus("200");
 		resp.setMessage("Login succesfull");
 		resp.setAuthToken(jwt);
+		resp.setUser(checkUser);
 		return resp;
 	}
 
