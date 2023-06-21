@@ -87,6 +87,7 @@ public class TRFServiceImpl implements TRFService{
 		rform.setNoOfParticipants(form.getNoOfParticipants());
 		rform.setStartDate(form.getStartDate());
 		rform.setEndDate(form.getEndDate());
+		rform.setCreatedBy(form.getCreatedBy());
 		logger.info("going to save form data - {} "+rform);
 		TrainingRequestForm res = trfRepository.save(rform);
 		assRepository.deleteByIdIn();

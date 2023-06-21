@@ -106,11 +106,14 @@ public class TrainingRequestForm implements Serializable{
 	@Column(name = "status")
 	private String status;
 	
+	@Column(name="created_by")
+	private String createdBy;
+	
 	/**
 	 * Hold the list of associate which will participate in the training
 	 */
 	
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "asst_trf_id", referencedColumnName = "trfId")
     private List<Associate> associates;
 
@@ -250,12 +253,23 @@ public class TrainingRequestForm implements Serializable{
 		this.status = status;
 	}
 
+	
+	public String getCreatedBy() {
+		return createdBy;
+	}
+
+	public void setCreatedBy(String createdBy) {
+		this.createdBy = createdBy;
+	}
+
 	@Override
 	public String toString() {
 		return "TrainingRequestForm [trfId=" + trfId + ", trainingTitle=" + trainingTitle + ", trainingType="
 				+ trainingType + ", resourceType=" + resourceType + ", duration=" + duration + ", purposeOfTraining="
 				+ purposeOfTraining + ", initiatedFrom=" + initiatedFrom + ", projectName=" + projectName
 				+ ", skillToBeImpartent=" + skillToBeImpartent + ", noOfParticipants=" + noOfParticipants
-				+ ", startDate=" + startDate + ", endDate=" + endDate + ", associates=" + associates + "]";
+				+ ", startDate=" + startDate + ", endDate=" + endDate + ", status=" + status + ", createdBy="
+				+ createdBy + ", associates=" + associates + "]";
 	}
+
 }
