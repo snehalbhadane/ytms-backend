@@ -15,6 +15,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 /**
  * configure the spring security.
+ * 
  * @author dheerendra.kag
  *
  */
@@ -36,10 +37,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		String[] permitAll = new String[]{"/useraccess/login", "/useraccess/add-user", "/useraccess/logout"};
+		String[] permitAll = new String[] { "/useraccess/login", "/useraccess/add-user", "/useraccess/logout",
+				"/trainer/**", "/tsm/**" };
 		http.cors().and().csrf().disable().authorizeRequests().antMatchers(permitAll).permitAll()
-				.antMatchers("/trf/**").hasRole("USER")
-				.antMatchers("/tsm/**").hasRole("TRAINER")
+//				.antMatchers("/trf/**").hasRole("USER")
+//				.antMatchers("/tsm/**").hasRole("TRAINER")
 				.anyRequest().authenticated().and().sessionManagement()
 				.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 		http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);

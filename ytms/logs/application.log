@@ -89,3 +89,52 @@
 2023-06-23 12:33:00.087  INFO 24316 --- [RMI TCP Connection(11)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-06-23 12:33:00.099  INFO 24316 --- [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
 2023-06-23 12:33:00.102  INFO 24316 --- [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-06-27 16:06:22.674  INFO 15012 --- [restartedMain] com.yash.ytms.YtmsApplication            : Starting YtmsApplication using Java 17.0.3 on YPH1016146LT with PID 15012 (D:\YTMS_New\dev-branch\ytms\target\classes started by shubham.bhake in D:\YTMS_New\dev-branch\ytms)
+2023-06-27 16:06:22.675  INFO 15012 --- [restartedMain] com.yash.ytms.YtmsApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-06-27 16:06:22.711  INFO 15012 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-27 16:06:22.712  INFO 15012 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-27 16:06:23.691  INFO 15012 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-27 16:06:23.851  INFO 15012 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 143 ms. Found 8 JPA repository interfaces.
+2023-06-27 16:06:24.613  INFO 15012 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-06-27 16:06:24.630  INFO 15012 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-27 16:06:24.631  INFO 15012 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-06-27 16:06:24.805  INFO 15012 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-27 16:06:24.805  INFO 15012 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2093 ms
+2023-06-27 16:06:25.004  INFO 15012 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-27 16:06:25.079  INFO 15012 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-06-27 16:06:25.275  INFO 15012 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-06-27 16:06:25.380  INFO 15012 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-27 16:06:25.572  INFO 15012 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-27 16:06:25.605  INFO 15012 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-06-27 16:06:26.847  INFO 15012 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-27 16:06:26.856  INFO 15012 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-27 16:06:27.220  WARN 15012 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-27 16:06:27.762  INFO 15012 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-27 16:06:27.880  INFO 15012 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@440f1811, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f469f55, org.springframework.security.web.context.SecurityContextPersistenceFilter@21914643, org.springframework.security.web.header.HeaderWriterFilter@2b35a905, org.springframework.web.filter.CorsFilter@729b82b8, org.springframework.security.web.authentication.logout.LogoutFilter@41153496, com.yash.ytms.config.JwtRequestFilter@364ecb1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f6eb2c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@62e2f6fc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@749bf6f5, org.springframework.security.web.session.SessionManagementFilter@a54a35d, org.springframework.security.web.access.ExceptionTranslationFilter@6e535cd8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@76a386c]
+2023-06-27 16:06:27.975  INFO 15012 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-27 16:06:28.151  INFO 15012 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-27 16:06:28.152  INFO 15012 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-27 16:06:28.167  INFO 15012 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-27 16:06:28.195  INFO 15012 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-27 16:06:28.444  INFO 15012 --- [restartedMain] com.yash.ytms.YtmsApplication            : Started YtmsApplication in 6.084 seconds (JVM running for 6.927)
+2023-06-27 16:07:13.441  INFO 15012 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-27 16:07:13.442  INFO 15012 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-27 16:07:13.445  INFO 15012 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-06-27 16:07:51.491  INFO 15012 --- [http-nio-8080-exec-4] com.yash.ytms.web.TrainerController      : getTrainers() method called from TrainerController class.
+2023-06-27 16:07:51.503  INFO 15012 --- [http-nio-8080-exec-4] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainers() method called from TrainerServiceImpl class.
+2023-06-27 16:08:27.653  INFO 15012 --- [RMI TCP Connection(10)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-06-27 16:08:27.668  INFO 15012 --- [RMI TCP Connection(10)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-27 16:08:27.669  INFO 15012 --- [RMI TCP Connection(10)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-27 16:08:27.673  WARN 15012 --- [RMI TCP Connection(10)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.3/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.3/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.3/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+2023-06-27 16:08:27.682  INFO 15012 --- [RMI TCP Connection(10)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-27 16:08:27.685  INFO 15012 --- [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-06-27 16:08:27.697  INFO 15012 --- [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
