@@ -11,11 +11,13 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.yash.ytms.config.JwtUtil;
 import com.yash.ytms.config.MyUserDetailService;
 import com.yash.ytms.dto.ServerResponse;
+import com.yash.ytms.exception.UserAlreadyExistsException;
 import com.yash.ytms.exception.UserNotFound;
 import com.yash.ytms.model.User;
 import com.yash.ytms.repo.UserRepository;
@@ -37,11 +39,16 @@ public class UserServiceImpl implements UserService {
 	private JwtUtil jwtutil;
 
 	@Override
-	public User addUser(User user) {
-		user.setCreatedOn(LocalDateTime.now());
-		user.setUpdatedDate(LocalDateTime.now());
-		return userRepository.save(user);
-
+	public User addUser(User user) throws UserAlreadyExistsException {
+	      user.setCreatedOn(LocalDateTime.now());
+	      user.setUpdatedDate(LocalDateTime.now());
+		Optional<User> optional = userRepository.findByEmail(user.getEmail());
+		if(optional.isPresent()) {
+			throw new UserAlreadyExistsException("User Already Exist.");
+		}else {
+			return userRepository.save(user);
+		}
+		//return userRepository.save(user);
 	}
 
 	@Override
@@ -54,6 +61,7 @@ public class UserServiceImpl implements UserService {
 	public ServerResponse generateToken(String email, String password) throws UserNotFound {
 
 		ServerResponse resp = new ServerResponse();
+		User userExist = userRepository.findByEmail(email).orElseThrow(()-> new UserNotFound("User not found"));
 		try {
 			authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(email, password));
 		} catch (BadCredentialsException e) {

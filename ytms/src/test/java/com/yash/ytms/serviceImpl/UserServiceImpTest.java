@@ -15,6 +15,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.yash.ytms.exception.UserAlreadyExistsException;
 import com.yash.ytms.model.Role;
 import com.yash.ytms.model.User;
 import com.yash.ytms.repo.UserRepository;
@@ -61,7 +62,7 @@ public class UserServiceImpTest {
 	}
 	
 	@Test
-	void createUserTest() {
+	void createUserTest() throws UserAlreadyExistsException {
 
 		when(userRepository.save(user)).thenReturn(user);
 		User addUser = userServiceImpl.addUser(user);

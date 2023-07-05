@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.yash.ytms.dto.ServerResponse;
+import com.yash.ytms.exception.UserAlreadyExistsException;
 import com.yash.ytms.exception.UserNotFound;
 import com.yash.ytms.model.User;
 import com.yash.ytms.service.UserService;
@@ -32,7 +33,7 @@ public class UserController {
 	private UserService userService;
 	
 	@PostMapping("/add-user")
-	public ResponseEntity<User> saveEmpoyee(  @RequestBody User user) {
+	public ResponseEntity<User> saveEmpoyee(  @RequestBody User user) throws UserAlreadyExistsException{
 		User addUser = userService.addUser(user);
 		return new ResponseEntity<>(addUser,HttpStatus.CREATED);
 	}
