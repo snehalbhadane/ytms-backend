@@ -74,7 +74,6 @@ public class TRFServiceImpl implements TRFService{
 		logger.info("inside updateTRF method - {} "+id+" training request - {} "+form);
 		TrainingRequestForm rform = trfRepository.findById(id).orElseThrow(()-> new TRFNotFound("Not Found"));
 		logger.info("db fetched form data - {} "+rform);
-		//deleteAssosicateByIds(id, rform.getAssociates());
 		rform.setTrainingTitle(form.getTrainingTitle());
         rform.setAssociates(form.getAssociates());
 		rform.setTrainingType(form.getTrainingType());
@@ -93,12 +92,13 @@ public class TRFServiceImpl implements TRFService{
 		assRepository.deleteByIdIn();
 		return res;
 	}
-	
-	public void deleteAssosicateByIds(Long id, List<Associate> associates) {
-//	    List<Long> ids = new ArrayList<>();
-//	    for(Associate a : associates) {
-//	    	ids.add(a.getId());
-//	    }
-//	    assRepository.deleteByIdIn();
+
+	@Override
+	public List<TrainingRequestForm> getAllTrfByStatus(String status) {
+		// TODO Auto-generated method stub
+		List<TrainingRequestForm> list = trfRepository.findAllTrainingRequestFormsByStatus(status);
+		System.out.println(list.toString());
+		return list;
 	}
+
 }

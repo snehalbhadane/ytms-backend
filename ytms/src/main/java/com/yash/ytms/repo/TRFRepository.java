@@ -20,4 +20,5 @@ public interface TRFRepository extends JpaRepository<TrainingRequestForm, Long>{
 	
 	@EntityGraph(attributePaths = {"associates"})
 	List<TrainingRequestForm> findAll();
+	List<TrainingRequestForm> findAllTrainingRequestFormsByStatus(String status);
 }

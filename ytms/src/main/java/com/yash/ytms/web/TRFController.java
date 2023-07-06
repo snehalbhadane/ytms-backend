@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.yash.ytms.config.LoggerConfiguration;
@@ -85,4 +86,10 @@ public class TRFController {
 		logger.info("inside getTrfById method id - {} "+id+" training request - {} "+form);
 		return new ResponseEntity<>(trfService.updateTRF(id, form), HttpStatus.OK);
 	}
+	
+	@GetMapping("/getTrfByStatus")
+	public ResponseEntity<List<TrainingRequestForm>> getTrfByStatus(@RequestParam("status") String status){
+		logger.info("inside getTrfByIdStatus method - {} "+status);
+		return new ResponseEntity<List<TrainingRequestForm>>(trfService.getAllTrfByStatus(status),HttpStatus.OK);
+    }
 }
