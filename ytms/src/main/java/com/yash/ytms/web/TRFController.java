@@ -92,4 +92,10 @@ public class TRFController {
 		logger.info("inside getTrfByIdStatus method - {} "+status);
 		return new ResponseEntity<List<TrainingRequestForm>>(trfService.getAllTrfByStatus(status),HttpStatus.OK);
     }
+	
+	@GetMapping("/updateTrfStatus")
+	public ResponseEntity<?> updateTrfStatus(@RequestParam("status") String status, @RequestParam("trfId") Long trfId) throws TRFNotFound{
+		logger.info("inside updateTrfStatus method - {} "+status);
+		return new ResponseEntity<>(trfService.updateTrainingRequestFormStatus(status, trfId),HttpStatus.OK);
+    }
 }

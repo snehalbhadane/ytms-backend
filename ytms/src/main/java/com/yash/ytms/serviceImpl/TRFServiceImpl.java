@@ -95,10 +95,18 @@ public class TRFServiceImpl implements TRFService{
 
 	@Override
 	public List<TrainingRequestForm> getAllTrfByStatus(String status) {
-		// TODO Auto-generated method stub
 		List<TrainingRequestForm> list = trfRepository.findAllTrainingRequestFormsByStatus(status);
 		System.out.println(list.toString());
 		return list;
+	}
+
+	@Transactional
+	@Override
+	public int updateTrainingRequestFormStatus(String status, Long trfId) throws TRFNotFound {
+		TrainingRequestForm rform = trfRepository.findById(trfId).orElseThrow(()-> new TRFNotFound("Not Found"));
+		int index = trfRepository.updateTrainingRequestFormStatus(trfId, status);
+		logger.info("index of updateStatus - {} "+index);
+		return index;
 	}
 
 }
