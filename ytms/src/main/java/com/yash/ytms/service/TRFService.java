@@ -21,6 +21,4 @@ public interface TRFService {
 	public List<TrainingRequestForm> getAllTrf();
 	public TrainingRequestForm getById(Long Id) throws TRFNotFound;
 	public TrainingRequestForm updateTRF(Long id, TrainingRequestForm form) throws TRFNotFound;
-	public List<TrainingRequestForm> getAllTrfByStatus(String status);
-	public int updateTrainingRequestFormStatus(String status, Long trfId) throws TRFNotFound;
 }

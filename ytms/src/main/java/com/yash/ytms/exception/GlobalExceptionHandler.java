@@ -73,14 +73,7 @@ public class GlobalExceptionHandler {
 	private ResponseEntity<Object> handleUserNotFoundException(UserNotFound e) {
 		Map<String, String> map = new HashMap<>();
 		map.put("error", e.getMessage());
-		return ResponseEntity.status(HttpStatus.OK).body(map);
+		return ResponseEntity.status(HttpStatus.FORBIDDEN).body(map);
 	}
 	
-	@ResponseStatus(HttpStatus.NOT_FOUND)
-	@ExceptionHandler(UserAlreadyExistsException.class)
-	private ResponseEntity<Object> handleUserAlreadyExistException(UserAlreadyExistsException e) {
-		Map<String, String> map = new HashMap<>();
-		map.put("error", e.getMessage());
-		return ResponseEntity.status(HttpStatus.OK).body(map);
-	}
 }
