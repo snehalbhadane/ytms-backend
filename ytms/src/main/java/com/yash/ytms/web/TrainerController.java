@@ -1,4 +1,4 @@
-package com.yash.ytms.web;
+                                                                                                                                                                                                                                                                                                         package com.yash.ytms.web;
 
 import java.util.List;
 
@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.yash.ytms.config.LoggerConfiguration;
+import com.yash.ytms.exception.TrainerNotFound;
 import com.yash.ytms.model.Trainer;
 import com.yash.ytms.model.TrainerTask;
 import com.yash.ytms.service.TrainerService;
@@ -119,6 +120,7 @@ public class TrainerController {
 		logger.info("getTrainerTasks() method called from TrainerController class.");
 
 		return new ResponseEntity<List<TrainerTask>>(trainerService.getTrainerTasks(), HttpStatus.OK);
+
 	}
 
 	/**
@@ -146,6 +148,7 @@ public class TrainerController {
 		logger.info("getTrainerTask/{trainerTaskId} method called from TrainerController class.");
 
 		return new ResponseEntity<TrainerTask>(trainerService.getTrainerTask(trainerTaskId), HttpStatus.OK);
+
 	}
 
 	/**
@@ -191,4 +194,18 @@ public class TrainerController {
 
 		trainerService.deleteTrainerTask(trainerTaskId);
 	}
+
+	/*
+	 * @ApiOperation(value = "fetch all trainer tasks.")
+	 * 
+	 * @GetMapping(value = "/getTrainerTasksNames") public
+	 * ResponseEntity<List<TrainerTask>> getTrainerTaskswithname() {
+	 * 
+	 * 
+	 * 
+	 * return null;
+	 * 
+	 * }
+	 */
+
 }

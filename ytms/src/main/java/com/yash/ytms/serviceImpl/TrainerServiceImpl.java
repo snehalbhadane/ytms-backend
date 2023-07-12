@@ -2,11 +2,10 @@ package com.yash.ytms.serviceImpl;
 
 import java.time.LocalDateTime;
 import java.util.List;
-
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-
 import com.yash.ytms.config.LoggerConfiguration;
 import com.yash.ytms.exception.TrainerNotFound;
 import com.yash.ytms.model.Trainer;
@@ -243,4 +242,19 @@ public class TrainerServiceImpl implements TrainerService {
 		trainerTaskRepository.deleteById(trainerTaskId);
 	}
 
+	public List<TrainerTask> getTrainerTaskswithTrainer() {
+		
+		TrainerServiceImpl tc= new TrainerServiceImpl();
+		
+	      List<TrainerTask> t1 = tc.getTrainerTasks();
+	      
+	    t1.forEach(e->System.out.println(e));
+		 
+
+		logger.info("getTrainerTasks() method called from TrainerServiceImpl class.");
+		
+		
+
+		return null;
+	}
 }

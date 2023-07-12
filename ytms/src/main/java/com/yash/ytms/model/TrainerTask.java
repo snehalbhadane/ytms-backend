@@ -60,7 +60,7 @@ public class TrainerTask {
 	}
 
 	public TrainerTask(Long trainerTaskId, Date taskDate, String firstHalf, String firstHalfDescription,
-			String secondHalf, String secondHalfDescription, User createdBy, LocalDateTime createdOn,
+			String secondHalf, String secondHalfDescription, User createdBy,Trainer trainer,LocalDateTime createdOn,
 			LocalDateTime updatedOn, boolean active) {
 		super();
 		this.trainerTaskId = trainerTaskId;
@@ -70,6 +70,7 @@ public class TrainerTask {
 		this.secondHalf = secondHalf;
 		this.secondHalfDescription = secondHalfDescription;
 		this.createdBy = createdBy;
+		this.trainer = trainer;
 		this.createdOn = createdOn;
 		this.updatedOn = updatedOn;
 		this.active = active;

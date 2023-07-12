@@ -45,9 +45,9 @@ public class TrainerRepositoryTest {
 
 		User user = new User();
 		user.setEmpCode("101");
-		user.setFirstName("Sadav");
-		user.setLastName("Khan");
-		user.setEmail("sadav.khan@yash.com");
+		user.setFirstName("Shubham");
+		user.setLastName("Bhake");
+		user.setEmail("Shubham@yash.com");
 		user.setRole(role);
 		tr.setUser(user);
 	}
