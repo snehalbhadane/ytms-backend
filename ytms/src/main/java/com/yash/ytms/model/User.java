@@ -15,15 +15,13 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 @Entity
 @Table(name = "user")
 public class User {
 
 	@Id
-	@Column(name = "user_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "user_id")
 	private Long userId;
 
 	@Column(name = "emp_code")
@@ -48,14 +46,13 @@ public class User {
 	private String gender;
 
 	@Column(name = "dob_date")
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
 	private Date dobDate;
 
 	@Column(name = "experience")
 	private String experience;
 
 	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "role_id", referencedColumnName = "role_id")
+	@JoinColumn(name = "role_id",referencedColumnName = "role_id")
 	private Role role;
 
 	@Column(name = "location")
@@ -68,11 +65,9 @@ public class User {
 	private String designation;
 
 	@Column(name = "created_on")
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
 	private LocalDateTime createdOn;
 
 	@Column(name = "updated_date")
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
 	private LocalDateTime updatedDate;
 
 	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
@@ -252,4 +247,5 @@ public class User {
 				+ ", updatedDate=" + updatedDate + ", createdBy=" + createdBy + "]";
 	}
 
+	
 }

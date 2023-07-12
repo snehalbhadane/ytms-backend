@@ -19,75 +19,66 @@ import com.yash.ytms.repo.TrainingSummaryRepository;
 
 @SpringBootTest
 public class TrainingSummaryRepoTest {
-	
-	
+
 	@Mock
 	private TrainingSummaryRepository tsmRepo;
-	
-	
+
 	private TrainingSummary tSummary;
-	
+
 //	private TrainingPlan trainingPlan;
-	
-	
-	
+
 	/**
-	 * This will execute before every test method and init the TrainingSummary  object
+	 * This will execute before every test method and init the TrainingSummary
+	 * object
 	 */
 	@BeforeEach
 	public void init() {
-		
-		tSummary=new TrainingSummary();
-		tSummary.setTraining_summary_id(1L);
+
+		tSummary = new TrainingSummary();
+		tSummary.setTrainingSummaryId(1L);
 		tSummary.setDuration(25);
 		tSummary.setTrainingPattern("Online");
-		
-		TrainingPlan trainingPlan=new TrainingPlan();
-		
-		
+
+		TrainingPlan trainingPlan = new TrainingPlan();
+
 		trainingPlan.setTrainingPlanId(1l);
 		trainingPlan.setTrainingName("Java Training");
-		
-	
-		User trainer=new User();
-		
+
+		User trainer = new User();
+
 		trainer.setEmpCode("10156");
 		trainer.setDesignation("Trainer");
 		trainer.setMobile("8976567889");
 		trainer.setFirstName("Pooja");
 		trainer.setLastName("patel");
-		
-		Role role=new Role();
+
+		Role role = new Role();
 		role.setRoleId(1l);
 		role.setRoleName("Trainer");
 		role.setRoleCode("10987");
-		
-		
-		
-		
+
 	}
-	
-	
+
 	@Test
-	 void createTSMTest() {
+	void createTSMTest() {
 
 		tsmRepo.save(tSummary);
 		assertThatObject(tSummary).isNotNull();
 	}
-	
+
 	@Test
-	 void getAllTSMTest() {
+	void getAllTSMTest() {
 		List<TrainingSummary> findAll = tsmRepo.findAll();
-		
+
 		assertThat(findAll).isEmpty();
 	}
-	
-	@Test
-	 void getByIdTSMTest() {
 
-		tSummary.setTraining_summary_id(1L);
+	@Test
+	void getByIdTSMTest() {
+
+		tSummary.setTrainingSummaryId(1L);
 		tsmRepo.save(tSummary);
-		assertThat(tSummary.getTraining_summary_id()).isEqualTo(1);
+		assertThat(tSummary.getTrainingSummaryId()).isEqualTo(1);
 	}
 
 }

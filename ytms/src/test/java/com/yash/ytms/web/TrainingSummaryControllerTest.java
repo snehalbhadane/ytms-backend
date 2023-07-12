@@ -49,7 +49,7 @@ public class TrainingSummaryControllerTest {
 		tSummary=new TrainingSummary();
 		
 		tSummary=new TrainingSummary();
-		tSummary.setTraining_summary_id(1L);
+		tSummary.setTrainingSummaryId(1L);
 		tSummary.setDuration(25);
 		tSummary.setTrainingPattern("Online");
 		

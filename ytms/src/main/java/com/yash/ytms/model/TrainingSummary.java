@@ -1,20 +1,18 @@
 package com.yash.ytms.model;
 
 import java.time.LocalDate;
-import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+
 
 @Entity
 @Table(name="training_summary")
@@ -23,14 +21,13 @@ public class TrainingSummary {
 	@Id
 	@Column(name = "training_summary_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long training_summary_id;
+	private Long trainingSummaryId;
 	
-
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "training_plan")
 	private TrainingPlan trainingPlan;
 	
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne
 	@JoinColumn(name="user_id")
 	private User trainer;
 	
@@ -44,11 +41,16 @@ public class TrainingSummary {
 	
 	@Column(name = "created_on")
 	private LocalDate createdOn;
+	
+	public TrainingSummary() {
+		super();
+		
+	}
 
 	public TrainingSummary(Long training_summary_id, TrainingPlan trainingPlan, User trainer,
 			String trainingPattern, int duration, LocalDate createdOn) {
 		super();
-		this.training_summary_id = training_summary_id;
+		this.trainingSummaryId = training_summary_id;
 		this.trainingPlan = trainingPlan;
 		this.trainer = trainer;
 		this.trainingPattern = trainingPattern;
@@ -56,12 +58,12 @@ public class TrainingSummary {
 		this.createdOn = createdOn;
 	}
 
-	public Long getTraining_summary_id() {
-		return training_summary_id;
+	public Long getTrainingSummaryId() {
+		return trainingSummaryId;
 	}
 
-	public void setTraining_summary_id(Long training_summary_id) {
-		this.training_summary_id = training_summary_id;
+	public void setTrainingSummaryId(Long trainingSummaryId) {
+		this.trainingSummaryId = trainingSummaryId;
 	}
 
 	public TrainingPlan getTrainingPlan() {
@@ -104,13 +106,4 @@ public class TrainingSummary {
 		this.createdOn = createdOn;
 	}
 
-	public TrainingSummary() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	
-	
-
-
-	
 }

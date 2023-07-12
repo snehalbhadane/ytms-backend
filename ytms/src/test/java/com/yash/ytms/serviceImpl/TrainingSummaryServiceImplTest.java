@@ -39,7 +39,7 @@ public class TrainingSummaryServiceImplTest {
 	public void init() {
 		
 		tSummary=new TrainingSummary();
-		tSummary.setTraining_summary_id(1L);
+		tSummary.setTrainingSummaryId(1L);
 		tSummary.setDuration(25);
 		tSummary.setTrainingPattern("Online");
 		
