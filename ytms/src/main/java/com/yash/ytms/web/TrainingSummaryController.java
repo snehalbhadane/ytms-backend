@@ -83,10 +83,10 @@ public class TrainingSummaryController {
 	}
 
 	// Get Training Summary By Trainer Name
-	@GetMapping("/getSummaryByName/{UserName}")
-	public ResponseEntity<List<TrainingSummary>> getSummaryByName(@PathVariable String UserName) {
+	@GetMapping("/getSummaryByName/{trainerName}")
+	public ResponseEntity<List<TrainingSummary>> getSummaryByName(@PathVariable String trainerName) {
 
-		return new ResponseEntity<List<TrainingSummary>>(this.trainingSummaryService.getSummaryByName(UserName),
+		return new ResponseEntity<List<TrainingSummary>>(this.trainingSummaryService.getSummaryByName(trainerName),
 				HttpStatus.OK);
 	}
 

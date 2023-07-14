@@ -75,9 +75,9 @@ public class TrainingSummaryServiceImpl implements TrainingSummaryService {
 	}
 
 	@Override
-	public List<TrainingSummary> getSummaryByName(String userName) {
+	public List<TrainingSummary> getSummaryByName(String trainerName) {
 		User u = new User();
-		u.setFirstName(userName);
+		u.setFirstName(trainerName);
 		TrainingSummary ts = new TrainingSummary();
 		ts.setTrainer(u);
 		String firstName = ts.getTrainer().getFirstName();

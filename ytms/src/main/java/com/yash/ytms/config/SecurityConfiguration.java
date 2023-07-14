@@ -38,7 +38,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		String[] permitAll = new String[] { "/useraccess/login", "/useraccess/add-user", "/useraccess/logout",
-				"/trainer/**", "/tsm/**" };
+				"/trainer/**", "/tsm/**", "/swagger-ui.html", "/swagger.json", "/swagger-resources/**", "/webjars/**","/v2/api-docs/**" };
 		http.cors().and().csrf().disable().authorizeRequests().antMatchers(permitAll).permitAll()
 //				.antMatchers("/trf/**").hasRole("USER")
 //				.antMatchers("/tsm/**").hasRole("TRAINER")
