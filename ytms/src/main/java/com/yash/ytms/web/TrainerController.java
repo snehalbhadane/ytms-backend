@@ -191,6 +191,7 @@ public class TrainerController {
 	public void deleteTrainerTask(@PathVariable(value = "trainerTaskId") Long trainerTaskId) {
 
 		logger.info("deleteTrainerTask/{trainerTaskId} method called from TrainerController class.");
+		logger.info("deleteTrainerTask/{trainerTaskId} method called from TrainerController class2.");
 
 		trainerService.deleteTrainerTask(trainerTaskId);
 	}
