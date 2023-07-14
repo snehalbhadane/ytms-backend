@@ -15,4 +15,6 @@ public interface TrainingSummaryService {
 
 	public void deleteTrainingSummary(Long trainingSummaryId);
 
+	public List<TrainingSummary> getSummaryByName(String userName);
+
 }

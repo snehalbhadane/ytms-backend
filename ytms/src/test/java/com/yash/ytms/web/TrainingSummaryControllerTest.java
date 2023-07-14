@@ -13,27 +13,27 @@ import org.apache.tomcat.util.json.ParseException;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.yash.ytms.model.Role;
 import com.yash.ytms.model.TrainingPlan;
 import com.yash.ytms.model.TrainingSummary;
 import com.yash.ytms.model.User;
 import com.yash.ytms.service.TrainingSummaryService;
 
-
 @WebMvcTest(TrainingSummaryController.class)
+@ExtendWith(SpringExtension.class)
 public class TrainingSummaryControllerTest {
 	
 	@Autowired
@@ -87,7 +87,7 @@ public class TrainingSummaryControllerTest {
 		
 		when(service.addTrainingSummary(tSummary)).thenReturn(tSummary);
 		
-		mockMvc.perform(post("/tsm/add-summary")
+		mockMvc.perform(post("/tsm/addSummary")
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(new ObjectMapper().writeValueAsString(tSummary))
 				).andExpect(status().isCreated());
@@ -104,14 +104,11 @@ public class TrainingSummaryControllerTest {
 		when(service.getTrainingSummary()).thenReturn(summarylist);
 		
 		
-		mvcResult=mockMvc.perform(MockMvcRequestBuilders.get("/tsm/get-trainig-summary-details"))
+		mvcResult=mockMvc.perform(MockMvcRequestBuilders.get("/tsm/getTrainigSummaryDetails"))
 		.andDo(print()).andReturn();
 		
 		assertEquals(200, mvcResult.getResponse().getStatus());
 		
 	}
 	
-	
-	
-
 }
