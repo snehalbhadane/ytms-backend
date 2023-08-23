@@ -113,6 +113,36 @@ public class TrainerServiceImpl implements TrainerService {
 	 * This method will responsible to delete trainer details data based on
 	 * trainerId
 	 */
+	
+	@Override
+	public Trainer updateTrainerDetails(Long trainerId, Trainer trainer) {
+		// TODO Auto-generated method stub
+		
+		logger.info("updateTrainerDetails(Trainer trainer) method called from TrainerServiceImpl class.");
+		
+		Trainer trainerObj = new Trainer();
+
+		if (trainer != null && trainer.getTrainerId() != null && trainer.getTrainerId() > 0) {
+
+			trainerObj = trainerRepository.findById(trainer.getTrainerId())
+					.orElseThrow(() -> new TrainerNotFound("Trainer not found."));
+		} else {
+			throw (new TrainerNotFound("Trainer not found."));
+		}
+
+		
+		  if (trainer.getUser() != null && trainer.getUser().getUserId() != null &&
+		 trainer.getUser().getUserId() > 0) {
+		 trainer.setCreatedOn(trainerObj.getCreatedOn());
+		 
+			trainer.setUpdatedOn(LocalDateTime.now());
+			
+			 } else { throw (new TrainerNotFound("Session user not found.")); }
+			 
+
+		return trainerRepository.save(trainer);
+	};
+	
 	@Override
 	public void deleteTrainerDetails(Long trainerId) {
 
@@ -167,13 +197,13 @@ public class TrainerServiceImpl implements TrainerService {
 
 		logger.info("saveTrainerTask(TrainerTask trainerTask) method called from TrainerServiceImpl class.");
 
-		if (trainerTask.getCreatedBy() != null && trainerTask.getCreatedBy().getUserId() != null
-				&& trainerTask.getCreatedBy().getUserId() > 0) {
+//		if (trainerTask.getCreatedBy() != null && trainerTask.getCreatedBy().getUserId() != null
+//				&& trainerTask.getCreatedBy().getUserId() > 0) {
 			trainerTask.setCreatedOn(LocalDateTime.now());
 			trainerTask.setActive(true);
-		} else {
-			throw (new TrainerNotFound("Session user not found."));
-		}
+//		} else {
+//			throw (new TrainerNotFound("Session user not found."));
+//		}
 
 		if (trainerTask.getTrainer() != null && trainerTask.getTrainer().getTrainerId() != null
 				&& trainerTask.getTrainer().getTrainerId() > 0) {
@@ -206,14 +236,17 @@ public class TrainerServiceImpl implements TrainerService {
 			throw (new TrainerNotFound("Trainer task not found."));
 		}
 
-		if (trainerTask.getCreatedBy() != null && trainerTask.getCreatedBy().getUserId() != null
-				&& trainerTask.getCreatedBy().getUserId() > 0) {
-			trainerTask.setCreatedOn(trainerTaskObj.getCreatedOn());
+		/*
+		 * if (trainerTask.getCreatedBy() != null &&
+		 * trainerTask.getCreatedBy().getUserId() != null &&
+		 * trainerTask.getCreatedBy().getUserId() > 0) {
+		 * trainerTask.setCreatedOn(trainerTaskObj.getCreatedOn());
+		 */
 			trainerTask.setUpdatedOn(LocalDateTime.now());
 			trainerTask.setActive(true);
-		} else {
-			throw (new TrainerNotFound("Session user not found."));
-		}
+			/*
+			 * } else { throw (new TrainerNotFound("Session user not found.")); }
+			 */
 
 		if (trainerTask.getTrainer() != null && trainerTask.getTrainer().getTrainerId() != null
 				&& trainerTask.getTrainer().getTrainerId() > 0) {
@@ -257,4 +290,6 @@ public class TrainerServiceImpl implements TrainerService {
 
 		return null;
 	}
+
+	
 }

@@ -37,9 +37,9 @@ public class TrainerTask {
 	@Column(name = "second_half_description")
 	private String secondHalfDescription;
 
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "created_by_id", referencedColumnName = "user_id")
-	private User createdBy;
+//	@ManyToOne(fetch = FetchType.EAGER)
+//	@JoinColumn(name = "created_by_id", referencedColumnName = "user_id")
+//	private User createdBy;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "trainer_id", referencedColumnName = "trainer_id")
@@ -69,7 +69,7 @@ public class TrainerTask {
 		this.firstHalfDescription = firstHalfDescription;
 		this.secondHalf = secondHalf;
 		this.secondHalfDescription = secondHalfDescription;
-		this.createdBy = createdBy;
+		//this.createdBy = createdBy;
 		this.trainer = trainer;
 		this.createdOn = createdOn;
 		this.updatedOn = updatedOn;
@@ -112,12 +112,11 @@ public class TrainerTask {
 	public void setSecondHalfDescription(String secondHalfDescription) {
 		this.secondHalfDescription = secondHalfDescription;
 	}
-	public User getCreatedBy() {
-		return createdBy;
-	}
-	public void setCreatedBy(User createdBy) {
-		this.createdBy = createdBy;
-	}
+
+	/*
+	 * public User getCreatedBy() { return createdBy; } public void
+	 * setCreatedBy(User createdBy) { this.createdBy = createdBy; }
+	 */
 	public Trainer getTrainer() {
 		return trainer;
 	}

@@ -23,6 +23,8 @@ public interface TrainerService {
 	public Trainer saveTrainerDetails(Trainer trainer);
 
 	public Trainer updateTrainerDetails(Trainer trainer);
+	
+	public Trainer updateTrainerDetails(Long trainerId ,Trainer trainer);
 
 	public void deleteTrainerDetails(Long trainerId);
 
@@ -35,6 +37,8 @@ public interface TrainerService {
 	public TrainerTask saveTrainerTask(TrainerTask trainerTask);
 
 	public TrainerTask updateTrainerTask(TrainerTask trainerTask);
+	
+	
 	
 	public void deleteTrainerTask(Long trainerTaskId);
 	

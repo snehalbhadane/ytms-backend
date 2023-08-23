@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -33,6 +34,7 @@ import io.swagger.annotations.ApiOperation;
  * @since 05/05/2023
  */
 @RestController
+@CrossOrigin
 @RequestMapping("/trainer")
 public class TrainerController {
 
@@ -100,6 +102,14 @@ public class TrainerController {
 	 * This controller method handles the HTTP delete request for delete trainer
 	 * details, matching with the given URI.
 	 */
+	@PutMapping("/updateTrainerDetail/{trainerId}")
+    public ResponseEntity<Trainer>updateTrainerById(@PathVariable Long trainerId ,@RequestBody Trainer trainer){
+    	logger.info("updateTrainer By id method called from TrainerController class.");
+    	
+	return  new ResponseEntity<Trainer>(trainerService.updateTrainerDetails(trainerId, trainer),HttpStatus.CREATED);
+	
+	}
+	
 	@ApiOperation(value = "delete trainer details based on trainer id.")
 	@DeleteMapping("/deleteTrainer/{trainerId}")
 	public void deleteTrainer(@PathVariable(value = "trainerId") Long trainerId) {
