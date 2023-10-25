@@ -186,7 +186,7 @@ public class TrainerServiceImpl implements TrainerService {
 		logger.info("getTrainerTask(Long trainerTaskId) method called from TrainerServiceImpl class.");
 
 		return trainerTaskRepository.findById(trainerTaskId)
-				.orElseThrow(() -> new TrainerNotFound("Trainer task not found."));
+				.orElseThrow(() -> new TrainerNotFound("Trainer task not found, from task id"));
 	}
 
 	/**
@@ -291,5 +291,44 @@ public class TrainerServiceImpl implements TrainerService {
 		return null;
 	}
 
-	
+	@Override
+	public TrainerTask updateTrainerTaskBytaskID(Long trainerTaskId, TrainerTask trainerTask) {
+		// TODO Auto-generated method stub
+		logger.info("updateTrainerTask(TrainerTask trainerTask) method called from TrainerServiceImpl class.");
+
+		TrainerTask trainerTaskObj = new TrainerTask();
+
+		if (trainerTask != null && trainerTask.getTrainerTaskId() != null && trainerTask.getTrainerTaskId() > 0) {
+
+			trainerTaskObj = trainerTaskRepository.findById(trainerTask.getTrainerTaskId())
+					.orElseThrow(() -> new TrainerNotFound("Trainer task not found."));
+		} else {
+			throw (new TrainerNotFound("Trainer task not found."));
+		}
+
+		/*
+		 * if (trainerTask.getCreatedBy() != null &&
+		 * trainerTask.getCreatedBy().getUserId() != null &&
+		 * trainerTask.getCreatedBy().getUserId() > 0) {
+		 * trainerTask.setCreatedOn(trainerTaskObj.getCreatedOn());
+		 */
+			trainerTask.setUpdatedOn(LocalDateTime.now());
+			trainerTask.setActive(true);
+			/*
+			 * } else { throw (new TrainerNotFound("Session user not found.")); }
+			 */
+
+		if (trainerTask.getTrainer() != null && trainerTask.getTrainer().getTrainerId() != null
+				&& trainerTask.getTrainer().getTrainerId() > 0) {
+
+			Trainer trainer = trainerRepository.findById(trainerTask.getTrainer().getTrainerId())
+					.orElseThrow(() -> new TrainerNotFound("Trainer not found. Please fill all the required details."));
+			trainerTask.setTrainer(trainer);
+		} else {
+			throw (new TrainerNotFound("Trainer not found. Please fill all the required details."));
+		}
+
+		return trainerTaskRepository.save(trainerTask);
+
+	}
 }

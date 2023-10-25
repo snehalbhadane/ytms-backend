@@ -1,6 +1,7 @@
 package com.yash.ytms.model;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,7 +20,7 @@ public class TrainingPlan {
 	
 	
 	@Id
-	@Column(name = "trainer_plan_id")
+	@Column(name = "training_plan_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long trainingPlanId;
 
@@ -40,16 +41,16 @@ public class TrainingPlan {
 	private int duration;
 
 	@Column(name = "planned_start_date")
-	private LocalDateTime plannedStartDate;
+	private Date plannedStartDate;
 
 	@Column(name = "planned_end_date")
-	private LocalDateTime plannedEndDate;
+	private Date plannedEndDate;
 	
 	@Column(name = "actual_start_date")
-	private LocalDateTime actualStartDate;
+	private Date actualStartDate;
 	
 	@Column(name = "actual_end_date")
-	private LocalDateTime actualEndDate;
+	private Date actualEndDate;
 	
 	@Column(name = "status")
 	private String status;
@@ -71,8 +72,8 @@ public class TrainingPlan {
 	}
 
 	public TrainingPlan(long trainingPlanId, String trainingName, String topic, String contentsCoverage,
-			String extraTopicCoverage, int duration, LocalDateTime plannedStartDate, LocalDateTime plannedEndDate,
-			LocalDateTime actualStartDate, LocalDateTime actualEndDate, String status, String remark, User user,
+			String extraTopicCoverage, int duration, Date plannedStartDate, Date plannedEndDate,
+			Date actualStartDate, Date actualEndDate, String status, String remark, User user,
 			Trainer trainer) {
 		super();
 		this.trainingPlanId = trainingPlanId;
@@ -139,35 +140,35 @@ public class TrainingPlan {
 		this.duration = duration;
 	}
 
-	public LocalDateTime getPlannedStartDate() {
+	public Date getPlannedStartDate() {
 		return plannedStartDate;
 	}
 
-	public void setPlannedStartDate(LocalDateTime plannedStartDate) {
+	public void setPlannedStartDate(Date plannedStartDate) {
 		this.plannedStartDate = plannedStartDate;
 	}
 
-	public LocalDateTime getPlannedEndDate() {
+	public Date getPlannedEndDate() {
 		return plannedEndDate;
 	}
 
-	public void setPlannedEndDate(LocalDateTime plannedEndDate) {
+	public void setPlannedEndDate(Date plannedEndDate) {
 		this.plannedEndDate = plannedEndDate;
 	}
 
-	public LocalDateTime getActualStartDate() {
+	public Date getActualStartDate() {
 		return actualStartDate;
 	}
 
-	public void setActualStartDate(LocalDateTime actualStartDate) {
+	public void setActualStartDate(Date actualStartDate) {
 		this.actualStartDate = actualStartDate;
 	}
 
-	public LocalDateTime getActualEndDate() {
+	public Date getActualEndDate() {
 		return actualEndDate;
 	}
 
-	public void setActualEndDate(LocalDateTime actualEndDate) {
+	public void setActualEndDate(Date actualEndDate) {
 		this.actualEndDate = actualEndDate;
 	}
 
@@ -201,6 +202,23 @@ public class TrainingPlan {
 
 	public void setTrainer(Trainer trainer) {
 		this.trainer = trainer;
+	}
+
+	@Override
+	public String toString() {
+		return "TrainingPlan [trainingPlanId=" + trainingPlanId + ", trainingName=" + trainingName + ", topic=" + topic
+				+ ", contentsCoverage=" + contentsCoverage + ", extraTopicCoverage=" + extraTopicCoverage
+				+ ", duration=" + duration + ", plannedStartDate=" + plannedStartDate + ", plannedEndDate="
+				+ plannedEndDate + ", actualStartDate=" + actualStartDate + ", actualEndDate=" + actualEndDate
+				+ ", status=" + status + ", remark=" + remark + ", user=" + user + ", trainer=" + trainer
+				+ ", getTrainingPlanId()=" + getTrainingPlanId() + ", getTrainingName()=" + getTrainingName()
+				+ ", getTopic()=" + getTopic() + ", getContentsCoverage()=" + getContentsCoverage()
+				+ ", getExtraTopicCoverage()=" + getExtraTopicCoverage() + ", getDuration()=" + getDuration()
+				+ ", getPlannedStartDate()=" + getPlannedStartDate() + ", getPlannedEndDate()=" + getPlannedEndDate()
+				+ ", getActualStartDate()=" + getActualStartDate() + ", getActualEndDate()=" + getActualEndDate()
+				+ ", getStatus()=" + getStatus() + ", getRemark()=" + getRemark() + ", getUser()=" + getUser()
+				+ ", getTrainer()=" + getTrainer() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ ", toString()=" + super.toString() + "]";
 	}
 
 

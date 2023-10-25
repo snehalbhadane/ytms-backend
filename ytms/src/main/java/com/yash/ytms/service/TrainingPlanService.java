@@ -15,5 +15,14 @@ public interface TrainingPlanService {
 	public void deleteTrainingPlanbyId(long id );
 	
 	public TrainingPlan updateTrainingPlan(TrainingPlan plan , long id);
+	
+	/*
+	 * @author shubham bhake 
+	 * this method is for gettinf details of training plan base on trainingPlanId
+	 * this will mostly use while updating plan from UI side
+	 * as we need data prefilled before update on UI.
+	 */
+   
+	public TrainingPlan getTrainingPlanId(long trainingPlanId);
 
 }

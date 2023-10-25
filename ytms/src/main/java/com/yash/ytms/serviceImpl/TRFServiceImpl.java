@@ -6,7 +6,6 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import com.yash.ytms.config.LoggerConfiguration;
 import com.yash.ytms.exception.TRFNotFound;
 import com.yash.ytms.model.Associate;
@@ -100,5 +99,22 @@ public class TRFServiceImpl implements TRFService{
 //	    	ids.add(a.getId());
 //	    }
 //	    assRepository.deleteByIdIn();
+	}
+	@Override
+	public List<TrainingRequestForm> getAllTrfByStatus(String status) {
+		List<TrainingRequestForm> list = trfRepository.findAllTrainingRequestFormsByStatus(status);
+		System.out.println(list.toString());
+		return list;
+	}
+
+ 
+
+	@Transactional
+	@Override
+	public int updateTrainingRequestFormStatus(String status, Long trfId) throws TRFNotFound {
+		TrainingRequestForm rform = trfRepository.findById(trfId).orElseThrow(()-> new TRFNotFound("Not Found"));
+		int index = trfRepository.updateTrainingRequestFormStatus(trfId, status);
+		logger.info("index of updateStatus - {} "+index);
+		return index;
 	}
 }

@@ -133,7 +133,34 @@ class TrainerServiceImplTest {
 		assertEquals(1L, trainer.getTrainerId());
 		assertEquals("permenat", trainer.getType());
 	}
+	
+	
+	@Test
+    public void updateTrainerById() throws ParseException {
+		
+		User user1 = new User(1L, "101", "Shubham", "Bhake", "shubham@gmail.com", "1234567890", "1234567890", "male",
+				formatter.parse(dob), "2.10 year", role, "Pune", "ytms", "software Enginner", createdOndate,
+				updatedOndate, null);
 
+		Trainer trainer11 = new Trainer(1L, user1, "pune", "Hinjewadi", "mamta", "permenat", "3year", createdOndate,
+				updatedOndate);
+		
+		
+		//Trainer trainerAvaible = new Trainer();
+		trainer11.setTrainerId(1L);
+		
+		trainer11.setIrm("Maruti");
+		trainer11.setCurrentLocation("Nagpur");
+		
+		
+		Trainer trainerupdate=this.trainerRepository.save(trainer11);
+
+		assertEquals("Maruti",trainer11.getIrm());
+		assertEquals("Nagpur",trainer11.getCurrentLocation());
+			
+    }
+	
+	
 	@Test
 	public void deleteTrainerDetailsTest() throws ParseException {
 
@@ -221,5 +248,7 @@ class TrainerServiceImplTest {
 		verify(trainerTaskRepository,times(1)).deleteById(taskid);
 		
     }
+    
+    
 }
 

@@ -113,7 +113,7 @@ public class TrainingRequestForm implements Serializable{
 	 * Hold the list of associate which will participate in the training
 	 */
 	
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     @JoinColumn(name = "asst_trf_id", referencedColumnName = "trfId")
     private List<Associate> associates;
 

@@ -38,6 +38,7 @@ public interface TrainerService {
 
 	public TrainerTask updateTrainerTask(TrainerTask trainerTask);
 	
+	public TrainerTask updateTrainerTaskBytaskID(Long trainerTaskId,TrainerTask trainerTask);
 	
 	
 	public void deleteTrainerTask(Long trainerTaskId);

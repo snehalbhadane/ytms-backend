@@ -52,7 +52,13 @@ public class TrainingPlanServiceImpl implements TrainingPlanService {
 		existingTrainingPlan.setRemark(plan.getRemark());
 		existingTrainingPlan.setUser(plan.getUser());
 		existingTrainingPlan.setTrainer(plan.getTrainer());
-		return existingTrainingPlan;
+		return planRepository.save(existingTrainingPlan);
+	}
+
+	@Override
+	public TrainingPlan getTrainingPlanId(long trainingPlanId) {
+		// TODO Auto-generated method stub
+		return planRepository.getById(trainingPlanId);
 	}
 
 }

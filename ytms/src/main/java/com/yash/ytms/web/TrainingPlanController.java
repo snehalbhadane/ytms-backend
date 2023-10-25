@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.yash.ytms.config.LoggerConfiguration;
 import com.yash.ytms.model.TrainingPlan;
 import com.yash.ytms.serviceImpl.TrainingPlanServiceImpl;
-
+@CrossOrigin
 @RestController
 @RequestMapping("/trainingPlan")
 public class TrainingPlanController {
@@ -28,7 +29,7 @@ public class TrainingPlanController {
 	@Autowired
 	private TrainingPlanServiceImpl planServiceImpl;
 
-	@PostMapping("/")
+	@PostMapping("/saveTrainingplan")
 	public TrainingPlan saveTrainingPlan(@RequestBody TrainingPlan plan) {
 		logger.info("In Saving Training plan Controller");
 		return planServiceImpl.saveTrainingPlanDetails(plan);
@@ -46,6 +47,9 @@ public class TrainingPlanController {
 	public ResponseEntity<TrainingPlan> updateTrainingPlan(@PathVariable("id") long id,
 			@RequestBody TrainingPlan trainingPlan) {
 		logger.info("In Update training plan controller");
+		
+		//System.out.println("check plan ..........."+trainingPlan.toString());
+		
 		return new ResponseEntity<TrainingPlan>(planServiceImpl.updateTrainingPlan(trainingPlan, id), HttpStatus.OK);
 	}
 
@@ -57,5 +61,14 @@ public class TrainingPlanController {
 		return true;
 
 	}
+	
+	@GetMapping("GetTrainingPlanById/{trainingPlanId}")
+	public ResponseEntity<TrainingPlan> getTrainingPlanByid(@PathVariable long trainingPlanId) {
+		
+		return new ResponseEntity<TrainingPlan>(planServiceImpl.getTrainingPlanId(trainingPlanId),HttpStatus.OK);
+		
+	}
+	
+	
 
 }

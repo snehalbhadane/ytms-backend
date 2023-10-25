@@ -1,9 +1,11 @@
-2023-08-23 01:31:41.748  WARN 19608 --- [HikariPool-6 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=7h4m46s980ms441µs600ns).
-2023-08-23 10:29:28.336  WARN 19608 --- [HikariPool-6 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=8h57m49s780ms685µs700ns).
-2023-08-23 10:33:39.686  INFO 19608 --- [RMI TCP Connection(302)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2023-08-23 10:33:39.868  INFO 19608 --- [RMI TCP Connection(302)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-08-23 10:33:39.880  INFO 19608 --- [RMI TCP Connection(302)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-08-23 10:33:39.984  WARN 19608 --- [RMI TCP Connection(302)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-6 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+2023-10-25 01:13:39.781  WARN 26784 --- [HikariPool-17 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-17 - Thread starvation or clock leap detected (housekeeper delta=1h20m31s849ms214µs200ns).
+2023-10-25 01:14:21.942  WARN 26784 --- [HikariPool-17 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-17 - Thread starvation or clock leap detected (housekeeper delta=45s166ms860µs300ns).
+2023-10-25 11:17:10.420  WARN 26784 --- [HikariPool-17 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-17 - Thread starvation or clock leap detected (housekeeper delta=10h2m51s446ms404µs100ns).
+2023-10-25 11:38:55.449  WARN 26784 --- [HikariPool-17 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-17 - Thread starvation or clock leap detected (housekeeper delta=8m11s255ms774µs100ns).
+2023-10-25 11:39:14.959  INFO 26784 --- [RMI TCP Connection(478)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-10-25 11:39:15.184  INFO 26784 --- [RMI TCP Connection(478)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-25 11:39:15.202  INFO 26784 --- [RMI TCP Connection(478)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-10-25 11:39:15.340  WARN 26784 --- [RMI TCP Connection(478)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-17 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  java.base@17.0.3/jdk.internal.misc.Unsafe.park(Native Method)
  java.base@17.0.3/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
  java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
@@ -13,7 +15,7 @@
  java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
  java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
  java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
-2023-08-23 10:33:39.990  WARN 19608 --- [RMI TCP Connection(302)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [logback-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+2023-10-25 11:39:15.344  WARN 26784 --- [RMI TCP Connection(478)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [logback-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  java.base@17.0.3/jdk.internal.misc.Unsafe.park(Native Method)
  java.base@17.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
  java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
@@ -26,7 +28,7 @@
  java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
  java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
  java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
-2023-08-23 10:33:39.991  WARN 19608 --- [RMI TCP Connection(302)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [logback-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+2023-10-25 11:39:15.345  WARN 26784 --- [RMI TCP Connection(478)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [logback-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  java.base@17.0.3/jdk.internal.misc.Unsafe.park(Native Method)
  java.base@17.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
  java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
@@ -39,6 +41,491 @@
  java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
  java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
  java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
-2023-08-23 10:33:40.051  INFO 19608 --- [RMI TCP Connection(302)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-08-23 10:33:40.120  INFO 19608 --- [RMI TCP Connection(302)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
-2023-08-23 10:33:40.178  INFO 19608 --- [RMI TCP Connection(302)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2023-10-25 11:39:15.346  WARN 26784 --- [RMI TCP Connection(478)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [logback-3] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+ java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+ java.base@17.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3463)
+ java.base@17.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3434)
+ java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+ java.base@17.0.3/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1170)
+ java.base@17.0.3/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+2023-10-25 11:39:15.347  WARN 26784 --- [RMI TCP Connection(478)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [logback-4] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+ java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+ java.base@17.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3463)
+ java.base@17.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3434)
+ java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+ java.base@17.0.3/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1170)
+ java.base@17.0.3/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+2023-10-25 11:39:15.450  INFO 26784 --- [RMI TCP Connection(478)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-25 11:39:15.495  INFO 26784 --- [RMI TCP Connection(478)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown initiated...
+2023-10-25 11:39:15.553  INFO 26784 --- [RMI TCP Connection(478)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown completed.
+2023-10-25 11:40:13.958  INFO 22232 --- [restartedMain] com.yash.ytms.YtmsApplication            : Starting YtmsApplication using Java 17.0.3 on YPH1016146LT with PID 22232 (D:\YTMS_New\dev-branch\ytms\target\classes started by shubham.bhake in D:\YTMS_New\dev-branch\ytms)
+2023-10-25 11:40:13.960  INFO 22232 --- [restartedMain] com.yash.ytms.YtmsApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-10-25 11:40:14.012  INFO 22232 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-25 11:40:14.013  INFO 22232 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-25 11:40:15.302  INFO 22232 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-25 11:40:15.447  INFO 22232 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132 ms. Found 11 JPA repository interfaces.
+2023-10-25 11:40:16.434  INFO 22232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-25 11:40:16.447  INFO 22232 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-25 11:40:16.447  INFO 22232 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-10-25 11:40:16.637  INFO 22232 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-25 11:40:16.637  INFO 22232 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2623 ms
+2023-10-25 11:40:16.816  INFO 22232 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-25 11:40:16.875  INFO 22232 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-25 11:40:17.102  INFO 22232 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-25 11:40:17.267  INFO 22232 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-25 11:40:17.761  INFO 22232 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-25 11:40:17.780  INFO 22232 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-10-25 11:40:18.960  INFO 22232 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-25 11:40:18.969  INFO 22232 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-25 11:40:19.403  WARN 22232 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-25 11:40:20.289  INFO 22232 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-10-25 11:40:20.449  INFO 22232 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@deaff4c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@bda67fe, org.springframework.security.web.context.SecurityContextPersistenceFilter@59f1153a, org.springframework.security.web.header.HeaderWriterFilter@538fee4c, org.springframework.web.filter.CorsFilter@24814f61, org.springframework.security.web.authentication.logout.LogoutFilter@2634cb67, com.yash.ytms.config.JwtRequestFilter@1fc5017c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3313dbfd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@112f0b99, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@692eb420, org.springframework.security.web.session.SessionManagementFilter@16741dc, org.springframework.security.web.access.ExceptionTranslationFilter@167e9b14, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@569ffb34]
+2023-10-25 11:40:20.563  INFO 22232 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-25 11:40:20.826  INFO 22232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-25 11:40:20.828  INFO 22232 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-10-25 11:40:20.846  INFO 22232 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-10-25 11:40:20.875  INFO 22232 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-10-25 11:40:21.118  INFO 22232 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addReportUsingPOST_1
+2023-10-25 11:40:21.238  INFO 22232 --- [restartedMain] com.yash.ytms.YtmsApplication            : Started YtmsApplication in 7.6 seconds (JVM running for 8.677)
+2023-10-25 11:46:29.656  INFO 14468 --- [restartedMain] com.yash.ytms.YtmsApplication            : Starting YtmsApplication using Java 17.0.3 on YPH1016146LT with PID 14468 (D:\YTMS_New\dev-branch\ytms\target\classes started by shubham.bhake in D:\YTMS_New\dev-branch\ytms)
+2023-10-25 11:46:29.657  INFO 14468 --- [restartedMain] com.yash.ytms.YtmsApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-10-25 11:46:29.704  INFO 14468 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-25 11:46:29.705  INFO 14468 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-25 11:46:31.241  INFO 14468 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-25 11:46:31.360  INFO 14468 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 11 JPA repository interfaces.
+2023-10-25 11:46:32.049  INFO 14468 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-25 11:46:32.058  INFO 14468 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-25 11:46:32.058  INFO 14468 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-10-25 11:46:32.159  INFO 14468 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-25 11:46:32.159  INFO 14468 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2453 ms
+2023-10-25 11:46:32.299  INFO 14468 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-25 11:46:32.348  INFO 14468 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-25 11:46:32.498  INFO 14468 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-25 11:46:32.589  INFO 14468 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-25 11:46:32.994  INFO 14468 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-25 11:46:33.015  INFO 14468 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-10-25 11:46:34.765  INFO 14468 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-25 11:46:34.790  INFO 14468 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-25 11:46:35.578  WARN 14468 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-25 11:46:37.048  INFO 14468 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-10-25 11:46:37.201  INFO 14468 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5b9fb414, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3ab25794, org.springframework.security.web.context.SecurityContextPersistenceFilter@4c35ca96, org.springframework.security.web.header.HeaderWriterFilter@5bf317da, org.springframework.web.filter.CorsFilter@555d5afc, org.springframework.security.web.authentication.logout.LogoutFilter@56dcbc3b, com.yash.ytms.config.JwtRequestFilter@1fc5017c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2634cb67, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1dd58ba, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@955bf8c, org.springframework.security.web.session.SessionManagementFilter@6fcc3a1f, org.springframework.security.web.access.ExceptionTranslationFilter@67801dca, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@38e6a71a]
+2023-10-25 11:46:37.361  INFO 14468 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-25 11:46:37.619  INFO 14468 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-25 11:46:37.620  INFO 14468 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-10-25 11:46:37.647  INFO 14468 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-10-25 11:46:37.694  INFO 14468 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-10-25 11:46:38.136  INFO 14468 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addReportUsingPOST_1
+2023-10-25 11:46:38.333  INFO 14468 --- [restartedMain] com.yash.ytms.YtmsApplication            : Started YtmsApplication in 9.092 seconds (JVM running for 10.062)
+2023-10-25 12:28:15.457  INFO 14468 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-25 12:28:15.459  INFO 14468 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-25 12:28:15.465  INFO 14468 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2023-10-25 12:28:27.569  INFO 14468 --- [http-nio-8080-exec-4] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 12:28:27.592  INFO 14468 --- [http-nio-8080-exec-4] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 12:28:28.792  INFO 14468 --- [http-nio-8080-exec-6] com.yash.ytms.web.TrainerController      : getTrainers() method called from TrainerController class.
+2023-10-25 12:28:28.792  INFO 14468 --- [http-nio-8080-exec-6] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainers() method called from TrainerServiceImpl class.
+2023-10-25 12:28:29.840  INFO 14468 --- [http-nio-8080-exec-7] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 12:28:29.840  INFO 14468 --- [http-nio-8080-exec-7] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 12:28:31.168  INFO 14468 --- [http-nio-8080-exec-8] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 12:28:31.169  INFO 14468 --- [http-nio-8080-exec-8] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 12:28:32.185  INFO 14468 --- [http-nio-8080-exec-9] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 12:28:32.186  INFO 14468 --- [http-nio-8080-exec-9] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 12:29:34.703  INFO 14468 --- [http-nio-8080-exec-2] c.y.ytms.web.TrainingSummaryController   : getAllSummary() called from TrainingSummaryController.
+2023-10-25 12:29:34.706  INFO 14468 --- [http-nio-8080-exec-2] c.y.y.s.TrainingSummaryServiceImpl       : getTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 12:31:07.117  INFO 14468 --- [http-nio-8080-exec-4] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 12:31:07.118  INFO 14468 --- [http-nio-8080-exec-4] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 12:31:08.920  INFO 14468 --- [http-nio-8080-exec-5] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 12:31:08.920  INFO 14468 --- [http-nio-8080-exec-5] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 12:31:16.321  INFO 14468 --- [http-nio-8080-exec-7] com.yash.ytms.web.TrainerController      : getTrainer/{trainerId} method called from TrainerController class.
+2023-10-25 12:31:16.321  INFO 14468 --- [http-nio-8080-exec-7] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainer(Long trainerId) method called from TrainerServiceImpl class.
+2023-10-25 12:31:19.300  INFO 14468 --- [http-nio-8080-exec-8] com.yash.ytms.web.TrainerController      : getTrainers() method called from TrainerController class.
+2023-10-25 12:31:19.300  INFO 14468 --- [http-nio-8080-exec-8] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainers() method called from TrainerServiceImpl class.
+2023-10-25 12:31:20.458  INFO 14468 --- [http-nio-8080-exec-9] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 12:31:20.458  INFO 14468 --- [http-nio-8080-exec-9] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 12:32:23.193  INFO 14468 --- [http-nio-8080-exec-1] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 12:32:23.194  INFO 14468 --- [http-nio-8080-exec-1] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 12:32:25.173  INFO 14468 --- [http-nio-8080-exec-2] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 12:32:25.173  INFO 14468 --- [http-nio-8080-exec-2] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 12:32:26.943  INFO 14468 --- [http-nio-8080-exec-3] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 12:32:26.943  INFO 14468 --- [http-nio-8080-exec-3] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 12:32:27.703  INFO 14468 --- [http-nio-8080-exec-4] com.yash.ytms.web.TrainerController      : getTrainers() method called from TrainerController class.
+2023-10-25 12:32:27.703  INFO 14468 --- [http-nio-8080-exec-4] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainers() method called from TrainerServiceImpl class.
+2023-10-25 12:32:34.640  INFO 14468 --- [http-nio-8080-exec-5] com.yash.ytms.web.TrainerController      : getTrainer/{trainerId} method called from TrainerController class.
+2023-10-25 12:32:34.641  INFO 14468 --- [http-nio-8080-exec-5] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainer(Long trainerId) method called from TrainerServiceImpl class.
+2023-10-25 12:32:36.344  INFO 14468 --- [http-nio-8080-exec-6] com.yash.ytms.web.TrainerController      : getTrainers() method called from TrainerController class.
+2023-10-25 12:32:36.344  INFO 14468 --- [http-nio-8080-exec-6] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainers() method called from TrainerServiceImpl class.
+2023-10-25 12:32:37.507  INFO 14468 --- [http-nio-8080-exec-7] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 12:32:37.507  INFO 14468 --- [http-nio-8080-exec-7] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 12:32:42.693  INFO 14468 --- [http-nio-8080-exec-8] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 12:32:42.694  INFO 14468 --- [http-nio-8080-exec-8] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 12:33:15.329  INFO 14468 --- [http-nio-8080-exec-9] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 12:33:15.329  INFO 14468 --- [http-nio-8080-exec-9] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 12:33:16.409  INFO 14468 --- [http-nio-8080-exec-10] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 12:33:16.410  INFO 14468 --- [http-nio-8080-exec-10] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 12:33:47.826  INFO 14468 --- [http-nio-8080-exec-2] com.yash.ytms.web.TrainerController      : In controller to get training plan list
+2023-10-25 12:33:59.036  INFO 14468 --- [http-nio-8080-exec-3] c.y.ytms.web.TrainingSummaryController   : getAllSummary() called from TrainingSummaryController.
+2023-10-25 12:33:59.038  INFO 14468 --- [http-nio-8080-exec-3] c.y.y.s.TrainingSummaryServiceImpl       : getTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 12:33:59.817  INFO 14468 --- [http-nio-8080-exec-5] c.y.ytms.web.TrainingSummaryController   : getAllSummary() called from TrainingSummaryController.
+2023-10-25 12:33:59.818  INFO 14468 --- [http-nio-8080-exec-5] c.y.y.s.TrainingSummaryServiceImpl       : getTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 12:34:01.987  INFO 14468 --- [http-nio-8080-exec-6] c.y.ytms.web.TrainingSummaryController   : getAllSummary() called from TrainingSummaryController.
+2023-10-25 12:34:01.988  INFO 14468 --- [http-nio-8080-exec-6] c.y.y.s.TrainingSummaryServiceImpl       : getTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 12:34:22.978  INFO 14468 --- [http-nio-8080-exec-10] com.yash.ytms.web.TRFController          : inside getTrfByIdStatus method - {} PENDING
+2023-10-25 12:34:27.286  INFO 14468 --- [http-nio-8080-exec-2] com.yash.ytms.web.TRFController          : inside updateTrfStatus method - {} APPROVED
+2023-10-25 12:34:27.318  INFO 14468 --- [http-nio-8080-exec-2] c.yash.ytms.serviceImpl.TRFServiceImpl   : index of updateStatus - {} 1
+2023-10-25 12:34:29.054  INFO 14468 --- [http-nio-8080-exec-3] com.yash.ytms.web.TRFController          : inside getTrfByIdStatus method - {} PENDING
+2023-10-25 12:34:37.611  INFO 14468 --- [http-nio-8080-exec-6] com.yash.ytms.web.TRFController          : inside getTrfById method - {} 4
+2023-10-25 12:34:37.613  INFO 14468 --- [http-nio-8080-exec-6] c.yash.ytms.serviceImpl.TRFServiceImpl   : inside getById method - {} 4
+2023-10-25 12:35:16.404  INFO 14468 --- [http-nio-8080-exec-8] c.y.ytms.web.TrainingSummaryController   : getAllSummary() called from TrainingSummaryController.
+2023-10-25 12:35:16.406  INFO 14468 --- [http-nio-8080-exec-8] c.y.y.s.TrainingSummaryServiceImpl       : getTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 12:36:20.470  INFO 14468 --- [http-nio-8080-exec-10] com.yash.ytms.web.TrainerController      : In controller to get training plan list
+2023-10-25 12:37:42.019  INFO 14468 --- [http-nio-8080-exec-2] c.y.ytms.web.TrainingSummaryController   : getAllSummary() called from TrainingSummaryController.
+2023-10-25 12:37:42.019  INFO 14468 --- [http-nio-8080-exec-2] c.y.y.s.TrainingSummaryServiceImpl       : getTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 12:42:50.254  INFO 14468 --- [http-nio-8080-exec-5] com.yash.ytms.web.TrainerController      : In Saving Training plan Controller
+2023-10-25 12:42:50.330  WARN 14468 --- [http-nio-8080-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1452, SQLState: 23000
+2023-10-25 12:42:50.330 ERROR 14468 --- [http-nio-8080-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : Cannot add or update a child row: a foreign key constraint fails (`ytms2`.`training_paln`, CONSTRAINT `FK91s8jh44uerkl9vwki6n4esa4` FOREIGN KEY (`trainer_id`) REFERENCES `trainer` (`trainer_id`))
+2023-10-25 12:42:50.351 ERROR 14468 --- [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement] with root cause
+
+java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`ytms2`.`training_paln`, CONSTRAINT `FK91s8jh44uerkl9vwki6n4esa4` FOREIGN KEY (`trainer_id`) REFERENCES `trainer` (`trainer_id`))
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1061) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1009) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1320) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:994) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:58) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:43) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3279) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3914) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:84) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:329) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:286) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:192) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:122) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:185) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:128) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:756) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:742) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:362) ~[spring-orm-5.3.27.jar:5.3.27]
+	at jdk.proxy3/jdk.proxy3.$Proxy128.persist(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:315) ~[spring-orm-5.3.27.jar:5.3.27]
+	at jdk.proxy3/jdk.proxy3.$Proxy128.persist(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:666) ~[spring-data-jpa-2.7.11.jar:2.7.11]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289) ~[spring-data-commons-2.7.11.jar:2.7.11]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.7.11.jar:2.7.11]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.7.11.jar:2.7.11]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:530) ~[spring-data-commons-2.7.11.jar:2.7.11]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:286) ~[spring-data-commons-2.7.11.jar:2.7.11]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:640) ~[spring-data-commons-2.7.11.jar:2.7.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164) ~[spring-data-commons-2.7.11.jar:2.7.11]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139) ~[spring-data-commons-2.7.11.jar:2.7.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:81) ~[spring-data-commons-2.7.11.jar:2.7.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.27.jar:5.3.27]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.27.jar:5.3.27]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.7.11.jar:2.7.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:220) ~[spring-aop-5.3.27.jar:5.3.27]
+	at jdk.proxy3/jdk.proxy3.$Proxy148.save(Unknown Source) ~[na:na]
+	at com.yash.ytms.serviceImpl.TrainingPlanServiceImpl.saveTrainingPlanDetails(TrainingPlanServiceImpl.java:23) ~[classes/:na]
+	at com.yash.ytms.web.TrainingPlanController.saveTrainingPlan(TrainingPlanController.java:35) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555) ~[tomcat-embed-core-9.0.74.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.74.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at com.yash.ytms.config.JwtRequestFilter.doFilterInternal(JwtRequestFilter.java:71) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186) ~[spring-security-web-5.7.8.jar:5.7.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.74.jar:9.0.74]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-10-25 12:44:19.499  INFO 14468 --- [http-nio-8080-exec-6] com.yash.ytms.web.TrainerController      : In Saving Training plan Controller
+2023-10-25 12:44:28.480  INFO 14468 --- [http-nio-8080-exec-8] c.y.ytms.web.TrainingSummaryController   : getAllSummary() called from TrainingSummaryController.
+2023-10-25 12:44:28.480  INFO 14468 --- [http-nio-8080-exec-8] c.y.y.s.TrainingSummaryServiceImpl       : getTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 12:46:13.604  INFO 14468 --- [http-nio-8080-exec-1] c.y.ytms.web.TrainingSummaryController   : addTrainingSummary() called from TrainingSummaryController.
+2023-10-25 12:46:13.606  INFO 14468 --- [http-nio-8080-exec-1] c.y.y.s.TrainingSummaryServiceImpl       : addTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 12:46:13.693  INFO 14468 --- [http-nio-8080-exec-2] c.y.ytms.web.TrainingSummaryController   : getAllSummary() called from TrainingSummaryController.
+2023-10-25 12:46:13.695  INFO 14468 --- [http-nio-8080-exec-2] c.y.y.s.TrainingSummaryServiceImpl       : getTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 12:47:01.572  INFO 14468 --- [http-nio-8080-exec-5] c.y.ytms.web.TrainingSummaryController   : deleteTrainningSum() called from TrainingSummaryController.
+2023-10-25 12:47:01.573  INFO 14468 --- [http-nio-8080-exec-5] c.y.y.s.TrainingSummaryServiceImpl       : deleteTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 12:47:02.419  INFO 14468 --- [http-nio-8080-exec-7] c.y.ytms.web.TrainingSummaryController   : getAllSummary() called from TrainingSummaryController.
+2023-10-25 12:47:02.419  INFO 14468 --- [http-nio-8080-exec-7] c.y.y.s.TrainingSummaryServiceImpl       : getTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 12:50:20.642  INFO 14468 --- [http-nio-8080-exec-9] c.y.ytms.web.TrainingSummaryController   : addTrainingSummary() called from TrainingSummaryController.
+2023-10-25 12:50:20.642  INFO 14468 --- [http-nio-8080-exec-9] c.y.y.s.TrainingSummaryServiceImpl       : addTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 12:50:20.707  INFO 14468 --- [http-nio-8080-exec-10] c.y.ytms.web.TrainingSummaryController   : getAllSummary() called from TrainingSummaryController.
+2023-10-25 12:50:20.707  INFO 14468 --- [http-nio-8080-exec-10] c.y.y.s.TrainingSummaryServiceImpl       : getTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 12:50:52.413  INFO 14468 --- [http-nio-8080-exec-3] c.y.ytms.web.TrainingSummaryController   : getByTsmId() called from TrainingSummaryController.
+2023-10-25 12:50:52.414  INFO 14468 --- [http-nio-8080-exec-3] c.y.y.s.TrainingSummaryServiceImpl       : getById() method called from TrainingSummaryServiceImpl class
+2023-10-25 12:52:41.235  INFO 14468 --- [http-nio-8080-exec-5] c.y.ytms.web.TrainingSummaryController   : getAllSummary() called from TrainingSummaryController.
+2023-10-25 12:52:41.235  INFO 14468 --- [http-nio-8080-exec-5] c.y.y.s.TrainingSummaryServiceImpl       : getTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 12:55:50.687  INFO 14468 --- [http-nio-8080-exec-7] c.y.ytms.web.TrainingSummaryController   : getAllSummary() called from TrainingSummaryController.
+2023-10-25 12:55:50.690  INFO 14468 --- [http-nio-8080-exec-7] c.y.y.s.TrainingSummaryServiceImpl       : getTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 12:57:25.068  INFO 14468 --- [http-nio-8080-exec-9] c.y.ytms.web.TrainingSummaryController   : getAllSummary() called from TrainingSummaryController.
+2023-10-25 12:57:25.068  INFO 14468 --- [http-nio-8080-exec-9] c.y.y.s.TrainingSummaryServiceImpl       : getTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 12:57:28.971  INFO 14468 --- [http-nio-8080-exec-10] c.y.ytms.web.TrainingSummaryController   : getByTsmId() called from TrainingSummaryController.
+2023-10-25 12:57:28.971  INFO 14468 --- [http-nio-8080-exec-10] c.y.y.s.TrainingSummaryServiceImpl       : getById() method called from TrainingSummaryServiceImpl class
+2023-10-25 12:57:33.686  INFO 14468 --- [http-nio-8080-exec-1] c.y.ytms.web.TrainingSummaryController   : getAllSummary() called from TrainingSummaryController.
+2023-10-25 12:57:33.686  INFO 14468 --- [http-nio-8080-exec-1] c.y.y.s.TrainingSummaryServiceImpl       : getTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 12:57:35.746  INFO 14468 --- [http-nio-8080-exec-2] c.y.ytms.web.TrainingSummaryController   : getByTsmId() called from TrainingSummaryController.
+2023-10-25 12:57:35.746  INFO 14468 --- [http-nio-8080-exec-2] c.y.y.s.TrainingSummaryServiceImpl       : getById() method called from TrainingSummaryServiceImpl class
+2023-10-25 12:57:54.022  INFO 14468 --- [http-nio-8080-exec-3] c.y.ytms.web.TrainingSummaryController   : getAllSummary() called from TrainingSummaryController.
+2023-10-25 12:57:54.022  INFO 14468 --- [http-nio-8080-exec-3] c.y.y.s.TrainingSummaryServiceImpl       : getTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 12:58:34.196  INFO 14468 --- [http-nio-8080-exec-5] c.y.ytms.web.TrainingSummaryController   : getAllSummary() called from TrainingSummaryController.
+2023-10-25 12:58:34.196  INFO 14468 --- [http-nio-8080-exec-5] c.y.y.s.TrainingSummaryServiceImpl       : getTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 13:00:16.656  INFO 14468 --- [http-nio-8080-exec-9] c.y.ytms.web.TrainingSummaryController   : getAllSummary() called from TrainingSummaryController.
+2023-10-25 13:00:16.656  INFO 14468 --- [http-nio-8080-exec-9] c.y.y.s.TrainingSummaryServiceImpl       : getTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 13:03:16.662  INFO 14468 --- [http-nio-8080-exec-1] c.y.ytms.web.TrainingSummaryController   : getAllSummary() called from TrainingSummaryController.
+2023-10-25 13:03:16.663  INFO 14468 --- [http-nio-8080-exec-1] c.y.y.s.TrainingSummaryServiceImpl       : getTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 13:05:06.495  INFO 14468 --- [http-nio-8080-exec-4] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 13:05:06.495  INFO 14468 --- [http-nio-8080-exec-4] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 14:31:03.769  INFO 14468 --- [http-nio-8080-exec-1] com.yash.ytms.web.TRFController          : inside createTrf method - {} TrainingRequestForm [trfId=null, trainingTitle=React, trainingType=CE, resourceType=SE, duration=5, purposeOfTraining=FullStack, initiatedFrom=Magrpatta, projectName=YTMS, skillToBeImpartent=React, noOfParticipants=1, startDate=2023-10-25, endDate=2023-10-31, status=null, createdBy=Jayanm@yash.com, associates=[Associate [id=5, empId=null, empName=null, exprience=0.0, grade=null, currentSkill=null, currentAllocation=null, project=null, upgradedSkillSet=null]]]
+2023-10-25 14:31:03.772  INFO 14468 --- [http-nio-8080-exec-1] c.yash.ytms.serviceImpl.TRFServiceImpl   : inside createTRF method - {} TrainingRequestForm [trfId=null, trainingTitle=React, trainingType=CE, resourceType=SE, duration=5, purposeOfTraining=FullStack, initiatedFrom=Magrpatta, projectName=YTMS, skillToBeImpartent=React, noOfParticipants=1, startDate=2023-10-25, endDate=2023-10-31, status=PENDING, createdBy=Jayanm@yash.com, associates=[Associate [id=5, empId=null, empName=null, exprience=0.0, grade=null, currentSkill=null, currentAllocation=null, project=null, upgradedSkillSet=null]]]
+2023-10-25 14:31:10.848  INFO 14468 --- [http-nio-8080-exec-4] com.yash.ytms.web.TRFController          : inside getTrfById method - {} 8
+2023-10-25 14:31:10.850  INFO 14468 --- [http-nio-8080-exec-4] c.yash.ytms.serviceImpl.TRFServiceImpl   : inside getById method - {} 8
+2023-10-25 14:31:35.735  INFO 14468 --- [http-nio-8080-exec-9] com.yash.ytms.web.TRFController          : inside getTrfByIdStatus method - {} PENDING
+2023-10-25 14:31:41.373  INFO 14468 --- [http-nio-8080-exec-1] com.yash.ytms.web.TRFController          : inside updateTrfStatus method - {} APPROVED
+2023-10-25 14:31:41.385  INFO 14468 --- [http-nio-8080-exec-1] c.yash.ytms.serviceImpl.TRFServiceImpl   : index of updateStatus - {} 1
+2023-10-25 14:31:43.758  INFO 14468 --- [http-nio-8080-exec-3] com.yash.ytms.web.TRFController          : inside getTrfByIdStatus method - {} PENDING
+2023-10-25 14:32:22.163  INFO 14468 --- [http-nio-8080-exec-6] com.yash.ytms.web.TrainerController      : In controller to get training plan list
+2023-10-25 14:32:45.157  INFO 14468 --- [http-nio-8080-exec-2] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 14:32:45.158  INFO 14468 --- [http-nio-8080-exec-2] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 14:32:58.798  INFO 14468 --- [http-nio-8080-exec-5] com.yash.ytms.web.TrainerController      : getTrainers() method called from TrainerController class.
+2023-10-25 14:32:58.798  INFO 14468 --- [http-nio-8080-exec-5] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainers() method called from TrainerServiceImpl class.
+2023-10-25 14:33:02.747  INFO 14468 --- [http-nio-8080-exec-8] com.yash.ytms.web.TrainerController      : getTrainer/{trainerId} method called from TrainerController class.
+2023-10-25 14:33:02.747  INFO 14468 --- [http-nio-8080-exec-8] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainer(Long trainerId) method called from TrainerServiceImpl class.
+2023-10-25 14:33:04.496  INFO 14468 --- [http-nio-8080-exec-9] com.yash.ytms.web.TrainerController      : getTrainers() method called from TrainerController class.
+2023-10-25 14:33:04.496  INFO 14468 --- [http-nio-8080-exec-9] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainers() method called from TrainerServiceImpl class.
+2023-10-25 14:33:05.506  INFO 14468 --- [http-nio-8080-exec-10] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 14:33:05.506  INFO 14468 --- [http-nio-8080-exec-10] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 14:33:06.430  INFO 14468 --- [http-nio-8080-exec-1] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 14:33:06.431  INFO 14468 --- [http-nio-8080-exec-1] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 14:33:20.652  INFO 14468 --- [http-nio-8080-exec-3] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 14:33:20.652  INFO 14468 --- [http-nio-8080-exec-3] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 15:02:24.179  INFO 14468 --- [http-nio-8080-exec-8] com.yash.ytms.web.TRFController          : inside getTrfById method - {} 8
+2023-10-25 15:02:24.181  INFO 14468 --- [http-nio-8080-exec-8] c.yash.ytms.serviceImpl.TRFServiceImpl   : inside getById method - {} 8
+2023-10-25 15:03:20.743  INFO 14468 --- [http-nio-8080-exec-2] com.yash.ytms.web.TRFController          : inside getTrfById method - {} 8
+2023-10-25 15:03:20.744  INFO 14468 --- [http-nio-8080-exec-2] c.yash.ytms.serviceImpl.TRFServiceImpl   : inside getById method - {} 8
+2023-10-25 15:17:01.679  WARN 14468 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m14s597ms59µs800ns).
+2023-10-25 15:34:43.702  WARN 14468 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m41s969ms616µs100ns).
+2023-10-25 15:35:50.751  INFO 14468 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-25 15:35:50.777  INFO 14468 --- [Thread-4] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-25 15:35:50.781  INFO 14468 --- [Thread-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-10-25 15:35:50.789  WARN 14468 --- [Thread-4] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.3/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.3/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.3/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+2023-10-25 15:35:50.809  INFO 14468 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-25 15:35:50.814  INFO 14468 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-25 15:35:50.823  INFO 14468 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-25 15:35:50.966  INFO 14468 --- [restartedMain] com.yash.ytms.YtmsApplication            : Starting YtmsApplication using Java 17.0.3 on YPH1016146LT with PID 14468 (D:\YTMS_New\dev-branch\ytms\target\classes started by shubham.bhake in D:\YTMS_New\dev-branch\ytms)
+2023-10-25 15:35:50.967  INFO 14468 --- [restartedMain] com.yash.ytms.YtmsApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-10-25 15:35:54.377  INFO 14468 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-25 15:35:55.102  INFO 14468 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 719 ms. Found 11 JPA repository interfaces.
+2023-10-25 15:35:56.826  INFO 14468 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-25 15:35:56.830  INFO 14468 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-25 15:35:56.831  INFO 14468 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-10-25 15:35:57.132  INFO 14468 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-25 15:35:57.132  INFO 14468 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6163 ms
+2023-10-25 15:35:57.252  INFO 14468 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-25 15:35:57.269  INFO 14468 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-10-25 15:35:57.302  INFO 14468 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-10-25 15:35:57.305  INFO 14468 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-10-25 15:35:57.922  INFO 14468 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-25 15:35:57.923  INFO 14468 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-25 15:35:58.225  WARN 14468 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-25 15:35:59.244  INFO 14468 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-10-25 15:35:59.384  INFO 14468 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@15724497, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6013477c, org.springframework.security.web.context.SecurityContextPersistenceFilter@53ca6b68, org.springframework.security.web.header.HeaderWriterFilter@53f64236, org.springframework.web.filter.CorsFilter@38a23a04, org.springframework.security.web.authentication.logout.LogoutFilter@2ca9c3df, com.yash.ytms.config.JwtRequestFilter@661d7a22, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4003ab3e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2105a6fa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@734549e9, org.springframework.security.web.session.SessionManagementFilter@25aeb881, org.springframework.security.web.access.ExceptionTranslationFilter@681f68bf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@21ad4031]
+2023-10-25 15:35:59.482  INFO 14468 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-25 15:35:59.674  INFO 14468 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-25 15:35:59.675  INFO 14468 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-10-25 15:35:59.678  INFO 14468 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-10-25 15:35:59.689  INFO 14468 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-10-25 15:36:00.041  INFO 14468 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addReportUsingPOST_1
+2023-10-25 15:36:00.290  INFO 14468 --- [restartedMain] com.yash.ytms.YtmsApplication            : Started YtmsApplication in 9.386 seconds (JVM running for 13771.223)
+2023-10-25 15:36:00.324  INFO 14468 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-10-25 15:36:01.915  INFO 14468 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-25 15:36:01.915  INFO 14468 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-25 15:36:01.918  INFO 14468 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-10-25 15:36:01.987  INFO 14468 --- [http-nio-8080-exec-4] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 15:36:01.999  INFO 14468 --- [http-nio-8080-exec-4] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 15:36:03.691  INFO 14468 --- [http-nio-8080-exec-9] com.yash.ytms.web.TrainerController      : getTrainers() method called from TrainerController class.
+2023-10-25 15:36:03.692  INFO 14468 --- [http-nio-8080-exec-9] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainers() method called from TrainerServiceImpl class.
+2023-10-25 15:36:06.776  INFO 14468 --- [http-nio-8080-exec-3] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 15:36:06.777  INFO 14468 --- [http-nio-8080-exec-3] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 15:36:16.177  INFO 14468 --- [http-nio-8080-exec-7] c.y.ytms.web.TrainingSummaryController   : getAllSummary() called from TrainingSummaryController.
+2023-10-25 15:36:16.185  INFO 14468 --- [http-nio-8080-exec-7] c.y.y.s.TrainingSummaryServiceImpl       : getTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 15:36:17.456  INFO 14468 --- [http-nio-8080-exec-1] c.y.ytms.web.TrainingSummaryController   : getAllSummary() called from TrainingSummaryController.
+2023-10-25 15:36:17.456  INFO 14468 --- [http-nio-8080-exec-1] c.y.y.s.TrainingSummaryServiceImpl       : getTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 15:36:28.510  INFO 14468 --- [http-nio-8080-exec-9] com.yash.ytms.web.TrainerController      : In controller to get training plan list
+2023-10-25 15:36:44.558  INFO 14468 --- [http-nio-8080-exec-3] c.y.ytms.web.TrainingSummaryController   : getAllSummary() called from TrainingSummaryController.
+2023-10-25 15:36:44.558  INFO 14468 --- [http-nio-8080-exec-3] c.y.y.s.TrainingSummaryServiceImpl       : getTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 15:36:47.631  INFO 14468 --- [http-nio-8080-exec-6] c.y.ytms.web.TrainingSummaryController   : getByTsmId() called from TrainingSummaryController.
+2023-10-25 15:36:47.632  INFO 14468 --- [http-nio-8080-exec-6] c.y.y.s.TrainingSummaryServiceImpl       : getById() method called from TrainingSummaryServiceImpl class
+2023-10-25 15:36:52.391  INFO 14468 --- [http-nio-8080-exec-10] c.y.ytms.web.TrainingSummaryController   : getAllSummary() called from TrainingSummaryController.
+2023-10-25 15:36:52.392  INFO 14468 --- [http-nio-8080-exec-10] c.y.y.s.TrainingSummaryServiceImpl       : getTrainingSummary() method called from TrainingSummaryServiceImpl class
+2023-10-25 15:36:56.516  INFO 14468 --- [http-nio-8080-exec-1] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 15:36:56.516  INFO 14468 --- [http-nio-8080-exec-1] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 15:36:57.992  INFO 14468 --- [http-nio-8080-exec-4] com.yash.ytms.web.TrainerController      : getTrainers() method called from TrainerController class.
+2023-10-25 15:36:57.992  INFO 14468 --- [http-nio-8080-exec-4] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainers() method called from TrainerServiceImpl class.
+2023-10-25 15:36:59.153  INFO 14468 --- [http-nio-8080-exec-5] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 15:36:59.154  INFO 14468 --- [http-nio-8080-exec-5] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 15:37:00.369  INFO 14468 --- [http-nio-8080-exec-9] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 15:37:00.369  INFO 14468 --- [http-nio-8080-exec-9] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 15:37:01.510  INFO 14468 --- [http-nio-8080-exec-8] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 15:37:01.512  INFO 14468 --- [http-nio-8080-exec-8] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 15:43:25.862  INFO 14468 --- [http-nio-8080-exec-1] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 15:43:25.862  INFO 14468 --- [http-nio-8080-exec-1] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 15:43:49.995  INFO 14468 --- [http-nio-8080-exec-5] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 15:43:49.995  INFO 14468 --- [http-nio-8080-exec-5] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 15:44:00.302  INFO 14468 --- [http-nio-8080-exec-9] com.yash.ytms.web.TrainerController      : getTrainerTasks() method called from TrainerController class.
+2023-10-25 15:44:00.303  INFO 14468 --- [http-nio-8080-exec-9] c.y.ytms.serviceImpl.TrainerServiceImpl  : getTrainerTasks() method called from TrainerServiceImpl class.
+2023-10-25 15:59:12.180  INFO 14468 --- [RMI TCP Connection(254)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-10-25 15:59:12.196  INFO 14468 --- [RMI TCP Connection(254)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-25 15:59:12.197  INFO 14468 --- [RMI TCP Connection(254)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-10-25 15:59:12.200  WARN 14468 --- [RMI TCP Connection(254)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-2 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.3/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.3/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.3/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+2023-10-25 15:59:12.206  INFO 14468 --- [RMI TCP Connection(254)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-25 15:59:12.206  INFO 14468 --- [RMI TCP Connection(254)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-10-25 15:59:12.219  INFO 14468 --- [RMI TCP Connection(254)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.

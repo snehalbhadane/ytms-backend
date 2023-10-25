@@ -17,6 +17,7 @@ import com.yash.ytms.config.JwtUtil;
 import com.yash.ytms.config.MyUserDetailService;
 import com.yash.ytms.dto.ServerResponse;
 import com.yash.ytms.exception.UserNotFound;
+import com.yash.ytms.model.Role;
 import com.yash.ytms.model.User;
 import com.yash.ytms.repo.UserRepository;
 import com.yash.ytms.service.UserService;
@@ -38,6 +39,9 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public User addUser(User user) {
+		
+		
+	
 		user.setCreatedOn(LocalDateTime.now());
 		user.setUpdatedDate(LocalDateTime.now());
 		return userRepository.save(user);
@@ -71,6 +75,41 @@ public class UserServiceImpl implements UserService {
 		resp.setAuthToken(jwt);
 		resp.setUser(checkUser);
 		return resp;
+	}
+
+	@Override
+	public User getById(Long userId) {
+
+		return userRepository.findById(userId).orElseThrow(() -> new UserNotFound("This User not exist"));
+	}
+
+	@Override
+	public User updateUserById(Long userId,User user) {
+		
+
+	User userObj = userRepository.findById(user.getUserId()).orElseThrow(()->new UserNotFound("user not found. Please fill all the required details.\""));
+		
+		System.out.println("data after peaasword ahe ka? ide-------------------"+userObj);
+		
+	     String pass=userObj.getPassword();
+		
+	     
+	     System.out.println(" peaasword from db-------------------"+pass);
+	     
+	     
+		 if (user.getPassword()==null) {
+		
+			 user.setPasswod(pass);
+		 }
+		 
+		
+		 
+		System.out.println("data after user -------------------"+user);
+		
+
+		return userRepository.save(user);
+		
+		
 	}
 
 }

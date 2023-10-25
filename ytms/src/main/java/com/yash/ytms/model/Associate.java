@@ -42,6 +42,8 @@ public class Associate implements Serializable{
 	
 	@Column(name = "upgraded_skill_set")
 	private String upgradedSkillSet;
+	
+	//private TrainingRequestForm trainingRequestForm
 
 	public Associate() {
 		super();

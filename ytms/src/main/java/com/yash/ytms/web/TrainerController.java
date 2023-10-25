@@ -98,10 +98,8 @@ public class TrainerController {
 		return new ResponseEntity<Trainer>(trainerService.updateTrainerDetails(trainer), HttpStatus.CREATED);
 	}
 
-	/**
-	 * This controller method handles the HTTP delete request for delete trainer
-	 * details, matching with the given URI.
-	 */
+	
+	@ApiOperation(value = "Update trainer detailsByid.")
 	@PutMapping("/updateTrainerDetail/{trainerId}")
     public ResponseEntity<Trainer>updateTrainerById(@PathVariable Long trainerId ,@RequestBody Trainer trainer){
     	logger.info("updateTrainer By id method called from TrainerController class.");
@@ -109,6 +107,11 @@ public class TrainerController {
 	return  new ResponseEntity<Trainer>(trainerService.updateTrainerDetails(trainerId, trainer),HttpStatus.CREATED);
 	
 	}
+	
+	/**
+	 * This controller method handles the HTTP delete request for delete trainer
+	 * details, matching with the given URI.
+	 */
 	
 	@ApiOperation(value = "delete trainer details based on trainer id.")
 	@DeleteMapping("/deleteTrainer/{trainerId}")
@@ -218,5 +221,15 @@ public class TrainerController {
 	 * 
 	 * }
 	 */
+	
+	@ApiOperation(value = "Update trainer task details by task Id.")
+	//@PutMapping("/updateTrainerTask/{trainerTaskId}")
+	@PutMapping("/updateTask/{trainerTaskId}")
+	public ResponseEntity<TrainerTask> updateTrainerTaskBytaskId(@PathVariable Long trainerTaskId,@RequestBody TrainerTask trainerTask)
+			throws JsonParseException {
 
+		  logger.info("updateTrainerTask method called from TrainerController class.");
+
+		return new ResponseEntity<TrainerTask>(trainerService.updateTrainerTaskBytaskID(trainerTaskId,trainerTask), HttpStatus.CREATED);
+	}
 }
