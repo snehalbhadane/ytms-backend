@@ -1,8 +1,13 @@
 package com.yash.ytms.web;
 
+import java.time.LocalDate;
 import java.util.List;
+
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -13,6 +18,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.yash.ytms.config.LoggerConfiguration;
@@ -57,7 +63,7 @@ public class TrainingSummaryController {
 
 		String methodName = "getByTsmId()";
 		logger.info(methodName + " called from TrainingSummaryController.");
-		return new ResponseEntity<TrainingSummary>(trainingSummaryService.getById(trainingSummaryId), HttpStatus.FOUND);
+		return new ResponseEntity<TrainingSummary>(trainingSummaryService.getById(trainingSummaryId), HttpStatus.OK);
 
 	}
 
@@ -81,14 +87,18 @@ public class TrainingSummaryController {
 		TrainingSummary updateTSM = trainingSummaryService.updateTrainingSummary(trainingSummaryId, trainingSummary);
 		return ResponseEntity.ok(updateTSM);
 
-	}
+	}	
+	
+	//Get Training Summary Details by CreatedDateOrName
+	@GetMapping("getSummaryByCreatedDateOrName")
+	public ResponseEntity<List<TrainingSummary>> getSummaryByNameAndCreatedOn(
 
-	// Get Training Summary By Trainer Name
-	@GetMapping("/getSummaryByName/{trainerName}")
-	public ResponseEntity<List<TrainingSummary>> getSummaryByName(@PathVariable String trainerName) {
+			@RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate createdOn,
 
-		return new ResponseEntity<List<TrainingSummary>>(this.trainingSummaryService.getSummaryByName(trainerName),
-				HttpStatus.OK);
+			@RequestParam(required = false) String trainingName) {
+		return new ResponseEntity<List<TrainingSummary>>(
+				this.trainingSummaryService.getSummaryByCreatedDateOrName(createdOn, trainingName), HttpStatus.OK);
 	}
+	 
 
 }

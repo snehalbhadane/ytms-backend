@@ -2,6 +2,7 @@ package com.yash.ytms.serviceImpl;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -73,15 +74,21 @@ public class TrainingSummaryServiceImpl implements TrainingSummaryService {
 		trainingSummaryRepository.save(trainingSummObj);
 		return trainingSummObj;
 	}
-
+	
 	@Override
-	public List<TrainingSummary> getSummaryByName(String trainerName) {
-		User u = new User();
-		u.setFirstName(trainerName);
-		TrainingSummary ts = new TrainingSummary();
-		ts.setTrainer(u);
-		String firstName = ts.getTrainer().getFirstName();
-		return trainingSummaryRepository.findByName(firstName);
+	public List<TrainingSummary> getSummaryByCreatedDateOrName(LocalDate createdOn, String trainingName) {
+		List<TrainingSummary> summaryByNameOrCreatedDateList = null;
+		try {
+			summaryByNameOrCreatedDateList = trainingSummaryRepository.findSummaryByCreatedDateOrName(createdOn,
+					trainingName);
+			if (!summaryByNameOrCreatedDateList.equals(null)) {
+				return summaryByNameOrCreatedDateList;
+			}
+		} catch (Exception e) {
+			logger.error(
+					"TrainingSummaryServiceImpl | getSummaryByNameOrCreatedDate | ErrorMessage: {}" + e.getMessage());
+		}
+		return summaryByNameOrCreatedDateList;
 	}
-
+	 
 }
