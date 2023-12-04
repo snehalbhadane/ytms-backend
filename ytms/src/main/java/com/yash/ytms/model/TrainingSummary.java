@@ -23,14 +23,6 @@ public class TrainingSummary {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long trainingSummaryId;
 	
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "training_plan")
-	private TrainingPlan trainingPlan;
-	
-	@OneToOne
-	@JoinColumn(name="user_id")
-	private User trainer;
-	
 	@NotNull(message="Fill Training pattern")
 	@Column(name = "training_pattern")
 	private String trainingPattern;
@@ -41,6 +33,14 @@ public class TrainingSummary {
 	
 	@Column(name = "created_on")
 	private LocalDate createdOn;
+	
+	@OneToOne(cascade = CascadeType.MERGE)
+	@JoinColumn(name = "training_plan")
+	private TrainingPlan trainingPlan;
+	
+	@OneToOne
+	@JoinColumn(name="user_id")
+	private User trainer;
 	
 	public TrainingSummary() {
 		super();

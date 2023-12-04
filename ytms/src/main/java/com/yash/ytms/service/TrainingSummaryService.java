@@ -1,6 +1,9 @@
 package com.yash.ytms.service;
 
+import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
+
 import com.yash.ytms.model.TrainingSummary;
 
 public interface TrainingSummaryService {
@@ -15,6 +18,6 @@ public interface TrainingSummaryService {
 
 	public void deleteTrainingSummary(Long trainingSummaryId);
 
-	public List<TrainingSummary> getSummaryByName(String userName);
+	public List<TrainingSummary> getSummaryByCreatedDateOrName(LocalDate createdOn,String trainingName);
 
 }
