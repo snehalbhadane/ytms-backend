@@ -1,26 +1,28 @@
 package com.yash.ytms.web;
 
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.yash.ytms.constants.LocationEnum;
+import com.yash.ytms.model.Location;
+import com.yash.ytms.service.LocationService;
 
 @CrossOrigin
 @RestController
 @RequestMapping("/location")
 public class LocationController {
 
-
+@Autowired
+private LocationService locationService;
 	@GetMapping("/getLocations")
-	public ResponseEntity<List<String>> getAllLocation() {
-		return ResponseEntity.ok(Stream.of(LocationEnum.LOCATION.values()).map(Enum::name).collect(Collectors.toList()));
+	public ResponseEntity<List<Location>> getAllLocation() {
+		
+		return ResponseEntity.ok(locationService.findAll());
 	}
 }
 
